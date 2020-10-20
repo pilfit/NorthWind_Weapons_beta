@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sounds>
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>30mmRotaryLoop</SubtypeId>
+      </Id>
+      <Volume>1</Volume>
+      <Category>SHOT</Category>
+      <MaxDistance>800</MaxDistance>
+
+
+      <PreventSynchronization>3</PreventSynchronization>
+      <SoundLimit>10</SoundLimit>
+
+	  <Loopable>true</Loopable>
+      <Waves>
+        <Wave Type="D3">
+
+          <Loop>Audio\30mm_CannonLoop2.wav</Loop>
+
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>30mmRotaryLoopDist</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>1500</MaxDistance>
+      <Volume>1.1</Volume>
+      <Loopable>true</Loopable>	  
+      <Waves>
+        <Wave Type="D3">
+
+          <Loop>Audio\30mmDistLoop2.wav</Loop>
+
+        </Wave>
+      </Waves>
+    </Sound>
+	
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>30mmMotorLoop</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>60</MaxDistance>
+      <Volume>0.5</Volume>
+      <Loopable>true</Loopable>	  
+      <Waves>
+        <Wave Type="D3">
+		  <Start>Audio\MotorLoopStart.wav</Start>
+          <Loop>Audio\MotorLoop.wav</Loop>
+          <End>Audio\MotorLoopEnd.wav</End>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+  </Sounds>
+</Definitions>

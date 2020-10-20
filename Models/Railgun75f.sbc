@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Railgun75f</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Railgun75f</DisplayName>
+			<Description>Description_Railgun75f</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="11"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Railgun75f.mwm</Model>
+			<Components>
+				<Component Count="10" Subtype="SteelPlate"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="SteelPlate"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="1" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="5.0" StartY="0.0" EndX="6.0" EndY="1.0"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="5.0" EndX="1" EndY="6.0"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="5.0" EndX="1" EndY="6.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Railgun75f_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Railgun75f_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Railgun75f_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>Railgun75f</BlockPairName>
+			<MirroringX>Y</MirroringX>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

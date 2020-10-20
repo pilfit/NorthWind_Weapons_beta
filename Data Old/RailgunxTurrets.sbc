@@ -1,0 +1,279 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+      <Id>
+        <TypeId>ConveyorSorter</TypeId>
+			<SubtypeId>RailgunxTurretS</SubtypeId>
+		  </Id>
+			<DisplayName>75mm Railgun Turret</DisplayName>
+			<Description>75mm Railgun turret with a 3x3 mount and 3km range.</Description>
+			<Icon>Textures\icons\railgun75ticon.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\RailgunxTurretS.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\RailgunxTurretS_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\RailgunxTurretS_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\RailgunxTurretS_BS3.mwm"/>
+			</BuildProgressModels>
+
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+	  
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="200" />
+             <Component Subtype="Construction" Count="50" />
+             <Component Subtype="MetalGrid" Count="30" />
+             <Component Subtype="LargeTube" Count="20" />
+             <Component Subtype="Motor" Count="15" />
+	         <Component Subtype="Superconductor" Count="5" />				 
+             <Component Subtype="Computer" Count="10" />
+             <Component Subtype="SteelPlate" Count="250" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>RailgunxTurretS</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="RailgunxTurretS" />
+			<InventoryMaxVolume>0.011</InventoryMaxVolume>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>275</PCU>
+            <IsAirTight>false</IsAirTight> 
+		</Definition>
+		
+        <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		
+		  <Id>
+			<TypeId>LargeMissileTurret</TypeId>
+			<SubtypeId>RailgunxTurretM</SubtypeId>
+		  </Id>
+			<DisplayName>150mm Railgun Turret</DisplayName>
+			<Description>150mm dual railgun turret with a 5x5 mount and 4km range.</Description>
+			<Icon>Textures\icons\railgun150ticon.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="2" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\RailgunxTurretM.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\RailgunxTurretM_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\RailgunxTurretM_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\RailgunxTurretM_BS3.mwm"/>
+			</BuildProgressModels>
+			
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+		   
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="500" />
+             <Component Subtype="Construction" Count="80" />
+             <Component Subtype="MetalGrid" Count="50" />
+             <Component Subtype="LargeTube" Count="20" />
+             <Component Subtype="Motor" Count="30" />
+	         <Component Subtype="Superconductor" Count="20" />				 
+             <Component Subtype="Computer" Count="20" />
+             <Component Subtype="SteelPlate" Count="550" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>RailgunxTurretM</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>			
+			<WeaponDefinitionId Subtype="RailgunxTurretM" />
+			<InventoryMaxVolume>0.062</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+			<MaxRangeMeters>4000</MaxRangeMeters>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>525</PCU>
+            <IsAirTight>false</IsAirTight> 			
+		</Definition>
+		
+        <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+          <Id>
+            <TypeId>ConveyorSorter</TypeId>
+			<SubtypeId>RailgunxTurret</SubtypeId>
+		  </Id>
+			<DisplayName>250mm Railgun Turret</DisplayName>
+			<Description>250mm railgun turret with a 7x7 mount and 5km range.</Description>
+			<Icon>Textures\icons\railgun250ticon.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="7" y="3" z="7"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\RailgunxTurret.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="7.0" EndY="7.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\RailgunxTurret_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\RailgunxTurret_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\RailgunxTurret_BS3.mwm"/>
+			</BuildProgressModels>
+			
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+		   
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="1100" />
+             <Component Subtype="Construction" Count="80" />
+             <Component Subtype="MetalGrid" Count="100" />
+             <Component Subtype="LargeTube" Count="60" />
+             <Component Subtype="Motor" Count="25" />
+	         <Component Subtype="Superconductor" Count="60" />		 
+             <Component Subtype="Computer" Count="40" />
+             <Component Subtype="SteelPlate" Count="950" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>RailgunxTurret</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="RailgunxTurret" />
+			<InventoryMaxVolume>0.195</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>60</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>825</PCU>
+            <IsAirTight>false</IsAirTight>  
+		</Definition>
+		
+        <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		
+		  <Id>
+			<TypeId>LargeMissileTurret</TypeId>
+			<SubtypeId>AMSlaser</SubtypeId>
+		  </Id>
+			<DisplayName>Discoball Laser AMS</DisplayName>
+			<Description>Anti Missile Laser.</Description>
+			<Icon>Textures\icons\discoball.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\AMSlaser.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\AMSlaser_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\AMSlaser_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\AMSlaser_BS3.mwm"/>
+			</BuildProgressModels>
+
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+	  
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>		
+             <Component Subtype="SteelPlate" Count="150" />
+             <Component Subtype="Construction" Count="50" />
+             <Component Subtype="MetalGrid" Count="10" />
+             <Component Subtype="SmallTube" Count="10" />			 
+             <Component Subtype="Motor" Count="10" />
+	         <Component Subtype="Superconductor" Count="10" />
+			 <Component Subtype="Computer" Count="50" />	
+			 <Component Subtype="BulletproofGlass" Count="10" />			 
+             <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>Discoball</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<WeaponDefinitionId Subtype="AMSlaser" />
+			<InventoryMaxVolume>0.011</InventoryMaxVolume>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>275</PCU>
+            <IsAirTight>false</IsAirTight> 
+		</Definition>
+		
+	</CubeBlocks>
+</Definitions>

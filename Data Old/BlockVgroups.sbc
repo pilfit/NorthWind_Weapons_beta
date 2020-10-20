@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlockVariantGroups>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Railgunturrets" />
+			<Icon>Textures\icons\railgun250ticon.png</Icon>
+			<DisplayName>DisplayName_Railgun_Turrets</DisplayName>
+			<Description>Description_Railgun_Turrets</Description>
+			<Blocks>
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="RailgunxTurretS" />
+				<Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="RailgunxTurretM" />
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="RailgunxTurret" />
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Railgunfixed" />
+			<Icon>Textures\icons\Railgunf150icon.png</Icon>
+			<DisplayName>DisplayName_Fixed_Railguns</DisplayName>
+			<Description>Description_Fixed_Railguns</Description>
+			<Blocks>
+				<Block Type="MyObjectBuilder_SmallMissileLauncher" Subtype="Railgunx75f" />
+				<Block Type="MyObjectBuilder_SmallMissileLauncher" Subtype="Railgunx150f" />
+			</Blocks>
+		</BlockVariantGroup>
+
+	</BlockVariantGroups>
+</Definitions>

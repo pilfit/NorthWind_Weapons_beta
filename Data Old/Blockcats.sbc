@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+  
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+	  <Id>
+		<TypeId>GuiBlockCategoryDefinition</TypeId>
+		<SubtypeId/>
+	  </Id>
+			  <DisplayName>Northwind Weapons</DisplayName>
+			  <Name>Northwindweapons</Name>
+				<SearchBlocks>true</SearchBlocks>
+				<IsShipCategory>false</IsShipCategory>
+				<IsBlockCategory>true</IsBlockCategory>
+				<IsToolCategory>false</IsToolCategory>
+			<ItemIds>
+
+				<string>SmallMissileLauncher/Railgunx75f</string>		
+				<string>SmallMissileLauncher/Railgunx150f</string>	
+				<string>SmallMissileLauncher/Railgunx</string>
+				<string>ConveyorSorter/RailgunxTurretS</string>	
+				<string>ConveyorSorter/RailgunxTurret</string>
+				<string>LargeMissileTurret/RailgunxTurretM</string>	
+
+
+			</ItemIds>
+		</Category>
+
+
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+					<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+					<Name>Weapons</Name>
+				<ItemIds>
+
+				<string>SmallMissileLauncher/Railgunx75f</string>		
+				<string>SmallMissileLauncher/Railgunx150f</string>	
+				<string>SmallMissileLauncher/Railgunx</string>
+				<string>ConveyorSorter/RailgunxTurretS</string>	
+				<string>ConveyorSorter/RailgunxTurret</string>
+				<string>LargeMissileTurret/RailgunxTurretM</string>
+
+
+				</ItemIds>  
+		</Category>
+
+	
+  </CategoryClasses>
+  
+
+</Definitions>

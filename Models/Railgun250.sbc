@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Railgun250</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Railgun250</DisplayName>
+			<Description>Description_Railgun250</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="9"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Railgun250.mwm</Model>
+			<Components>
+				<Component Count="10" Subtype="SteelPlate"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="SteelPlate"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Railgun250_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Railgun250_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Railgun250_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>Railgun250</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

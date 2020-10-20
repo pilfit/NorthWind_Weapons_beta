@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+  <Blueprints>   
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>R75ammo</SubtypeId>
+      </Id>
+      <DisplayName>75mm Railgun Ammo</DisplayName>
+      <Icon>Textures\icons\Railgunammo75icon.png</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="2" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="5" TypeId="Ingot" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="R75ammo" />
+      <BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>R150ammo</SubtypeId>
+      </Id>
+      <DisplayName>150mm Railgun Ammo</DisplayName>
+      <Icon>Textures\icons\Railgunammo150icon.png</Icon>
+      <Prerequisites>
+        <Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="4" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="R150ammo" />
+      <BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>R250ammo</SubtypeId>
+      </Id>
+      <DisplayName>250mm Railgun Ammo</DisplayName>
+      <Icon>Textures\icons\Railgunammo250icon.png</Icon>
+      <Prerequisites>
+        <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="20" TypeId="Ingot" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="R250ammo" />
+      <BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+    </Blueprint>
+  </Blueprints>
+
+   <BlueprintClassEntries>
+   
+	
+		<Entry Class="Components" BlueprintSubtypeId="R75ammo" />	
+		<Entry Class="Components" BlueprintSubtypeId="R150ammo" />	
+		<Entry Class="Components" BlueprintSubtypeId="R250ammo" />	
+		
+
+		
+	
+		<Entry Class="Ammo" BlueprintSubtypeId="R75ammo" />
+		<Entry Class="Ammo" BlueprintSubtypeId="R150ammo" />
+		<Entry Class="Ammo" BlueprintSubtypeId="R250ammo" />
+		
+
+	
+  </BlueprintClassEntries>
+	
+
+
+  
+</Definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>RotaryCannon</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_RotaryCannon</DisplayName>
+			<Description>Description_RotaryCannon</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="6"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\RotaryCannon.mwm</Model>
+			<Components>
+				<Component Count="10" Subtype="SteelPlate"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="SteelPlate"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\RotaryCannon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\RotaryCannon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\RotaryCannon_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>RotaryCannon</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

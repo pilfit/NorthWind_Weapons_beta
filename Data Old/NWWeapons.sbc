@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+<Weapons>
+	
+	<Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>Railgunx75f</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>
+	
+	<Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>RailgunxturretS</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>
+
+	<Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>Railgunx150f</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>
+	
+	<Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>RailgunxTurretM</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>
+	
+    <Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>Railgunx</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>
+	
+	    <Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>RailgunxTurret</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>
+
+	    <Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>AMSlaser</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>
+	
+	<Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>203mmHowitzer</SubtypeId>
+      </Id>
+      <ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Blank" />
+      </AmmoMagazines>
+      <ReloadTime>0</ReloadTime>
+    </Weapon>	
+	
+
+
+</Weapons>
+	
+
+
+
+  
+</Definitions>
