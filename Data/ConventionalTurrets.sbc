@@ -9,7 +9,7 @@
 			<SubtypeId>CIWS</SubtypeId>
 		  </Id>
 			<DisplayName>30mm CIWS Turret</DisplayName>
-			<Description>30mm CIWS Turret Intended for protection from fighters and missiles. Can be loaded with Standard 30mm rounds or DU rounds for anti armor.</Description>
+			<Description>30mm CIWS Turret Intended for protection from fighters and missiles. Can be loaded with Standard 30mm rounds or DU rounds for anti armor. The targeting systems on this turret will not work if placed near another CIWS, must be placed at least 3 blocks appart.</Description>
 			<Icon>Textures\icons\CIWS.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
