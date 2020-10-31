@@ -23,7 +23,7 @@ namespace WeaponThread
         private AmmoDef H203mmammoS => new AmmoDef
         {
             AmmoMagazine = "H203Ammo",
-            AmmoRound = "H203mmammoS",
+            AmmoRound = "LV203mmammo",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -274,7 +274,7 @@ namespace WeaponThread
         private AmmoDef H203mmammoM => new AmmoDef
         {
             AmmoMagazine = "H203Ammo",
-            AmmoRound = "H203mmammoM",
+            AmmoRound = "MV203mmammo",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -525,7 +525,7 @@ namespace WeaponThread
         private AmmoDef H203mmammoL => new AmmoDef
         {
             AmmoMagazine = "H203Ammo",
-            AmmoRound = "H203mmammoL",
+            AmmoRound = "HV203mmammo",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -779,7 +779,7 @@ namespace WeaponThread
             AmmoRound = "H203mmammoShrap",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 300f,
+            BaseDamage = 200f,
             Mass = 2f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -836,9 +836,9 @@ namespace WeaponThread
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = -1f,
+                    Armor = 0.8f,
                     Light = -1f,
-                    Heavy = 0.6f,
+                    Heavy = 0.5f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -1051,7 +1051,7 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "H203mmammoShrap",
-                Fragments = 150,
+                Fragments = 100,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360
