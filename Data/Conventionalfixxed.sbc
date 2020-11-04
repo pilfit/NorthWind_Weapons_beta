@@ -16,6 +16,7 @@
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="3" y="2" z="6" />
       <ModelOffset x="0" y="0" z="0" />
+      <Center x="1" y="0" z="4" />
       <Model>Models\RotaryCannon.mwm</Model>
 	  <UseModelIntersection>true</UseModelIntersection>
 	  <BuildProgressModels>
@@ -76,6 +77,7 @@
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="3" y="3" z="21" />
       <ModelOffset x="0" y="0" z="0" />
+      <Center x="1" y="1" z="19" />
       <Model>Models\203mmHowitzer.mwm</Model>
 	  <UseModelIntersection>true</UseModelIntersection>	  
 			<BuildProgressModels>
