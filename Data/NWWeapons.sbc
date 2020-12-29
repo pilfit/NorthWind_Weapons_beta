@@ -17,7 +17,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="R75ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -34,7 +34,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="R75ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -51,7 +51,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="R150ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -68,7 +68,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="R150ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -85,7 +85,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="R250ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -102,7 +102,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="R250ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -136,7 +136,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="C30Ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -153,7 +153,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="C30Ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>
@@ -170,7 +170,7 @@
       <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
       <SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
       <AmmoMagazines>
-        <AmmoMagazine Subtype="Blank" />
+        <AmmoMagazine Subtype="H203Ammo" />
       </AmmoMagazines>
       <ReloadTime>0</ReloadTime>
     </Weapon>	

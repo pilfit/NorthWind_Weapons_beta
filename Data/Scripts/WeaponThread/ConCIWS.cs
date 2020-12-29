@@ -52,9 +52,9 @@ namespace WeaponThread {
             {
                 WeaponName = "30mm Conventional CIWS", // name of weapon in terminal
                 DeviateShotAngle = 0.8f,
-                AimingTolerance = 0.15f, // 0 - 180 firing angle
+                AimingTolerance = 3.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 15, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
                     RateOfFire = true,
@@ -86,7 +86,7 @@ namespace WeaponThread {
                     EnergyPriority = 0,
                     MuzzleCheck = false,
                     Debug = false,
-                    RestrictionRadius = 7.5f, // Meters, radius of sphere disable this gun if another is present
+                    RestrictionRadius = 7f, // Meters, radius of sphere disable this gun if another is present
                     CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype					
                 },
@@ -96,7 +96,7 @@ namespace WeaponThread {
                     BarrelsPerShot = 2,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 276, //heat generated per shot
                     MaxHeat = 140000, //max heat before weapon enters cooldown (70% of max heat)

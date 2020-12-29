@@ -74,7 +74,7 @@
       <Volume>100</Volume>
       <Model>Models\203howitzerMag.mwm</Model>
       <Capacity>1</Capacity>
-      <AmmoDefinitionId Subtype="H203mmammo" />
+      <AmmoDefinitionId Subtype="H203Ammo" />
     </AmmoMagazine>		
 
     <AmmoMagazine>
@@ -93,7 +93,7 @@
       <Volume>47</Volume>
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
-      <AmmoDefinitionId Subtype="R75ammo" />
+      <AmmoDefinitionId Subtype="C30Ammo" />
     </AmmoMagazine>
 	
     <AmmoMagazine>
@@ -112,7 +112,7 @@
       <Volume>47</Volume>
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
-      <AmmoDefinitionId Subtype="R75ammo" />
+      <AmmoDefinitionId Subtype="C30DUammo" />
     </AmmoMagazine>	
 	
   </AmmoMagazines>

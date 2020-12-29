@@ -317,7 +317,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.2, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -723,7 +723,7 @@ namespace WeaponThread
                             Restart = false,
                             MaxDistance = 5000,
                             MaxDuration = 0.1f,
-                            Scale = 4.2f,
+                            Scale = 14.2f,
                             HitPlayChance = 1f,
                         },
                     },
@@ -1272,7 +1272,7 @@ namespace WeaponThread
         private AmmoDef C30mmAmmoAT => new AmmoDef
         {
             AmmoMagazine = "C30DUammo",
-            AmmoRound = "30mmAmmoDUHE",
+            AmmoRound = "30mmDUAmmo",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.003f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -1767,7 +1767,7 @@ namespace WeaponThread
          private AmmoDef C30mmAmmoATT => new AmmoDef
         {
             AmmoMagazine = "C30DUammo",
-            AmmoRound = "30mmAmmoDUHET",
+            AmmoRound = "30mmDUAmmoT",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.003f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
@@ -1799,7 +1799,7 @@ namespace WeaponThread
             Pattern = new AmmoPatternDef
             {
                 Ammos = new[] {
-                    "30mmAmmoDUHET", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU",
+                    "30mmDUAmmoT", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU", "30mmAmmoDU",
                 },
                 Enable = true,
                 TriggerChance = 1f,
