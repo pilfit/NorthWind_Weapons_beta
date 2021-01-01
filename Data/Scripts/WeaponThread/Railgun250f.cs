@@ -140,7 +140,9 @@ namespace WeaponThread {
             },
             Ammos = new [] {
                 R250ammo,
-				railgunShrapnel3
+				railgunShrapnel3,
+                RailFXshotl,
+                RailFXshotl2
                 
             },
             Animations = Railgunx_Animation,

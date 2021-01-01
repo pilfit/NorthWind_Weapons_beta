@@ -55,7 +55,7 @@
 			<BlockPairName>RailgunxTurretS</BlockPairName>
             <EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="RailgunxTurretS" />
-			<InventoryMaxVolume>0.011</InventoryMaxVolume>
+			<InventoryMaxVolume>0.041</InventoryMaxVolume>
             <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
             <DamagedSound>ParticleWeapExpl</DamagedSound>
             <ResourceSinkGroup>Defense</ResourceSinkGroup>
@@ -192,7 +192,7 @@
 			<BlockPairName>RailgunxTurret</BlockPairName>
             <EdgeType>Light</EdgeType>
 			<WeaponDefinitionId Subtype="RailgunxTurret" />
-			<InventoryMaxVolume>0.195</InventoryMaxVolume>
+			<InventoryMaxVolume>1.085</InventoryMaxVolume>
             <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
             <DamagedSound>ParticleWeapExpl</DamagedSound>
             <ResourceSinkGroup>Defense</ResourceSinkGroup>

@@ -73,7 +73,7 @@ namespace WeaponThread {
                     MinElevation = -5,
                     MaxElevation = 355,
                     FixedOffset = false,
-                    InventorySize = 0.185f,
+                    InventorySize = 0.361f,
                     Offset = Vector(x: 2.3, y: 0, z: 0),
                 },
                 Other = new OtherDef {
@@ -140,8 +140,10 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                R250ammoT,
-				railgunShrapnel3
+                R250ammo,
+				railgunShrapnel3,
+                RailFXshotl,
+                RailFXshotl2
 
             },
             Animations = Railgunxturret_Animation2,
