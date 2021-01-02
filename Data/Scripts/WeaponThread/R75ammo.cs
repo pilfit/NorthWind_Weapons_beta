@@ -48,7 +48,7 @@ namespace WeaponThread
                 Fragments = 10,
 				Reverse = false,
 				RandomizeDir = false,
-                Degrees = 120, // 0 - 360
+                Degrees = 190, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -165,7 +165,7 @@ namespace WeaponThread
                 DesiredSpeed = 3000,
                 MaxTrajectory = 3000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -457,9 +457,9 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 1f,
+                        Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 50, green: 15, blue: 0, alpha: 1),
+                        Color = Color(red: 40, green: 20, blue: 1, alpha: 1),
                     },
                     Trail = new TrailDef
                     {

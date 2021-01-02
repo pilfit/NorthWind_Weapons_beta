@@ -48,7 +48,7 @@ namespace WeaponThread {
             {
                 WeaponName = "RailgunxTurretD", // name of weapon in terminal
                 DeviateShotAngle = 0.1f,
-                AimingTolerance = 0.5f, // 0 - 180 firing angle
+                AimingTolerance = 1.0f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
@@ -66,8 +66,8 @@ namespace WeaponThread {
                     LockOnFocus = true,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.0012f,
-                    ElevateRate = 0.0014f,
+                    RotateRate = 0.002f,
+                    ElevateRate = 0.002f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -5,

@@ -47,7 +47,7 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "150mm Railgun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.4f,
+                DeviateShotAngle = 0.2f,
                 AimingTolerance = 0.8f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -66,7 +66,7 @@ namespace WeaponThread {
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.002f,
+                    RotateRate = 0.003f,
                     ElevateRate = 0.003f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,

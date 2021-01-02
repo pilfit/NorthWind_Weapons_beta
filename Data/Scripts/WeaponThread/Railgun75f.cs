@@ -46,7 +46,7 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "75mm Railgun", // name of weapon in terminal
-                DeviateShotAngle = 0.3f,
+                DeviateShotAngle = 0.2f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -83,7 +83,7 @@ namespace WeaponThread {
                     Debug = false,
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 30,
+                    RateOfFire = 180,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.

@@ -27,7 +27,7 @@ namespace WeaponThread
             HybridRound = true, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.35f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 15000f,
-            Mass = 60f, // in kilograms
+            Mass = 50f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
 			HardPointUsable = true,
@@ -48,7 +48,7 @@ namespace WeaponThread
                 Fragments = 15,
 				Reverse = false,
 				RandomizeDir = false,
-                Degrees = 120, // 0 - 360
+                Degrees = 190, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -165,7 +165,7 @@ namespace WeaponThread
                 DesiredSpeed = 2500,
                 MaxTrajectory = 4000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -387,8 +387,8 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 5000,
-                MaxTrajectory = 20f,
+                DesiredSpeed = 2500,
+                MaxTrajectory = 25f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
@@ -457,9 +457,9 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 1f,
+                        Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 1, green: 0, blue: 0, alpha: 1),
+                        Color = Color(red: 40, green: 20, blue: 1, alpha: 1),
                     },
                     Trail = new TrailDef
                     {
