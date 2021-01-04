@@ -142,7 +142,8 @@ namespace WeaponThread {
                 R150ammo,
 				railgunShrapnel2,
                 RailFXshot,
-                RailFXshot2                
+                RailFXshot2,
+                railgunShrapnel2B                
                 
             },
             Animations = Railgunx150f_Animation,

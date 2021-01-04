@@ -99,6 +99,22 @@
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30DUammo" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
     </Blueprint>	
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CRAM30mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>30mm Standard Ammo</DisplayName>
+      <Icon>Textures\icons\30mmAmmoCan.png</Icon>
+      <Prerequisites>
+        <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="4" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30Ammo" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>    
 	
   </Blueprints>
 

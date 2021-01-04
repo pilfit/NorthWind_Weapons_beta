@@ -47,7 +47,7 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "30mm Rotary Cannon", // name of weapon in terminal
-                DeviateShotAngle = 0.5f,
+                DeviateShotAngle = 0.4f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -142,7 +142,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                C30mmAmmo, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoAT, C30mmAmmoDU,
+                C30mmAmmo, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoAT, C30mmAmmoDU, C30mmCRAMAmmo,
 				
                 
             },

@@ -114,6 +114,25 @@
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="C30DUammo" />
     </AmmoMagazine>	
+
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>CRAM30mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>30mm C-RAM Ammo</DisplayName>
+      <Icon>Textures\icons\30mmAmmoCan.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>70</Mass>
+      <Volume>47</Volume>
+      <Model>Models\30mmAmmobox.mwm</Model>
+      <Capacity>120</Capacity>
+      <AmmoDefinitionId Subtype="C30DUammo" />
+    </AmmoMagazine>	
 	
   </AmmoMagazines>
 </Definitions>

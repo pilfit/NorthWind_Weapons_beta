@@ -48,7 +48,7 @@ namespace WeaponThread
                 Fragments = 20,
 				Reverse = false,
 				RandomizeDir = false,
-                Degrees = 190, // 0 - 360
+                Degrees = 120, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -90,7 +90,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1f,
+                    Modifier = 0.4f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -156,7 +156,7 @@ namespace WeaponThread
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 200, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 2000,
                 MaxTrajectory = 5000f,

@@ -51,13 +51,13 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "30mm Conventional CIWS", // name of weapon in terminal
-                DeviateShotAngle = 0.8f,
+                DeviateShotAngle = 0.4f,
                 AimingTolerance = 3.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
-                    RateOfFire = true,
+                    RateOfFire = false,
                     DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload =  false,
@@ -147,7 +147,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-               C30mmAmmoT, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoATT, C30mmAmmoDU,
+               C30mmAmmoT, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoATT, C30mmAmmoDU, C30mmCRAMAmmo,
 
             },
             Animations = ConCIWSAnim,

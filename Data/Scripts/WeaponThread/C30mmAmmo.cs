@@ -165,7 +165,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -238,14 +238,14 @@ namespace WeaponThread
                         Enable = true,
                         Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 50.0f, green: 8.20f, blue: 0.5f, alpha: 1f),
+                        Color = Color(red: 30.0f, green: 8.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 6.162f, blue: 0.0f, alpha: 1f),
+                        Color = Color(red: 18.985f, green: 6.162f, blue: 0.0f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -412,7 +412,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -665,7 +665,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -918,7 +918,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 10f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1166,7 +1166,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1239,14 +1239,14 @@ namespace WeaponThread
                         Enable = true,
                         Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 50.0f, green: 8.20f, blue: 0.5f, alpha: 1f),
+                        Color = Color(red: 30.0f, green: 8.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 6.162f, blue: 0.0f, alpha: 1f),
+                        Color = Color(red: 18.985f, green: 6.162f, blue: 0.0f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -1414,7 +1414,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1487,14 +1487,14 @@ namespace WeaponThread
                         Enable = true,
                         Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 50.0f, green: 50.0f, blue: 40.0f, alpha: 1f),
+                        Color = Color(red: 30.0f, green: 25.0f, blue: 20.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 18.162f, blue: 5.0f, alpha: 1f),
+                        Color = Color(red: 18.985f, green: 18.162f, blue: 5.0f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -1661,7 +1661,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1909,7 +1909,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1982,14 +1982,14 @@ namespace WeaponThread
                         Enable = true,
                         Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 50.0f, green: 50.0f, blue: 40.0f, alpha: 1f),
+                        Color = Color(red: 30.0f, green: 25.0f, blue: 20.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 18.162f, blue: 5.0f, alpha: 1f),
+                        Color = Color(red: 18.985f, green: 18.162f, blue: 5.0f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -2011,6 +2011,259 @@ namespace WeaponThread
                 HitPlayShield = true,
             }, // Don't edit below this line
         };
- 
+
+         private AmmoDef C30mmCRAMAmmo => new AmmoDef
+        {
+            AmmoMagazine = "CRAM30mmAmmo",
+            AmmoRound = "30mmCRAMAmmo",
+            HybridRound = false, //AmmoMagazine based weapon with energy cost
+            EnergyCost = 0.003f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+            BaseDamage = 1f,
+            Mass = 0.5f, // in kilograms
+            Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            BackKickForce = 1000f,
+            DecayPerShot = 0f,			
+			HardPointUsable = true,
+            IgnoreWater = false,			
+
+            Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
+            {
+                Shape = LineShape,
+                Diameter = 0.1,
+            },
+            ObjectsHit = new ObjectsHitDef
+            {
+                MaxObjectsHit = 0, // 0 = disabled
+                CountBlocks = false, // counts gridBlocks and not just entities hit
+            },
+            Shrapnel = new ShrapnelDef
+            {
+                AmmoRound = "",
+                Fragments = 0,
+				Reverse = false,
+				RandomizeDir = false,
+                Degrees = 120, // 0 - 360
+            },
+            Pattern = new AmmoPatternDef
+            {
+                Ammos = new[] {
+                    "",
+                },
+                Enable = false,
+                TriggerChance = 1f,
+                Random = false,
+                RandomMin = 1,
+                RandomMax = 1,
+                SkipParent = false,
+            },			
+            DamageScales = new DamageScaleDef
+            {
+                MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
+                DamageVoxels = false, // true = voxels are vulnerable to this weapon
+                SelfDamage = false, // true = allow self damage.
+                HealthHitModifier = 0.3, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
+                VoxelHitModifier = 10,				
+                Characters = -1f,
+				FallOff = new FallOffDef
+                {
+                 Distance = 1000f, // Distance at which max damage begins falling off.
+                 MinMultipler = 1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+		        },
+                Grids = new GridSizeDef
+                {
+                    Large = 0.4f,
+                    Small = -1f,
+                },
+                Armor = new ArmorDef
+                {
+                    Armor = -1f,
+                    Light = 0.5f,
+                    Heavy = 0f,
+                    NonArmor = -1f,
+                },
+                Shields = new ShieldDef
+                {
+                    Modifier = 1.2f,
+                    Type = Kinetic,
+                    BypassModifier = -1f,
+                },
+                // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
+                Custom = new CustomScalesDef
+                {
+                    IgnoreAllOthers = false,
+                    Types = new[]
+                    {
+                        new CustomBlocksDef
+                        {
+                            SubTypeId = "LargeHeavyBlockArmorBlock",
+                            Modifier = -1f,
+                        },
+                        new CustomBlocksDef
+                        {
+                            SubTypeId = "Test2",
+                            Modifier = -1f,
+                        },
+                    },
+                },
+            },
+            AreaEffect = new AreaDamageDef
+            {
+                AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
+                Base = new AreaInfluence
+                {
+                    Radius = 0f, // the sphere of influence of area effects
+                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                },
+                Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
+                {
+                    Interval = 0,
+                    PulseChance = 0,
+                },
+                Explosions = new ExplosionDef
+                {
+                    NoVisuals = false,
+                    NoSound = false,
+                    NoShrapnel = false,
+                    NoDeformation = false,
+                    Scale = 4f,
+                    CustomParticle = "",
+                    CustomSound = "",
+                },
+                Detonation = new DetonateDef
+                {
+                    DetonateOnEnd = true,
+                    ArmOnlyOnHit = false,
+                    DetonationDamage = 20,
+                    DetonationRadius = 1f,
+                    MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
+                },
+                EwarFields = new EwarFieldsDef
+                {
+                    Duration = 60,
+                    StackDuration = true,
+                    Depletable = false,
+                    MaxStacks = 10,
+                    TriggerRange = 5f,
+                },
+            },
+            Beams = new BeamDef
+            {
+                Enable = false,
+                VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
+                ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
+                RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
+                OneParticle = false, // Only spawn one particle hit per beam weapon.
+            },
+            Trajectory = new TrajectoryDef
+            {
+                Guidance = None,
+                TargetLossDegree = 80f,
+                TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 200, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                AccelPerSec = 0f,
+                DesiredSpeed = 800,
+                MaxTrajectory = 1800f,
+                FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
+                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
+				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+                Smarts = new SmartsDef
+                {
+                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 1f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0, // controls how sharp the trajectile may turn
+                    TrackingDelay = 1, // Measured in Shape diameter units traveled.
+                    MaxChaseTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
+                },
+                Mines = new MinesDef
+                {
+                    DetectRadius = 200,
+                    DeCloakRadius = 100,
+                    FieldTime = 1800,
+                    Cloak = false,
+                    Persist = false,
+                },
+            },
+            AmmoGraphics = new GraphicDef
+            {
+                ModelName = "",
+                VisualProbability = 1f,
+                ShieldHitDraw = true,
+                Particles = new AmmoParticleDef
+                {
+                    Ammo = new ParticleDef
+                    {
+                        Name = "", //ShipWelderArc
+                        Color = Color(red: 255, green: 60, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false,
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 1,
+                            Scale = 0.1f,
+                        },
+                    },
+                    Hit = new ParticleDef
+                    {
+                        Name = "Small30mmExplo",
+                        ApplyToShield = true,
+                        ShrinkByDistance = true,
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false,
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 0.1f,
+                            Scale = 4.2f,
+                            HitPlayChance = 1f,
+                        },
+                    },
+                },
+                Lines = new LineDef
+                {
+                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
+                    Tracer = new TracerBaseDef
+                    {
+                        Enable = true,
+                        Length = 9f,
+                        Width = 0.05f,
+                        Color = Color(red: 15.80f, green: 3.0f, blue: 3.0f, alpha: 0.8f),
+                    },
+                    Trail = new TrailDef
+                    {
+                        Enable = true,
+                        Material = "WeaponLaser",
+                        DecayTime = 1,
+                        Color = Color(red: 1.985f, green: 0f, blue: 0f, alpha: 0.8f),
+                        Back = false,
+                        CustomWidth = 0.05f,
+                        UseWidthVariance = true,
+                        UseColorFade = true,
+                    },
+                    OffsetEffect = new OffsetEffectDef
+                    {
+                        MaxOffset = 0,// 0 offset value disables this effect
+                        MinLength = 0.2f,
+                        MaxLength = 3,
+                    },
+                },
+            },
+            AmmoAudio = new AmmoAudioDef
+            {
+                TravelSound = "",
+                HitSound = "ArcWepExplSmall",
+                HitPlayChance = 1f,
+                HitPlayShield = true,
+            }, // Don't edit below this line
+        };
+
     }
 }
