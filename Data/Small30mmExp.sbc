@@ -217,7 +217,7 @@
               </Keys>
             </Property>
             <Property Name="Rotation velocity" AnimationType="Const" Type="Float">
-              <ValueFloat>1</ValueFloat>
+              <ValueFloat>0</ValueFloat>
             </Property>
             <Property Name="Radius" AnimationType="Animated2D" Type="Float">
               <Keys>
@@ -227,22 +227,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>0.90</ValueFloat>
+                        <ValueFloat>0.60</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.1489879</Time>
-                        <ValueFloat>0.90</ValueFloat>
+                        <ValueFloat>0.60</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.2866397</Time>
-                        <ValueFloat>1.3</ValueFloat>
+                        <ValueFloat>0.9</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>1.8</ValueFloat>
+                        <ValueFloat>1.2</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -290,7 +290,7 @@
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property Name="Gravity" AnimationType="Const" Type="Float">
-              <ValueFloat>0</ValueFloat>
+              <ValueFloat>-0.2</ValueFloat>
             </Property>
             <Property Name="Offset" AnimationType="Const" Type="Vector3">
               <ValueVector3>
@@ -662,22 +662,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>0.4</ValueFloat>
+                        <ValueFloat>0.6</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.33</Time>
-                        <ValueFloat>0.4</ValueFloat>
+                        <ValueFloat>0.8</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.66</Time>
-                        <ValueFloat>0.4</ValueFloat>
+                        <ValueFloat>1</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>0.4</ValueFloat>
+                        <ValueFloat>1.4</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -752,7 +752,7 @@
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property Name="Gravity" AnimationType="Const" Type="Float">
-              <ValueFloat>-0.09</ValueFloat>
+              <ValueFloat>-0.19</ValueFloat>
             </Property>
             <Property Name="Offset" AnimationType="Const" Type="Vector3">
               <ValueVector3>
