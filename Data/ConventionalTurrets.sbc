@@ -72,7 +72,75 @@
             <IsAirTight>false</IsAirTight> 			
 		</Definition>
 		
-
+        <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		
+		  <Id>
+			<TypeId>LargeMissileTurret</TypeId>
+			<SubtypeId>C100mmTurret</SubtypeId>
+		  </Id>
+			<DisplayName>100mm Gun Turret</DisplayName>
+			<Description>100mm dual purpose gun turret. Proximity fused shells function as flak. </Description>
+			<Icon>Textures\icons\CIWS.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\C100mmTurret.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\C100mmTurret_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\C100mmTurret_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\C100mmTurret_BS3.mwm"/>
+			</BuildProgressModels>
+			
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+		   
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="50" />
+             <Component Subtype="Construction" Count="80" />
+             <Component Subtype="MetalGrid" Count="20" />
+			 <Component Subtype="SmallTube" Count="12" /> 
+             <Component Subtype="LargeTube" Count="6" />
+             <Component Subtype="Motor" Count="30" />			 
+             <Component Subtype="Computer" Count="20" />
+             <Component Subtype="SteelPlate" Count="150" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>ConventionalTurrets</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>			
+			<WeaponDefinitionId Subtype="CIWS" />
+			<InventoryMaxVolume>0.062</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+			<MaxRangeMeters>4000</MaxRangeMeters>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>525</PCU>
+            <IsAirTight>false</IsAirTight> 			
+		</Definition>
 		
 	</CubeBlocks>
 </Definitions>

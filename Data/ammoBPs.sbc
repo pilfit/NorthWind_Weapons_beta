@@ -105,7 +105,7 @@
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>CRAM30mmAmmo</SubtypeId>
       </Id>
-      <DisplayName>30mm Standard Ammo</DisplayName>
+      <DisplayName>30mm C-RAM Ammo</DisplayName>
       <Icon>Textures\icons\30mmAmmoCan.png</Icon>
       <Prerequisites>
         <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
@@ -115,7 +115,37 @@
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30Ammo" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
     </Blueprint>    
-	
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>C100mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>100mm HE Ammo</DisplayName>
+      <Icon>Textures\icons\30mmAmmoCan.png</Icon>
+      <Prerequisites>
+        <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="4" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30Ammo" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint> 
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>C100ShellCasingToIron</SubtypeId>
+      </Id>
+      <DisplayName>100mm Casing Scrap</DisplayName>
+      <Icon>Textures\GUI\Icons\component\ScrapMetalComponent.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="C100ShellCasing" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>     
+
   </Blueprints>
 
    <BlueprintClassEntries>
@@ -127,8 +157,8 @@
 		<Entry Class="Components" BlueprintSubtypeId="H203Ammo" />
 		<Entry Class="Components" BlueprintSubtypeId="C30Ammo" />
 		<Entry Class="Components" BlueprintSubtypeId="C30DUammo" />		
-		
-
+		<Entry Class="Components" BlueprintSubtypeId="CRAM30mmAmmo" />	
+		<Entry Class="Components" BlueprintSubtypeId="C100mmAmmo" />	
 		
 	
 		<Entry Class="Ammo" BlueprintSubtypeId="R75ammo" />
@@ -137,8 +167,11 @@
 		<Entry Class="Ammo" BlueprintSubtypeId="H203Ammo" />		
 		<Entry Class="Ammo" BlueprintSubtypeId="C30Ammo" />		
 		<Entry Class="Ammo" BlueprintSubtypeId="C30DUammo" />		
+    <Entry Class="Ammo" BlueprintSubtypeId="CRAM30mmAmmo" />	
+    <Entry Class="Ammo" BlueprintSubtypeId="C100mmAmmo" />		
 
-	
+    <Entry Class="CommonMetals" BlueprintSubtypeId="C100ShellCasingToIron" />    
+
   </BlueprintClassEntries>
 	
 

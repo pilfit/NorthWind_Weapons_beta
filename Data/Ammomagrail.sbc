@@ -133,6 +133,46 @@
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="C30DUammo" />
     </AmmoMagazine>	
+
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C100mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>100mm HE Ammo</DisplayName>
+      <Icon>Textures\icons\30mmAmmoCan.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>70</Mass>
+      <Volume>47</Volume>
+      <Model>Models\C100AmmoMag.mwm</Model>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="C100mmAmmo" />
+    </AmmoMagazine>	    
 	
   </AmmoMagazines>
+
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>C100ShellCasing</SubtypeId>
+            </Id>
+            <DisplayName>100mm Casing Scrap</DisplayName>
+            <Icon>Textures\GUI\Icons\component\ScrapMetalComponent.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.2</Y>
+                <Z>0.1</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.254</Volume>
+            <Model>Models\C100ShellCasing.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+        </Component>
+</Components>
+
 </Definitions>
