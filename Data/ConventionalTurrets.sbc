@@ -80,7 +80,7 @@
 		  </Id>
 			<DisplayName>100mm Gun Turret</DisplayName>
 			<Description>100mm dual purpose gun turret. Proximity fused shells function as flak. </Description>
-			<Icon>Textures\icons\CIWS.png</Icon>
+			<Icon>Textures\icons\100mmIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -114,12 +114,12 @@
 		    <MirroringY>Z</MirroringY>
 		    <MirroringZ>Y</MirroringZ>
 			<Components>
-             <Component Subtype="SteelPlate" Count="50" />
+             <Component Subtype="SteelPlate" Count="60" />
              <Component Subtype="Construction" Count="80" />
-             <Component Subtype="MetalGrid" Count="20" />
+             <Component Subtype="MetalGrid" Count="25" />
 			 <Component Subtype="SmallTube" Count="12" /> 
-             <Component Subtype="LargeTube" Count="6" />
-             <Component Subtype="Motor" Count="30" />			 
+             <Component Subtype="LargeTube" Count="3" />
+             <Component Subtype="Motor" Count="20" />			 
              <Component Subtype="Computer" Count="20" />
              <Component Subtype="SteelPlate" Count="150" />
             </Components>

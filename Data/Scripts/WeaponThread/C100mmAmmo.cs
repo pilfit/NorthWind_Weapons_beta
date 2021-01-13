@@ -79,7 +79,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = -1f,
                 },
                 Armor = new ArmorDef
                 {
@@ -103,7 +103,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -140,8 +140,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 500,
-                    DetonationRadius = 5,
+                    DetonationDamage = 300,
+                    DetonationRadius = 4,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -291,13 +291,13 @@ namespace WeaponThread
             Ejection = new AmmoEjectionDef
             {
                 Type = Item, // Particle or Item (Inventory Component)
-                Speed = 20f, // Speed inventory is ejected from in dummy direction
+                Speed = 4f, // Speed inventory is ejected from in dummy direction
                 SpawnChance = 1f, // chance of triggering effect (0 - 1)
                 CompDef = new ComponentDef
                 {
                     ItemDefinition = "C100ShellCasing", //InventoryComponent name
                     LifeTime = 300, // how long item should exist in world
-                    Delay = 60, // delay in ticks after shot before ejected
+                    Delay = 30, // delay in ticks after shot before ejected
                 }
             },
 
@@ -311,7 +311,7 @@ namespace WeaponThread
             AmmoRound = "C100mmShrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 200f,
+            BaseDamage = 100f,
             Mass = 2f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -363,12 +363,12 @@ namespace WeaponThread
 		        },
                 Grids = new GridSizeDef
                 {
-                    Large = -1f,
-                    Small = 0.5f,
+                    Large = 0.5f,
+                    Small = -1f,
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = 0.8f,
+                    Armor = -1f,
                     Light = -1f,
                     Heavy = 0.5f,
                     NonArmor = -1f,
@@ -454,7 +454,7 @@ namespace WeaponThread
                 MaxLifeTime = 15, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 1000,
-                MaxTrajectory = 35f,
+                MaxTrajectory = 45f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
@@ -524,7 +524,7 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f,
+                        Length = 1f,
                         Width = 0.1f,
                         Color = Color(red: 50.0f, green: 5.20f, blue: 1.1f, alpha: 1f),
                     },
@@ -532,7 +532,7 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 10,
+                        DecayTime = 1,
                         Color = Color(red: 5.585f, green: 3.562f, blue: 2.21f, alpha: 1f),
                         Back = false,
                         CustomWidth = 0.3f,

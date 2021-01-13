@@ -71,7 +71,7 @@ namespace WeaponThread {
                     MinAzimuth = 0,
                     MaxAzimuth = 0,
                     MinElevation = -5,
-                    MaxElevation = 355,
+                    MaxElevation = 35,
                     FixedOffset = false,
                     InventorySize = 0.361f,
                     Offset = Vector(x: 2.3, y: 0, z: 0),

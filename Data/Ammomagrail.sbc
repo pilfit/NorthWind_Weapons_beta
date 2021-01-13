@@ -140,7 +140,7 @@
         <SubtypeId>C100mmAmmo</SubtypeId>
       </Id>
       <DisplayName>100mm HE Ammo</DisplayName>
-      <Icon>Textures\icons\30mmAmmoCan.png</Icon>
+      <Icon>Textures\icons\100mmMag.png</Icon>
       <Size>
         <X>0.25</X>
         <Y>0.2</Y>
