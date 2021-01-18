@@ -20,15 +20,15 @@ namespace WeaponThread
 { // Don't edit above this line
     partial class Weapons
     {
-        private AmmoDef C100mmAmmo => new AmmoDef
+        private AmmoDef C200mmAmmo => new AmmoDef
         {
-            AmmoMagazine = "C100mmAmmo",
-            AmmoRound = "C100mmAmmo",
+            AmmoMagazine = "H203Ammo",
+            AmmoRound = "C200mmAmmo",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
             Mass = 90f, // in kilograms
-            Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            Health = 8, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 15000f,
 			HardPointUsable = true,
 
@@ -44,7 +44,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "C100mmShrapnelbase",
+                AmmoRound = "C200mmShrapnelbase",
                 Fragments = 1,
 				Reverse = false,
 				RandomizeDir = false,
@@ -133,15 +133,15 @@ namespace WeaponThread
                     NoShrapnel = false,
                     NoDeformation = false,
                     Scale = 1,
-                    CustomParticle = "",
+                    CustomParticle = "LargeArtExplosionLight",
                     CustomSound = "",
                 },
                 Detonation = new DetonateDef
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 500,
-                    DetonationRadius = 5,
+                    DetonationDamage = 1500,
+                    DetonationRadius = 15,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -166,10 +166,10 @@ namespace WeaponThread
                 Guidance = TravelTo,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 400, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 500,
-                MaxTrajectory = 2500f,
+                DesiredSpeed = 450,
+                MaxTrajectory = 3500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 15), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
@@ -194,7 +194,7 @@ namespace WeaponThread
             },
             AmmoGraphics = new GraphicDef
             {
-                ModelName = "",
+                ModelName = "\\Models\\203HowitzerRound.mwm",
                 VisualProbability = 1f,
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
@@ -251,22 +251,22 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                     ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f,
+                        Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 50.80f, green: 6.20f, blue: 1.6f, alpha: 0.8f),
+                        Color = Color(red: 50.80f, green: 10.20f, blue: 1.6f, alpha: 1f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 10,
-                        Color = Color(red: 5.585f, green: 1.562f, blue: 0.21f, alpha: 0.8f),
+                        DecayTime = 15,
+                        Color = Color(red: 5.585f, green: 3.562f, blue: 0.21f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -290,12 +290,12 @@ namespace WeaponThread
 
             Ejection = new AmmoEjectionDef
             {
-                Type = Item, // Particle or Item (Inventory Component)
+                Type = Particle, // Particle or Item (Inventory Component)
                 Speed = 4f, // Speed inventory is ejected from in dummy direction
-                SpawnChance = 1f, // chance of triggering effect (0 - 1)
+                SpawnChance = 0f, // chance of triggering effect (0 - 1)
                 CompDef = new ComponentDef
                 {
-                    ItemDefinition = "C100ShellCasing", //InventoryComponent name
+                    ItemDefinition = "", //InventoryComponent name
                     LifeTime = 300, // how long item should exist in world
                     Delay = 30, // delay in ticks after shot before ejected
                 }
@@ -305,13 +305,13 @@ namespace WeaponThread
  
  
 
-        private AmmoDef C100mmShrapnel => new AmmoDef
+        private AmmoDef C200mmShrapnel => new AmmoDef
         {
             AmmoMagazine = "",
-            AmmoRound = "C100mmShrapnel",
+            AmmoRound = "C200mmShrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 100f,
+            BaseDamage = 150f,
             Mass = 2f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -454,7 +454,7 @@ namespace WeaponThread
                 MaxLifeTime = 20, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 900,
-                MaxTrajectory = 20f,
+                MaxTrajectory = 30f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
@@ -556,10 +556,10 @@ namespace WeaponThread
             }, // Don't edit below this line
         };
 
-          private AmmoDef C100mmShrapnelbase => new AmmoDef
+          private AmmoDef C200mmShrapnelbase => new AmmoDef
         {
             AmmoMagazine = "",
-            AmmoRound = "C100mmShrapnelbase",
+            AmmoRound = "C200mmShrapnelbase",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.0001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 10f,
@@ -582,8 +582,8 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "C100mmShrapnel",
-                Fragments = 50,
+                AmmoRound = "C200mmShrapnel",
+                Fragments = 100,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360
@@ -722,7 +722,7 @@ namespace WeaponThread
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 2, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 3, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 500f,
                 DesiredSpeed = 1,
                 MaxTrajectory = 1f,

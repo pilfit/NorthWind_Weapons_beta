@@ -112,7 +112,7 @@
 		<Item Amount="4" TypeId="Ingot" SubtypeId="Nickel" />
 		<Item Amount="7" TypeId="Ingot" SubtypeId="Magnesium" />
       </Prerequisites>
-      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30Ammo" />
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="CRAM30mmAmmo" />
       <BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
     </Blueprint>    
 
@@ -129,7 +129,7 @@
 		<Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
     <Item Amount="2" TypeId="Ingot" SubtypeId="Cobalt" />
       </Prerequisites>
-      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30Ammo" />
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C100mmAmmo" />
       <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
     </Blueprint> 
 

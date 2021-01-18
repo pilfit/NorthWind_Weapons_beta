@@ -2413,7 +2413,7 @@ namespace WeaponThread
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 10, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 8, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 750,
                 MaxTrajectory = 200f,
@@ -2488,7 +2488,7 @@ namespace WeaponThread
                         Enable = true,
                         Length = 4f,
                         Width = 4.25f,
-                        Color = Color(red: 45.0f, green: 40.0f, blue: 40.0f, alpha: 1f),
+                        Color = Color(red: 45.0f, green: 40.0f, blue: 40.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
