@@ -51,7 +51,7 @@ namespace WeaponThread {
             },
             HardPoint = new HardPointDef 
             {
-                WeaponName = "200mm Gun Turret", // name of weapon in terminal
+                WeaponName = "203mm Gun Turret", // name of weapon in terminal
                 DeviateShotAngle = 0.6f,
                 AimingTolerance = 0.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
@@ -107,7 +107,7 @@ namespace WeaponThread {
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "",
-                    FiringSound = "ArcWepExplSmall", // WepShipGatlingShot
+                    FiringSound = "ArtilleryFireNW", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "",
@@ -145,7 +145,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                C200mmAmmo, C200mmShrapnel, C200mmShrapnelbase,               
+                C200mmAmmo, C200mmShrapnel, C200mmShrapnelbase, C200mmAmmoImpact,               
 
             },
             Animations = C200Turret_Animation,

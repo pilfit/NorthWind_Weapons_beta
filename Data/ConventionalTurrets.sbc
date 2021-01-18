@@ -148,9 +148,9 @@
 			<TypeId>LargeMissileTurret</TypeId>
 			<SubtypeId>C200mmTurret</SubtypeId>
 		  </Id>
-			<DisplayName>200mm Gun Turret</DisplayName>
-			<Description>200mm dual purpose gun turret. Proximity fused shells function as flak. </Description>
-			<Icon>Textures\icons\100mmIcon.png</Icon>
+			<DisplayName>203mm Gun Turret</DisplayName>
+			<Description>203mm dual purpose gun turret. Proximity fused shells function as flak. </Description>
+			<Icon>Textures\icons\C200TurretIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>

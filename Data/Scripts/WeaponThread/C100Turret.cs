@@ -106,7 +106,7 @@ namespace WeaponThread {
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "",
-                    FiringSound = "ArcWepExplSmall", // WepShipGatlingShot
+                    FiringSound = "LightArtilleryFireNW", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "",
@@ -144,7 +144,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                C100mmAmmo, C100mmShrapnel, C100mmShrapnelbase,               
+                C100mmAmmo, C100mmShrapnel, C100mmShrapnelbase, C100mmAmmoImpact,               
 
             },
             Animations = C100Turret_Animation,

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sounds>
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>LightArtilleryFireNW</SubtypeId>
+      </Id>
+      <Volume>2.5</Volume>
+      <Category>SHOT</Category>
+      <MaxDistance>400</MaxDistance>
+
+
+      <PreventSynchronization>0</PreventSynchronization>
+      <SoundLimit>10</SoundLimit>
+      <DistantSounds>
+        <DistantSound DistanceCrossfade="10" Distance="400" Sound="LightArtilleryFireNWDist" />
+      </DistantSounds>
+	  <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\LightArtilleryNear1.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\LightArtilleryNear2.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\LightArtilleryNear3.wav</Start>
+        </Wave>		
+	
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>LightArtilleryFireNWDist</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>1200</MaxDistance>
+      <Volume>1.5</Volume>
+      <Loopable>false</Loopable>	  
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\LightArtilleryFar1.wav</Start>
+        </Wave>	
+        <Wave Type="D3">
+          <Start>Audio\LightArtilleryFar2.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\LightArtilleryFar3.wav</Start>
+        </Wave>		
+      </Waves>
+    </Sound>
+	
+
+	
+  </Sounds>
+</Definitions>
