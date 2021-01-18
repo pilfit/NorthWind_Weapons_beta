@@ -86,7 +86,7 @@ namespace WeaponThread {
                     EnergyPriority = 0,
                     MuzzleCheck = false,
                     Debug = false,
-                    RestrictionRadius = 7f, // Meters, radius of sphere disable this gun if another is present
+                    RestrictionRadius = 6.2f, // Meters, radius of sphere disable this gun if another is present
                     CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype					
                 },

@@ -159,6 +159,10 @@
 			<Model>Models\C200mm.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<MountPoints>
+		        <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />
+		        <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />
+		        <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />
+		        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />			
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
 			</MountPoints>
 			<BuildProgressModels>
@@ -184,14 +188,14 @@
 		    <MirroringY>Z</MirroringY>
 		    <MirroringZ>Y</MirroringZ>
 			<Components>
-             <Component Subtype="SteelPlate" Count="60" />
-             <Component Subtype="Construction" Count="80" />
-             <Component Subtype="MetalGrid" Count="25" />
-			 <Component Subtype="SmallTube" Count="12" /> 
-             <Component Subtype="LargeTube" Count="3" />
-             <Component Subtype="Motor" Count="20" />			 
+             <Component Subtype="SteelPlate" Count="80" />
+             <Component Subtype="Construction" Count="90" />
+             <Component Subtype="MetalGrid" Count="30" />
+			 <Component Subtype="SmallTube" Count="15" /> 
+             <Component Subtype="LargeTube" Count="6" />
+             <Component Subtype="Motor" Count="30" />			 
              <Component Subtype="Computer" Count="20" />
-             <Component Subtype="SteelPlate" Count="150" />
+             <Component Subtype="SteelPlate" Count="225" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>200mmTurret</BlockPairName>

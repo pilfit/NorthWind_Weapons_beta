@@ -46,7 +46,7 @@ namespace WeaponThread
             {
                 AmmoRound = "C200mmShrapnelbase",
                 Fragments = 1,
-				Reverse = false,
+				Reverse = true,
 				RandomizeDir = false,
                 Degrees = 0, // 0 - 360
             },
@@ -79,7 +79,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = 0.3f,
                 },
                 Armor = new ArmorDef
                 {
@@ -330,7 +330,7 @@ namespace WeaponThread
             {
                 AmmoRound = "C200mmShrapnelbase",
                 Fragments = 1,
-				Reverse = false,
+				Reverse = true,
 				RandomizeDir = false,
                 Degrees = 0, // 0 - 360
             },
@@ -363,7 +363,7 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = 0.3f,
                 },
                 Armor = new ArmorDef
                 {
@@ -594,7 +594,7 @@ namespace WeaponThread
             AmmoRound = "C200mmShrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 150f,
+            BaseDamage = 200f,
             Mass = 2f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -646,8 +646,8 @@ namespace WeaponThread
 		        },
                 Grids = new GridSizeDef
                 {
-                    Large = 0.5f,
-                    Small = -1f,
+                     Large = -1f,
+                    Small = 0.6f,
                 },
                 Armor = new ArmorDef
                 {
@@ -1006,9 +1006,9 @@ namespace WeaponThread
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 3, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AccelPerSec = 500f,
-                DesiredSpeed = 1,
-                MaxTrajectory = 1f,
+                AccelPerSec = 0f,
+                DesiredSpeed = 500,
+                MaxTrajectory = 3f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory

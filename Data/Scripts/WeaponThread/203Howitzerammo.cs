@@ -46,9 +46,9 @@ namespace WeaponThread
             {
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
-				Reverse = false,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 360, // 0 - 360
+                Degrees = 0, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -67,7 +67,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.5, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 20, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = -1f,
                 VoxelHitModifier = 2f,					
@@ -297,9 +297,9 @@ namespace WeaponThread
             {
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
-				Reverse = false,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 360, // 0 - 360
+                Degrees = 0, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -548,9 +548,9 @@ namespace WeaponThread
             {
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
-				Reverse = false,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 360, // 0 - 360
+                Degrees = 0, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -779,7 +779,7 @@ namespace WeaponThread
             AmmoRound = "H203mmammoShrap",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 200f,
+            BaseDamage = 150f,
             Mass = 2f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -832,11 +832,11 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.5f,
+                    Small = 0.6f,
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = 0.8f,
+                    Armor = -1f,
                     Light = -1f,
                     Heavy = 0.5f,
                     NonArmor = -1f,
@@ -1191,9 +1191,9 @@ namespace WeaponThread
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 6, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AccelPerSec = 500f,
-                DesiredSpeed = 10,
-                MaxTrajectory = 1f,
+                AccelPerSec = 0f,
+                DesiredSpeed = 350,
+                MaxTrajectory = 3f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
