@@ -90,7 +90,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1.2f,
+                    Modifier = 2f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -132,7 +132,7 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 15,
+                    Scale = 1,
                     CustomParticle = "",
                     CustomSound = "",
                 },
@@ -341,7 +341,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1.2f,
+                    Modifier = 2f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -592,7 +592,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1.2f,
+                    Modifier = 2f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -843,7 +843,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.2f,
+                    Modifier = 0.5f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },

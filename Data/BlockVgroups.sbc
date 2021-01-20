@@ -5,8 +5,8 @@
 		<BlockVariantGroup>
 			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Railgunturrets" />
 			<Icon>Textures\icons\railgun250ticon.png</Icon>
-			<DisplayName>DisplayName_Railgun_Turrets</DisplayName>
-			<Description>Description_Railgun_Turrets</Description>
+			<DisplayName>Railgun Turrets</DisplayName>
+			<Description>Railgun Turrets</Description>
 			<Blocks>
 				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="RailgunxTurretS" />
 				<Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="RailgunxTurretM" />
@@ -17,8 +17,8 @@
 		<BlockVariantGroup>
 			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Railgunfixed" />
 			<Icon>Textures\icons\Railgunf150icon.png</Icon>
-			<DisplayName>DisplayName_Fixed_Railguns</DisplayName>
-			<Description>Description_Fixed_Railguns</Description>
+			<DisplayName>Fixed Railguns</DisplayName>
+			<Description>Fixed Railguns</Description>
 			<Blocks>
 				<Block Type="MyObjectBuilder_SmallMissileLauncher" Subtype="Railgunx75f" />
 				<Block Type="MyObjectBuilder_SmallMissileLauncher" Subtype="Railgunx150f" />

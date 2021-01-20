@@ -52,8 +52,8 @@ namespace WeaponThread {
             {
                 WeaponName = "30mm Conventional CIWS", // name of weapon in terminal
                 DeviateShotAngle = 0.4f,
-                AimingTolerance = 3.15f, // 0 - 180 firing angle
-                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
+                AimingTolerance = 4.15f, // 0 - 180 firing angle
+                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
@@ -70,8 +70,8 @@ namespace WeaponThread {
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.018f,
-                    ElevateRate = 0.010f,
+                    RotateRate = 0.025f,
+                    ElevateRate = 0.018f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -10,

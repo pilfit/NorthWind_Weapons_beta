@@ -114,7 +114,7 @@ namespace WeaponThread
                 {
                     SubpartId = Names("C100Barrel"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
-                    StartupFireDelay = 60,
+                    StartupFireDelay = 50,
                     AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),

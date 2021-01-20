@@ -236,16 +236,16 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f,
+                        Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 30.0f, green: 8.20f, blue: 0.5f, alpha: 0.8f),
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 6.162f, blue: 0.0f, alpha: 0.8f),
+                        DecayTime = 1,
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -762,7 +762,7 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "ArcWepExplSmall",
+                HitSound = "FireworkNWSound",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             }, // Don't edit below this line
@@ -1237,16 +1237,16 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f,
+                        Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 30.0f, green: 8.20f, blue: 0.5f, alpha: 0.8f),
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 6.162f, blue: 0.0f, alpha: 0.8f),
+                        DecayTime = 1,
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -1485,16 +1485,16 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f,
+                        Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 30.0f, green: 25.0f, blue: 20.0f, alpha: 0.8f),
+                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 18.162f, blue: 5.0f, alpha: 0.8f),
+                        DecayTime = 1,
+                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -1511,7 +1511,7 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "ArcWepExplSmall",
+                HitSound = "FireworkNWSound",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             }, // Don't edit below this line
@@ -1980,16 +1980,16 @@ namespace WeaponThread
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f,
+                        Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 30.0f, green: 25.0f, blue: 20.0f, alpha: 0.8f),
+                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 2,
-                        Color = Color(red: 18.985f, green: 18.162f, blue: 5.0f, alpha: 0.8f),
+                        DecayTime = 1,
+                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -2006,7 +2006,7 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "ArcWepExplSmall",
+                HitSound = "FireworkNWSound",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             }, // Don't edit below this line
@@ -2029,7 +2029,7 @@ namespace WeaponThread
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 0.1,
+                Diameter = 0.2,
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -2112,7 +2112,7 @@ namespace WeaponThread
                 AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 0f, // the sphere of influence of area effects
+                    Radius = 2f, // the sphere of influence of area effects
                     EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
@@ -2128,7 +2128,7 @@ namespace WeaponThread
                     NoDeformation = false,
                     Scale = 1f,
                     CustomParticle = "",
-                    CustomSound = "ArcWepExplSmall",
+                    CustomSound = "FireworkNWSound",
                 },
                 Detonation = new DetonateDef
                 {
@@ -2165,7 +2165,7 @@ namespace WeaponThread
                 DesiredSpeed = 800,
                 MaxTrajectory = 1700f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 5), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 300), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -2209,7 +2209,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "Small30mmExplo",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
@@ -2221,7 +2221,7 @@ namespace WeaponThread
                             MaxDistance = 5000,
                             MaxDuration = 0.2f,
                             Scale = 4.2f,
-                            HitPlayChance = 1f,
+                            HitPlayChance = 0.5f,
                         },
                     },
                 },
@@ -2259,8 +2259,8 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "ArcWepExplSmall",
-                HitPlayChance = 1f,
+                HitSound = "FireworkNWSound",
+                HitPlayChance = 0.4f,
                 HitPlayShield = true,
             }, // Don't edit below this line
         };
@@ -2380,8 +2380,8 @@ namespace WeaponThread
                     NoShrapnel = false,
                     NoDeformation = false,
                     Scale = 1f,
-                    CustomParticle = "Small30mmExplo",
-                    CustomSound = "ArcWepExplSmall",
+                    CustomParticle = "",
+                    CustomSound = "",
                 },
                 Detonation = new DetonateDef
                 {
@@ -2512,7 +2512,7 @@ namespace WeaponThread
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "",
-                HitSound = "ArcWepExplSmall",
+                HitSound = "",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             }, // Don't edit below this line

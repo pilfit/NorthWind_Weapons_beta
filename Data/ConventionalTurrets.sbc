@@ -149,7 +149,7 @@
 			<SubtypeId>C200mmTurret</SubtypeId>
 		  </Id>
 			<DisplayName>203mm Gun Turret</DisplayName>
-			<Description>203mm dual purpose gun turret. Proximity fused shells function as flak. </Description>
+			<Description>203mm dual purpose gun turret. Proximity fused shells function as flak. Uses 203mm HE Ammo. </Description>
 			<Icon>Textures\icons\C200TurretIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>

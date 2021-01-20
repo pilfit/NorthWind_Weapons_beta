@@ -66,7 +66,7 @@ namespace WeaponThread {
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.003f,
+                    RotateRate = 0.005f,
                     ElevateRate = 0.003f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,

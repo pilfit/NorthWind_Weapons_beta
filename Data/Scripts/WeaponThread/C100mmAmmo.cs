@@ -118,7 +118,7 @@ namespace WeaponThread
                 AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 0f, // the sphere of influence of area effects
+                    Radius = 2f, // the sphere of influence of area effects
                     EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
@@ -171,7 +171,7 @@ namespace WeaponThread
                 DesiredSpeed = 500,
                 MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 15), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: 0, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -259,14 +259,14 @@ namespace WeaponThread
                         Enable = true,
                         Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 50.80f, green: 6.20f, blue: 1.6f, alpha: 0.8f),
+                        Color = Color(red: 40.80f, green: 2.20f, blue: 1.6f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 10,
-                        Color = Color(red: 5.585f, green: 1.562f, blue: 0.21f, alpha: 0.8f),
+                        Color = Color(red: 2.585f, green: 0.562f, blue: 0.21f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -374,7 +374,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1.2f,
+                    Modifier = 2f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -455,7 +455,7 @@ namespace WeaponThread
                 DesiredSpeed = 500,
                 MaxTrajectory = 3000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 15), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: 0, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -543,14 +543,14 @@ namespace WeaponThread
                         Enable = true,
                         Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 50.80f, green: 6.20f, blue: 1.6f, alpha: 0.8f),
+                        Color = Color(red: 40.80f, green: 2.20f, blue: 1.6f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 10,
-                        Color = Color(red: 5.585f, green: 1.562f, blue: 0.21f, alpha: 0.8f),
+                        Color = Color(red: 2.585f, green: 0.562f, blue: 0.21f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
