@@ -46,7 +46,7 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "203mm Howitzer", // name of weapon in terminal
-                DeviateShotAngle = 1.8f,
+                DeviateShotAngle = 0.8f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -139,7 +139,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase
+                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase, 
 				
                 
             },

@@ -33,7 +33,7 @@ namespace WeaponThread {
             Targeting = new TargetingDef  
             {
                 Threats = new[] {
-                    Grids, Projectiles, Meteors,
+                    Grids, Projectiles,
                 },
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Any,
@@ -43,7 +43,7 @@ namespace WeaponThread {
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.                
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 2500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 3500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 20, // 0 = unlimited, Min target distance that targets will be automatically shot at.                
                 TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
@@ -88,8 +88,8 @@ namespace WeaponThread {
                     MuzzleCheck = false,
                     Debug = false,
                     RestrictionRadius = 6.2f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype	                    
+                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype	                    
                 },
                 Loading = new LoadingDef {
                     RateOfFire = 20,

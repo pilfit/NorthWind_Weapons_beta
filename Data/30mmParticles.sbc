@@ -4712,8 +4712,8 @@
       <Preload>0</Preload>
       <LowRes>false</LowRes>
       <Loop>true</Loop>
-      <DurationMin>1</DurationMin>
-      <DurationMax>1</DurationMax>
+      <DurationMin>0.5</DurationMin>
+      <DurationMax>0.5</DurationMax>
       <Version>0</Version>
       <ParticleGenerations>
         <ParticleGeneration Name="Dust_Slow" Version="0">
@@ -4941,12 +4941,12 @@
                       </Key>
                       <Key>
                         <Time>0.01218866</Time>
-                        <ValueFloat>0.4</ValueFloat>
+                        <ValueFloat>0.6</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>0.5</ValueFloat>
+                        <ValueFloat>0.75</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -4955,7 +4955,7 @@
               </Keys>
             </Property>
             <Property Name="Life" AnimationType="Const" Type="Float">
-              <ValueFloat>0.9</ValueFloat>
+              <ValueFloat>1</ValueFloat>
             </Property>
             <Property Name="Soft particle distance scale" AnimationType="Const" Type="Float">
               <ValueFloat>2</ValueFloat>
@@ -5079,15 +5079,15 @@
               <Keys>
                 <Key>
                   <Time>0.01063264</Time>
-                  <ValueFloat>30</ValueFloat>
+                  <ValueFloat>10</ValueFloat>
                 </Key>
                 <Key>
                   <Time>0.06804891</Time>
-                  <ValueFloat>30</ValueFloat>
+                  <ValueFloat>10</ValueFloat>
                 </Key>
                 <Key>
                   <Time>0.1190856</Time>
-                  <ValueFloat>30</ValueFloat>
+                  <ValueFloat>10</ValueFloat>
                 </Key>
               </Keys>
             </Property>

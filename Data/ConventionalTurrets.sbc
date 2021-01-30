@@ -159,11 +159,26 @@
 			<Model>Models\C200mm.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<MountPoints>
-		        <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />
-		        <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />
-		        <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />
-		        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" />			
+		        <MountPoint Side="Front" StartX="0.80" StartY="0.00" EndX="2.20" EndY="1.0" />
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="0.20" EndY="1.0" />
+				<MountPoint Side="Front" StartX="2.80" StartY="0.00" EndX="3.00" EndY="1.0" />
+				<MountPoint Side="Front" StartX="0.00" StartY="1.00" EndX="3.00" EndY="2.00" />				
+				<MountPoint Side="Front" StartX="0.00" StartY="2.00" EndX="3.00" EndY="4.00" Enabled="false" />
+		        <MountPoint Side="Back" StartX="0.80" StartY="0.00" EndX="2.20" EndY="1.00" />
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="0.20" EndY="1.00" />
+				<MountPoint Side="Back" StartX="2.80" StartY="0.00" EndX="3.00" EndY="1.00" />
+		        <MountPoint Side="Back" StartX="0.00" StartY="1.00" EndX="3.00" EndY="2.00" />
+				<MountPoint Side="Back" StartX="0.00" StartY="2.00" EndX="3.00" EndY="4.00" Enabled="false" />				
+		        <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.20" EndY="1.00" />
+				<MountPoint Side="Left" StartX="1.80" StartY="0.00" EndX="3.00" EndY="1.00" />
+				<MountPoint Side="Left" StartX="0.00" StartY="1.00" EndX="3.00" EndY="2.00" />
+				<MountPoint Side="Left" StartX="0.00" StartY="2.00" EndX="3.00" EndY="4.00" Enabled="false" />
+		        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.20" EndY="1.00" />
+				<MountPoint Side="Right" StartX="1.80" StartY="0.00" EndX="3.00" EndY="1.00" />
+				<MountPoint Side="Right" StartX="0.00" StartY="1.00" EndX="3.00" EndY="2.00" />
+				<MountPoint Side="Right" StartX="0.00" StartY="2.00" EndX="3.00" EndY="4.00" Enabled="false" />			
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" Enabled="false" />
 			</MountPoints>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\C200mm_BS1.mwm"/>
@@ -213,7 +228,7 @@
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
-            <IsAirTight>false</IsAirTight> 			
+            			
 		</Definition>
 
 	</CubeBlocks>

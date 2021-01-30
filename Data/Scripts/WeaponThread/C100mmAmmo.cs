@@ -132,9 +132,9 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 1,
-                    CustomParticle = "",
-                    CustomSound = "",
+                    Scale = 0.2f,
+                    CustomParticle = "LargeArtExplosionLight",
+                    CustomSound = "ArcWepSmallMissileExpl",
                 },
                 Detonation = new DetonateDef
                 {
@@ -416,9 +416,9 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 1,
-                    CustomParticle = "",
-                    CustomSound = "",
+                    Scale = 0.2f,
+                    CustomParticle = "LargeArtExplosionLight",
+                    CustomSound = "ArcWepSmallMissileExpl",
                 },
                 Detonation = new DetonateDef
                 {

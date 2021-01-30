@@ -172,6 +172,7 @@
     <Entry Class="Ammo" BlueprintSubtypeId="C100mmAmmo" />		
 
     <Entry Class="CommonMetals" BlueprintSubtypeId="C100ShellCasingToIron" />    
+    <Entry Class="Ingots" BlueprintSubtypeId="C100ShellCasingToIron" />   
 
   </BlueprintClassEntries>
 	

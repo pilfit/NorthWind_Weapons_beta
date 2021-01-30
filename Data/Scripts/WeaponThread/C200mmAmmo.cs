@@ -132,9 +132,9 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 1,
+                    Scale = 0.5f,
                     CustomParticle = "LargeArtExplosionLight",
-                    CustomSound = "",
+                    CustomSound = "ArcWepLrgWarheadExpl",
                 },
                 Detonation = new DetonateDef
                 {
@@ -416,9 +416,9 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 1,
+                    Scale = 0.5f,
                     CustomParticle = "LargeArtExplosionLight",
-                    CustomSound = "",
+                    CustomSound = "ArcWepLrgWarheadExpl",
                 },
                 Detonation = new DetonateDef
                 {
@@ -647,13 +647,13 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                      Large = -1f,
-                    Small = 0.6f,
+                    Small = 0.5f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0.5f,
+                    Heavy = 0.9f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef

@@ -57,7 +57,7 @@ namespace WeaponThread
                 SelfDamage = false, // true = allow self damage.
                 HealthHitModifier = 0.06f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
-                Characters = -1f,
+                Characters = 0.15f,
 				FallOff = new FallOffDef
                 {
                  Distance = 100f, // Distance at which max damage begins falling off.
@@ -65,14 +65,14 @@ namespace WeaponThread
 		        },				
                 Grids = new GridSizeDef
                 {
-                    Large = -1f,
-                    Small = -1f,
+                    Large = 0.1f,
+                    Small = 0.1f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = -1f,
+                    Heavy = 0f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
