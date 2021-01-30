@@ -4708,12 +4708,12 @@
     <ParticleEffect xsi:type="ParticleEffect">
       <Id Type="MyObjectBuilder_ParticleEffect" Subtype="RotarycannonSmoke" />
       <ParticleId>17861</ParticleId>
-      <Length>8</Length>
+      <Length>2</Length>
       <Preload>0</Preload>
       <LowRes>false</LowRes>
       <Loop>true</Loop>
-      <DurationMin>0.5</DurationMin>
-      <DurationMax>0.5</DurationMax>
+      <DurationMin>0.1</DurationMin>
+      <DurationMax>0.1</DurationMax>
       <Version>0</Version>
       <ParticleGenerations>
         <ParticleGeneration Name="Dust_Slow" Version="0">
@@ -4764,12 +4764,12 @@
                           <X>0.01448386</X>
                           <Y>0.01448386</Y>
                           <Z>0.01448386</Z>
-                          <W>0.3764706</W>
+                          <W>0.2764706</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>1</Time>
+                        <Time>1.2</Time>
                         <ValueVector4>
                           <X>0</X>
                           <Y>0</Y>
@@ -4945,8 +4945,8 @@
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>1</Time>
-                        <ValueFloat>0.75</ValueFloat>
+                        <Time>1.5</Time>
+                        <ValueFloat>1.25</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -4955,7 +4955,7 @@
               </Keys>
             </Property>
             <Property Name="Life" AnimationType="Const" Type="Float">
-              <ValueFloat>1</ValueFloat>
+              <ValueFloat>2</ValueFloat>
             </Property>
             <Property Name="Soft particle distance scale" AnimationType="Const" Type="Float">
               <ValueFloat>2</ValueFloat>
@@ -5079,15 +5079,15 @@
               <Keys>
                 <Key>
                   <Time>0.01063264</Time>
-                  <ValueFloat>10</ValueFloat>
+                  <ValueFloat>0</ValueFloat>
                 </Key>
                 <Key>
                   <Time>0.06804891</Time>
-                  <ValueFloat>10</ValueFloat>
+                  <ValueFloat>0</ValueFloat>
                 </Key>
                 <Key>
                   <Time>0.1190856</Time>
-                  <ValueFloat>10</ValueFloat>
+                  <ValueFloat>0</ValueFloat>
                 </Key>
               </Keys>
             </Property>
