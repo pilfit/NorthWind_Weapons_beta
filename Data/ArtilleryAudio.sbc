@@ -11,7 +11,7 @@
       <MaxDistance>400</MaxDistance>
 
 
-      <PreventSynchronization>0</PreventSynchronization>
+      <PreventSynchronization>1</PreventSynchronization>
       <SoundLimit>10</SoundLimit>
       <DistantSounds>
         <DistantSound DistanceCrossfade="10" Distance="400" Sound="ArtilleryFireNWDist" />

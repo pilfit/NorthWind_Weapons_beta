@@ -112,14 +112,14 @@ namespace WeaponThread {
 
                     Barrel1 = new ParticleDef {
                         Name = "Railgunmuzzleflash_NW", // Smoke_LargeGunShot
-                        Color = Color(red: 255, green: 155, blue: 51, alpha: 1),
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 0.6f),
                         Offset = Vector(x: 0, y: 0, z: 0),
 
                         Extras = new ParticleOptionDef {
                             Loop = false,
                             Restart = false,
                             MaxDistance = 300,
-                            MaxDuration = 10,
+                            MaxDuration = 0,
                             Scale = 1.0f,
                         },
                     },
@@ -132,8 +132,8 @@ namespace WeaponThread {
                             Loop = false,
                             Restart = false,
                             MaxDistance = 350,
-                            MaxDuration = 15,
-                            Scale = 0.3f,
+                            MaxDuration = 0,
+                            Scale = 1f,
                         },
                     },
                 },

@@ -125,9 +125,9 @@ namespace WeaponThread {
 
                         Extras = new ParticleOptionDef {
                             Loop = true,
-                            Restart = false,
+                            Restart = true,
                             MaxDistance = 300,
-                            MaxDuration = 1f,
+                            MaxDuration = 0f,
                             Scale = 1f,
                         },
                     },
@@ -140,7 +140,7 @@ namespace WeaponThread {
                             Loop = true,
                             Restart = false,
                             MaxDistance = 350,
-                            MaxDuration = 60f,
+                            MaxDuration = 6f,
                             Scale = 1.0f,
                         },
                     },

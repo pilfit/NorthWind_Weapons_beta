@@ -94,7 +94,7 @@ namespace WeaponThread {
                     HeatPerShot = 14000, //heat generated per shot
                     MaxHeat = 140000, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = .50f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 2000, //amount of heat lost per second
+                    HeatSinkRate = 1000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -113,14 +113,14 @@ namespace WeaponThread {
 
                     Barrel1 = new ParticleDef {
                         Name = "Railgunmuzzleflash_NW", // Smoke_LargeGunShot
-                        Color = Color(red: 255, green: 155, blue: 51, alpha: 1),
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 0.6f),
                         Offset = Vector(x: 0, y: 0, z: 0),
 
                         Extras = new ParticleOptionDef {
                             Loop = false,
                             Restart = false,
                             MaxDistance = 300,
-                            MaxDuration = 10,
+                            MaxDuration = 0,
                             Scale = 1.5f,
                         },
                     },
@@ -132,9 +132,9 @@ namespace WeaponThread {
                         Extras = new ParticleOptionDef {
                             Loop = false,
                             Restart = false,
-                            MaxDistance = 150,
-                            MaxDuration = 15,
-                            Scale = 0.4f,
+                            MaxDistance = 350,
+                            MaxDuration = 0,
+                            Scale = 1f,
                         },
                     },
                 },
