@@ -88,6 +88,27 @@
     <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
       <Id>
         <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>H203AmmoAP</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>0</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>0</MaxTrajectory>
+        <BackkickForce>0</BackkickForce>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage>
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+        <ProjectileMaterial></ProjectileMaterial>
+        <ProjectileTrailScale>0</ProjectileTrailScale>
+        <ProjectileTrailProbability>0</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>	    
+
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
         <SubtypeId>C30Ammo</SubtypeId>
       </Id>
       <BasicProperties>

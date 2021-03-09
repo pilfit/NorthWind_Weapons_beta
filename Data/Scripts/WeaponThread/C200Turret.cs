@@ -148,7 +148,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                C200mmAmmo, C200mmShrapnel, C200mmShrapnelbase, C200mmAmmoImpact,               
+                C200mmAmmo, C200mmShrapnel, C200mmShrapnelbase, C200mmAmmoImpact, C200mmAmmoAP,               
 
             },
             Animations = C200Turret_Animation,

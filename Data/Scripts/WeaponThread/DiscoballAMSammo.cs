@@ -31,11 +31,12 @@ namespace WeaponThread
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 0f,
 			HardPointUsable = true,
+            EnergyMagazineSize = 10,             
 
             Shape = new ShapeDef //defines SphereShape LineShape the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 5,
+                Diameter = 1,
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -55,13 +56,13 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.06f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.2f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.15f,
 				FallOff = new FallOffDef
                 {
-                 Distance = 100f, // Distance at which max damage begins falling off.
-                 MinMultipler = 0.2f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 Distance = 200f, // Distance at which max damage begins falling off.
+                 MinMultipler = 0.3f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },				
                 Grids = new GridSizeDef
                 {
@@ -138,7 +139,7 @@ namespace WeaponThread
             {
                 Enable = true,
                 VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
-                ConvergeBeams = true, // When using virtual beams this option visually converges the beams to the location of the real beam.
+                ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
                 RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
                 OneParticle = true, // Only spawn one particle hit per beam weapon.
             },
@@ -195,18 +196,18 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "",
+                        Name = "LaserHitParticlesNW",
                         ApplyToShield = true,
                         ShrinkByDistance = false,
-                        Color = Color(red: 255, green: 60, blue: 1, alpha: 1),
+                        Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 0.8f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Loop = false,
+                            Loop = true,
                             Restart = false,
-                            MaxDistance = 5000,
-                            MaxDuration = 1,
-                            Scale = 0.5f,
+                            MaxDistance = 1000,
+                            MaxDuration = 0,
+                            Scale = 1f,
                             HitPlayChance = 1f,
                         },
                     },

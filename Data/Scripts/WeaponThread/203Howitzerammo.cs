@@ -27,8 +27,8 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 90f, // in kilograms
-            Health = 8, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            Mass = 120f, // in kilograms
+            Health = 10, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 55000f,
 			HardPointUsable = true,
 
@@ -278,8 +278,8 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 20f, // in kilograms
-            Health = 8, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            Mass = 120f, // in kilograms
+            Health = 10, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 100000f,
 			HardPointUsable = true,
 
@@ -529,8 +529,8 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 20f, // in kilograms
-            Health = 8, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            Mass = 120f, // in kilograms
+            Health = 10, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 180000f,
 			HardPointUsable = true,
 
@@ -780,8 +780,8 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 1f,
-            Mass = 20f, // in kilograms
-            Health = 8, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            Mass = 120f, // in kilograms
+            Health = 10, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 180000f,
 			HardPointUsable = true,
 

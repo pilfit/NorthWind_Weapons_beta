@@ -37,9 +37,13 @@ namespace WeaponThread {
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Any,
                 },
-                ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
+                LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.                
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
+                MaxTargetDistance = 0, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MinTargetDistance = 80, // 0 = unlimited, Min target distance that targets will be automatically shot at.                
                 TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 2000, // do not track target threats traveling faster than this speed
@@ -48,9 +52,9 @@ namespace WeaponThread {
             {
                 WeaponName = "Discoball Laser AMS", // name of weapon in terminal
                 DeviateShotAngle = 0f,
-                AimingTolerance = 1f, // 0 - 180 firing angle
+                AimingTolerance = 5f, // 0 - 180 firing angle
                 AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                DelayCeaseFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
                     RateOfFire = false,
@@ -113,14 +117,14 @@ namespace WeaponThread {
 
                     Barrel1 = new ParticleDef {
                         Name = "", // Smoke_LargeGunShot
-                        Color = Color(red: 255, green: 155, blue: 51, alpha: 1),
+                        Color = Color(red: 2, green: 1, blue: 5, alpha: 1),
                         Offset = Vector(x: 0, y: -1, z: 0),
 
                         Extras = new ParticleOptionDef {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 300,
-                            MaxDuration = 15,
+                            Loop = true,
+                            Restart = true,
+                            MaxDistance = 500,
+                            MaxDuration = 0,
                             Scale = 0.5f,
                         },
                     },

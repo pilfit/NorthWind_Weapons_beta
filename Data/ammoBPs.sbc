@@ -55,12 +55,29 @@
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>H203Ammo</SubtypeId>
       </Id>
-      <DisplayName>203mm Howitzer Ammo</DisplayName>
+      <DisplayName>203mm HE Ammo</DisplayName>
       <Icon>Textures\icons\203mmHMagIcon.png</Icon>
       <Prerequisites>
         <Item Amount="55" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="10" TypeId="Ingot" SubtypeId="Nickel" />
 		<Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />		
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="H203Ammo" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>H203AmmoAP</SubtypeId>
+      </Id>
+      <DisplayName>203mm AP Ammo</DisplayName>
+      <Icon>Textures\icons\203mmHMagIcon.png</Icon>
+      <Prerequisites>
+        <Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="3" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="H203Ammo" />
@@ -156,6 +173,7 @@
 		<Entry Class="Components" BlueprintSubtypeId="R150ammo" />	
 		<Entry Class="Components" BlueprintSubtypeId="R250ammo" />	
 		<Entry Class="Components" BlueprintSubtypeId="H203Ammo" />
+		<Entry Class="Components" BlueprintSubtypeId="H203AmmoAP" />    
 		<Entry Class="Components" BlueprintSubtypeId="C30Ammo" />
 		<Entry Class="Components" BlueprintSubtypeId="C30DUammo" />		
 		<Entry Class="Components" BlueprintSubtypeId="CRAM30mmAmmo" />	
@@ -165,7 +183,8 @@
 		<Entry Class="Ammo" BlueprintSubtypeId="R75ammo" />
 		<Entry Class="Ammo" BlueprintSubtypeId="R150ammo" />
 		<Entry Class="Ammo" BlueprintSubtypeId="R250ammo" />
-		<Entry Class="Ammo" BlueprintSubtypeId="H203Ammo" />		
+		<Entry Class="Ammo" BlueprintSubtypeId="H203Ammo" />	
+		<Entry Class="Ammo" BlueprintSubtypeId="H203AmmoAP" />      	
 		<Entry Class="Ammo" BlueprintSubtypeId="C30Ammo" />		
 		<Entry Class="Ammo" BlueprintSubtypeId="C30DUammo" />		
     <Entry Class="Ammo" BlueprintSubtypeId="CRAM30mmAmmo" />	

@@ -51,7 +51,7 @@
              <Component Subtype="LargeTube" Count="6" />
              <Component Subtype="Motor" Count="30" />			 
              <Component Subtype="Computer" Count="20" />
-             <Component Subtype="SteelPlate" Count="150" />
+             <Component Subtype="SteelPlate" Count="200" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>CWIS</BlockPairName>
@@ -121,7 +121,7 @@
              <Component Subtype="LargeTube" Count="3" />
              <Component Subtype="Motor" Count="20" />			 
              <Component Subtype="Computer" Count="20" />
-             <Component Subtype="SteelPlate" Count="150" />
+             <Component Subtype="SteelPlate" Count="250" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>100mmTurret</BlockPairName>
@@ -210,7 +210,7 @@
              <Component Subtype="LargeTube" Count="6" />
              <Component Subtype="Motor" Count="30" />			 
              <Component Subtype="Computer" Count="20" />
-             <Component Subtype="SteelPlate" Count="225" />
+             <Component Subtype="SteelPlate" Count="425" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>200mmTurret</BlockPairName>
