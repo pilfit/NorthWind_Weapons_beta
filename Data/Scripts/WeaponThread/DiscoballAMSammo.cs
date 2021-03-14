@@ -199,7 +199,7 @@ namespace WeaponThread
                         Name = "LaserHitParticlesNW",
                         ApplyToShield = true,
                         ShrinkByDistance = false,
-                        Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 0.8f),
+                        Color = Color(red: 10f, green: 2f, blue: 1f, alpha: 0.8f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {

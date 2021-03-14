@@ -787,8 +787,8 @@ namespace WeaponThread
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
-                Shape = SphereShape,
-                Diameter = 30.0,
+                Shape = LineShape,
+                Diameter = 1,
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -856,7 +856,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -895,7 +895,7 @@ namespace WeaponThread
                     ArmOnlyOnHit = false,
                     DetonationDamage = 1500,
                     DetonationRadius = 15,
-                    MinArmingTime = 30, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
+                    MinArmingTime = 1, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
                 {
@@ -916,7 +916,7 @@ namespace WeaponThread
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = Smart,
+                Guidance = DetectFixed,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 780, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -932,15 +932,15 @@ namespace WeaponThread
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 0f, // controls how responsive tracking is.
                     MaxLateralThrust = 0, // controls how sharp the trajectile may turn
-                    TrackingDelay = 100, // Measured in Shape diameter units traveled.
+                    TrackingDelay = 1, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
+                    DetectRadius = 500,
                     DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    FieldTime = 780,
                     Cloak = false,
                     Persist = false,
                 },
