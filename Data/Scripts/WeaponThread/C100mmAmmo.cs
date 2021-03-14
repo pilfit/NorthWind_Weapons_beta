@@ -44,7 +44,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "C100mmShrapnelbase",
+                AmmoRound = "",
                 Fragments = 1,
 				Reverse = false,
 				RandomizeDir = false,
@@ -118,7 +118,7 @@ namespace WeaponThread
                 AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 2f, // the sphere of influence of area effects
+                    Radius = 0f, // the sphere of influence of area effects
                     EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
@@ -141,7 +141,7 @@ namespace WeaponThread
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
                     DetonationDamage = 500,
-                    DetonationRadius = 150,
+                    DetonationRadius = 500,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
