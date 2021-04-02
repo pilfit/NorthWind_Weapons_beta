@@ -28,7 +28,8 @@ namespace WeaponThread {
                     "muzzle_missile_2",
 
                 },
-                Ejector = "",                
+                Ejector = "",    
+                Scope = "camera", //Where line of sight checks are performed from must be clear of block collision                            
             },
             Targeting = new TargetingDef  
             {
@@ -52,7 +53,7 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "203mm Gun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.6f,
+                DeviateShotAngle = 0.1f,
                 AimingTolerance = 0.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

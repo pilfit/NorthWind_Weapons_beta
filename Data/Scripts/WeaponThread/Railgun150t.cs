@@ -40,6 +40,7 @@ namespace WeaponThread {
                 ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 MinimumDiameter = 3, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
+                MaxTargetDistance = 4000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
@@ -94,7 +95,7 @@ namespace WeaponThread {
                     HeatPerShot = 14000, //heat generated per shot
                     MaxHeat = 140000, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = .50f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 1000, //amount of heat lost per second
+                    HeatSinkRate = 500, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

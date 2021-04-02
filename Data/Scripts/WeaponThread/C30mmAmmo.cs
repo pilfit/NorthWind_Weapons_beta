@@ -317,7 +317,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.3, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -564,7 +564,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.3, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.5, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -723,7 +723,7 @@ namespace WeaponThread
                             Restart = false,
                             MaxDistance = 5000,
                             MaxDuration = 0.1f,
-                            Scale = 14.2f,
+                            Scale = 1.0f,
                             HitPlayChance = 1f,
                         },
                     },
@@ -1820,7 +1820,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.2, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.4, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -2315,7 +2315,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.3, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.8, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -2339,7 +2339,7 @@ namespace WeaponThread
                 Shields = new ShieldDef
                 {
                     Modifier = 1.2f,
-                    Type = Kinetic,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -2366,7 +2366,7 @@ namespace WeaponThread
                 AreaEffect = Radiant, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 2f, // the sphere of influence of area effects
+                    Radius = 0f, // the sphere of influence of area effects
                     EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
@@ -2388,8 +2388,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 20,
-                    DetonationRadius = 1f,
+                    DetonationDamage = 15,
+                    DetonationRadius = 2f,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
                 },
                 EwarFields = new EwarFieldsDef
@@ -2463,7 +2463,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "",
+                        Name = "Small30mmExplo",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
@@ -2473,8 +2473,8 @@ namespace WeaponThread
                             Loop = false,
                             Restart = false,
                             MaxDistance = 5000,
-                            MaxDuration = 0.2f,
-                            Scale = 4.2f,
+                            MaxDuration = 0.1f,
+                            Scale = 0.5f,
                             HitPlayChance = 0.5f,
                         },
                     },
@@ -2702,8 +2702,8 @@ namespace WeaponThread
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "", //ShipWelderArc
-                        Color = Color(red: 255, green: 60, blue: 1, alpha: 1),
+                        Name = "Small30mmExplo", //ShipWelderArc
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
@@ -2711,7 +2711,7 @@ namespace WeaponThread
                             Restart = false,
                             MaxDistance = 5000,
                             MaxDuration = 1,
-                            Scale = 0.1f,
+                            Scale = 1f,
                         },
                     },
                     Hit = new ParticleDef
@@ -2739,14 +2739,14 @@ namespace WeaponThread
                     WidthVariance = Random(start: 0f, end: 0.5f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Length = 3f,
                         Width = 4.25f,
                         Color = Color(red: 45.0f, green: 40.0f, blue: 40.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 1,
                         Color = Color(red: 30f, green: 25f, blue: 25f, alpha: 0.6f),

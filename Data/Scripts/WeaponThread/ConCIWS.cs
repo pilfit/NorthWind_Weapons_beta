@@ -46,7 +46,7 @@ namespace WeaponThread {
                 MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.				
                 TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
-                StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
+                StopTrackingSpeed = 1500, // do not track target threats traveling faster than this speed
             },
             HardPoint = new HardPointDef 
             {

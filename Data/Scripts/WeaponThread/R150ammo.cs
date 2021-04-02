@@ -160,12 +160,12 @@ namespace WeaponThread
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 200, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 240, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 2500,
-                MaxTrajectory = 4000f,
+                MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -50, end: 50), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -456,7 +456,7 @@ namespace WeaponThread
                     WidthVariance = Random(start: 0f, end: 0.025f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Length = 10f,
                         Width = 0.1f,
                         Color = Color(red: 40, green: 20, blue: 1, alpha: 1),
@@ -465,8 +465,8 @@ namespace WeaponThread
                     {
                         Enable = false,
                         Material = "WeaponLaser",
-                        DecayTime = 128,
-                        Color = Color(red: 0, green: 0, blue: 1, alpha: 1),
+                        DecayTime = 10,
+                        Color = Color(red: 2, green: 0, blue: 0, alpha: 1),
                         Back = true,
                         CustomWidth = 0,
                         UseWidthVariance = false,

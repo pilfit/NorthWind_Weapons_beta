@@ -12,9 +12,31 @@ namespace WeaponThread
     partial class Weapons
     {
         internal List<WeaponDefinition> Weapon = new List<WeaponDefinition>();
+        internal List<ArmorCompatibilityDef> ArmorBlocks = new List<ArmorCompatibilityDef>();
         internal void ConfigFiles(params WeaponDefinition[] defs)
         {
             foreach (var def in defs) Weapon.Add(def);
+        }
+
+        internal void ArmorDefinitions(params ArmorCompatibilityDef[] defs)
+        {
+            foreach (var def in defs) ArmorBlocks.Add(def);
+        }
+
+        internal void HeavyArmorSubtypes(params string[] subtypes)
+        {
+            foreach (var subtype in subtypes)
+            {
+                ArmorDefinitions(new ArmorCompatibilityDef { Kind = ArmorCompatibilityDef.ArmorType.Heavy, SubtypeId = subtype });
+            }
+        }
+
+        internal void LightArmorSubtypes(params string[] subtypes)
+        {
+            foreach (var subtype in subtypes)
+            {
+                ArmorDefinitions(new ArmorCompatibilityDef { Kind = ArmorCompatibilityDef.ArmorType.Light, SubtypeId = subtype });
+            }
         }
 
         internal WeaponDefinition[] ReturnDefs()
@@ -23,6 +45,14 @@ namespace WeaponThread
             for (int i = 0; i < Weapon.Count; i++) weaponDefinitions[i] = Weapon[i];
             Weapon.Clear();
             return weaponDefinitions;
+        }
+
+        internal ArmorCompatibilityDef[] ReturnArmorDefs()
+        {
+            var armorDefinitions = new ArmorCompatibilityDef[ArmorBlocks.Count];
+            for (int i = 0; i < ArmorBlocks.Count; i++) armorDefinitions[i] = ArmorBlocks[i];
+            ArmorBlocks.Clear();
+            return armorDefinitions;
         }
 
         internal AmmoDef.Randomize Random(float start, float end)

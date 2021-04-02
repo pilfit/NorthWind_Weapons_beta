@@ -44,7 +44,7 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "",
+                AmmoRound = "C100mmShrapnelbase",
                 Fragments = 1,
 				Reverse = false,
 				RandomizeDir = false,
@@ -67,14 +67,14 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 30, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 300, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
-                Characters = -1f,
+                Characters = 0.1f,
                 VoxelHitModifier = 2f,					
 				FallOff = new FallOffDef
                 {
                  Distance = 1000f, // Distance at which max damage begins falling off.
-                 MinMultipler = 1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 MinMultipler = -1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },
                 Grids = new GridSizeDef
                 {
@@ -141,7 +141,7 @@ namespace WeaponThread
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
                     DetonationDamage = 500,
-                    DetonationRadius = 500,
+                    DetonationRadius = 5,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -168,11 +168,11 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 400, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 600,
+                DesiredSpeed = 700,
                 MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 5), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: -5, end: 5), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -259,7 +259,7 @@ namespace WeaponThread
                         Enable = true,
                         Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 40.80f, green: 2.20f, blue: 1.6f, alpha: 0.8f),
+                        Color = Color(red: 40.80f, green: 8.20f, blue: 1.6f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
@@ -351,14 +351,14 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 30, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 90, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
-                Characters = -1f,
+                Characters = 0.1f,
                 VoxelHitModifier = 2f,					
 				FallOff = new FallOffDef
                 {
                  Distance = 1000f, // Distance at which max damage begins falling off.
-                 MinMultipler = 1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 MinMultipler = -1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },
                 Grids = new GridSizeDef
                 {
@@ -450,13 +450,13 @@ namespace WeaponThread
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 400, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 800, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 600,
-                MaxTrajectory = 3000f,
+                DesiredSpeed = 700,
+                MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 5), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -635,18 +635,18 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 2, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 10, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = -1f,
-                VoxelHitModifier = 10,					
+                VoxelHitModifier = 1,					
 				FallOff = new FallOffDef
                 {
                  Distance = 15f, // Distance at which max damage begins falling off.
-                 MinMultipler = 0.2f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 MinMultipler = -1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },
                 Grids = new GridSizeDef
                 {
-                    Large = 0.5f,
+                    Large = -1f,
                     Small = -1f,
                 },
                 Armor = new ArmorDef
@@ -888,14 +888,14 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.5, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 500, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
 				FallOff = new FallOffDef
                 {
                  Distance = 1000f, // Distance at which max damage begins falling off.
-                 MinMultipler = 1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 MinMultipler = -1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },
                 Grids = new GridSizeDef
                 {
@@ -940,7 +940,7 @@ namespace WeaponThread
                 Base = new AreaInfluence
                 {
                     Radius = 1f, // the sphere of influence of area effects
-                    EffectStrength = 10f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    EffectStrength = 1f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {

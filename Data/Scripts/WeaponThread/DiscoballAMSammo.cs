@@ -56,13 +56,13 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 0.2f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.15f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.15f,
 				FallOff = new FallOffDef
                 {
-                 Distance = 200f, // Distance at which max damage begins falling off.
-                 MinMultipler = 0.3f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 Distance = 100f, // Distance at which max damage begins falling off.
+                 MinMultipler = 0.1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },				
                 Grids = new GridSizeDef
                 {

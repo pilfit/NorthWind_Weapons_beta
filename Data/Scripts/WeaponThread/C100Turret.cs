@@ -27,7 +27,8 @@ namespace WeaponThread {
                     "muzzle_missile_1",
 
                 },
-                Ejector = "Ejectorx",                
+                Ejector = "Ejectorx",    
+                Scope = "C100Barrel", //Where line of sight checks are performed from must be clear of block collision            
             },
             Targeting = new TargetingDef  
             {

@@ -2,8 +2,8 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<ParticleEffects>
     <ParticleEffect xsi:type="ParticleEffect">
-      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="Small30mmExplo" />
-      <ParticleId>17650</ParticleId>
+      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="ShieldPenParticle" />
+      <ParticleId>68427</ParticleId>
       <Length>0.2</Length>
       <Preload>0</Preload>
       <LowRes>false</LowRes>
@@ -38,9 +38,9 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>10</X>
-                          <Y>10</Y>
-                          <Z>10</Z>
+                          <X>40</X>
+                          <Y>2</Y>
+                          <Z>2</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
@@ -48,9 +48,9 @@
                       <Key>
                         <Time>0.33</Time>
                         <ValueVector4>
-                          <X>2.9828262</X>
-                          <Y>2.9406007</Y>
-                          <Z>2.4313402</Z>
+                          <X>8.9828262</X>
+                          <Y>0.9406007</Y>
+                          <Z>0.4313402</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
@@ -233,7 +233,7 @@
                       </Key>
                       <Key>
                         <Time>0.005299417</Time>
-                        <ValueFloat>8.6</ValueFloat>
+                        <ValueFloat>4.6</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
@@ -252,7 +252,7 @@
               </Keys>
             </Property>
             <Property Name="Life" AnimationType="Const" Type="Float">
-              <ValueFloat>0.1</ValueFloat>
+              <ValueFloat>0.3</ValueFloat>
             </Property>
             <Property Name="Soft particle distance scale" AnimationType="Const" Type="Float">
               <ValueFloat>1</ValueFloat>
