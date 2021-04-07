@@ -90,7 +90,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 2f,
+                    Modifier = 3f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -103,7 +103,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -341,7 +341,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 2f,
+                    Modifier = 3f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -354,7 +354,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -592,7 +592,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 2f,
+                    Modifier = 3f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -605,7 +605,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -843,7 +843,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 2f,
+                    Modifier = 3f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -1360,7 +1360,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {

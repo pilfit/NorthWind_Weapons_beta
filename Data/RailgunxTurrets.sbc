@@ -112,11 +112,11 @@
 			<Components>
              <Component Subtype="SteelPlate" Count="500" />
              <Component Subtype="Construction" Count="80" />
-             <Component Subtype="MetalGrid" Count="50" />
              <Component Subtype="LargeTube" Count="20" />
              <Component Subtype="Motor" Count="30" />
 	         <Component Subtype="Superconductor" Count="20" />				 
              <Component Subtype="Computer" Count="20" />
+             <Component Subtype="MetalGrid" Count="50" />			 
              <Component Subtype="SteelPlate" Count="550" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />
@@ -186,6 +186,7 @@
              <Component Subtype="Motor" Count="25" />
 	         <Component Subtype="Superconductor" Count="60" />		 
              <Component Subtype="Computer" Count="40" />
+             <Component Subtype="MetalGrid" Count="50" />			 
              <Component Subtype="SteelPlate" Count="950" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />

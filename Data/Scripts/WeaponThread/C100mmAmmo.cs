@@ -90,8 +90,8 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 4f,
-                    Type = Kinetic,
+                    Modifier = 3f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -252,7 +252,7 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0.5f, end: 0.8f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -374,8 +374,8 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 4f,
-                    Type = Kinetic,
+                    Modifier = 3f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -536,7 +536,7 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0.5f, end: 0.8f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -658,7 +658,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.2f,
+                    Modifier = 0.1f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -809,7 +809,7 @@ namespace WeaponThread
                         Enable = true,
                         Length = 1f,
                         Width = 0.1f,
-                        Color = Color(red: 50.0f, green: 5.20f, blue: 1.1f, alpha: 1f),
+                        Color = Color(red: 40.0f, green: 5.20f, blue: 1.1f, alpha: 1f),
                     },
                     Trail = new TrailDef
                     {

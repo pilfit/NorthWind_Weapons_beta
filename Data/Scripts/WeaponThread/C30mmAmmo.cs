@@ -230,8 +230,8 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -245,7 +245,7 @@ namespace WeaponThread
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 1,
-                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.5f),
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.1f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -541,11 +541,11 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "",
-                Fragments = 0,
-				Reverse = false,
+                AmmoRound = "30mmCRAMAmmoS",
+                Fragments = 1,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 120, // 0 - 360
+                Degrees = 0, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -712,7 +712,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "Small30mmExplo",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
@@ -1485,8 +1485,8 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -1500,7 +1500,7 @@ namespace WeaponThread
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 1,
-                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.5f),
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.1f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -1549,11 +1549,11 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "",
-                Fragments = 0,
-				Reverse = false,
+                AmmoRound = "30mmCRAMAmmoS",
+                Fragments = 1,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 120, // 0 - 360
+                Degrees = 0, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -1715,7 +1715,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "Small30mmExplo",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
@@ -1725,16 +1725,16 @@ namespace WeaponThread
                             Loop = false,
                             Restart = false,
                             MaxDistance = 5000,
-                            MaxDuration = 0.1f,
-                            Scale = 4.2f,
+                            MaxDuration = 1f,
+                            Scale = 1f,
                             HitPlayChance = 1f,
                         },
                     },
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -1748,7 +1748,7 @@ namespace WeaponThread
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 1,
-                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.5f),
+                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.1f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -2044,11 +2044,11 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "",
-                Fragments = 0,
-				Reverse = false,
+                AmmoRound = "30mmCRAMAmmoS",
+                Fragments = 1,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 120, // 0 - 360
+                Degrees = 0, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -2210,7 +2210,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "Small30mmExplo",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
@@ -2220,16 +2220,16 @@ namespace WeaponThread
                             Loop = false,
                             Restart = false,
                             MaxDistance = 5000,
-                            MaxDuration = 0.1f,
-                            Scale = 4.2f,
+                            MaxDuration = 1f,
+                            Scale = 1f,
                             HitPlayChance = 1f,
                         },
                     },
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -2243,7 +2243,7 @@ namespace WeaponThread
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 1,
-                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.5f),
+                        Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.1f),
                         Back = false,
                         CustomWidth = 0.05f,
                         UseWidthVariance = true,
@@ -2463,7 +2463,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "Small30mmExplo",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
@@ -2669,7 +2669,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 8, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 750,
+                DesiredSpeed = 810,
                 MaxTrajectory = 200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed

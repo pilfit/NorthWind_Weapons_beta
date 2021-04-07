@@ -75,12 +75,12 @@
       <DisplayName>203mm AP Ammo</DisplayName>
       <Icon>Textures\icons\203mmHMagIcon.png</Icon>
       <Prerequisites>
-        <Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="120" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
 		<Item Amount="3" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
-      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="H203Ammo" />
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="H203AmmoAP" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
     </Blueprint>
 
@@ -153,6 +153,59 @@
    <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>C300AmmoAP</SubtypeId>
+      </Id>
+      <DisplayName>300mm AP Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Prerequisites>
+        <Item Amount="390" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="25" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="15" TypeId="Ingot" SubtypeId="Cobalt" />		
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoAP" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>    
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>C300AmmoHE</SubtypeId>
+      </Id>
+      <DisplayName>300mm HE Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Prerequisites>
+        <Item Amount="190" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />		
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoHE" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>      
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>C300AmmoG</SubtypeId>
+      </Id>
+      <DisplayName>300mm Guided Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Prerequisites>
+        <Item Amount="190" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="20" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />	
+    <Item Amount="5" TypeId="Ingot" SubtypeId="Silver" />	
+		<Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />    
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoG" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>  
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>C100ShellCasingToIron</SubtypeId>
       </Id>
       <DisplayName>100mm Casing Scrap</DisplayName>
@@ -178,7 +231,10 @@
 		<Entry Class="Components" BlueprintSubtypeId="C30DUammo" />		
 		<Entry Class="Components" BlueprintSubtypeId="CRAM30mmAmmo" />	
 		<Entry Class="Components" BlueprintSubtypeId="C100mmAmmo" />	
-		
+		<Entry Class="Components" BlueprintSubtypeId="C300AmmoAP" />
+		<Entry Class="Components" BlueprintSubtypeId="C300AmmoHE" />
+		<Entry Class="Components" BlueprintSubtypeId="C300AmmoG" />        
+
 	
 		<Entry Class="Ammo" BlueprintSubtypeId="R75ammo" />
 		<Entry Class="Ammo" BlueprintSubtypeId="R150ammo" />
@@ -188,7 +244,11 @@
 		<Entry Class="Ammo" BlueprintSubtypeId="C30Ammo" />		
 		<Entry Class="Ammo" BlueprintSubtypeId="C30DUammo" />		
     <Entry Class="Ammo" BlueprintSubtypeId="CRAM30mmAmmo" />	
-    <Entry Class="Ammo" BlueprintSubtypeId="C100mmAmmo" />		
+    <Entry Class="Ammo" BlueprintSubtypeId="C100mmAmmo" />	
+		<Entry Class="Ammo" BlueprintSubtypeId="C300AmmoAP" />
+		<Entry Class="Ammo" BlueprintSubtypeId="C300AmmoHE" />
+		<Entry Class="Ammo" BlueprintSubtypeId="C300AmmoG" />     
+
 
     <Entry Class="CommonMetals" BlueprintSubtypeId="C100ShellCasingToIron" />    
     <Entry Class="Ingots" BlueprintSubtypeId="C100ShellCasingToIron" />   

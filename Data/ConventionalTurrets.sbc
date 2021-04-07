@@ -231,5 +231,85 @@
             			
 		</Definition>
 
+        <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		
+		  <Id>
+			<TypeId>LargeMissileTurret</TypeId>
+			<SubtypeId>C300mmTurret</SubtypeId>
+		  </Id>
+			<DisplayName>300mm Gun Turret</DisplayName>
+			<Description>300mm gun turret. Uses 300mm Ammo. </Description>
+			<Icon>Textures\icons\300mmTurretIcon.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="5" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\C300mm.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\C300mm_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\C300mm_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\C300mm_BS3.mwm"/>
+			</BuildProgressModels>
+			
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+		   
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="800" />
+             <Component Subtype="Construction" Count="190" />
+             <Component Subtype="MetalGrid" Count="50" />
+			 <Component Subtype="SmallTube" Count="25" /> 
+             <Component Subtype="LargeTube" Count="30" />
+             <Component Subtype="Motor" Count="30" />			 
+             <Component Subtype="Computer" Count="20" />
+             <Component Subtype="MetalGrid" Count="50" />			 
+             <Component Subtype="SteelPlate" Count="800" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>300mmTurret</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>			
+			<WeaponDefinitionId Subtype="C300mmTurret" />
+			<InventoryMaxVolume>0.062</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+			<MaxRangeMeters>4000</MaxRangeMeters>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>525</PCU>
+            			
+		</Definition>
+
 	</CubeBlocks>
 </Definitions>

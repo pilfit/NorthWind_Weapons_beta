@@ -139,7 +139,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase, H203mmammoF,
+                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase, 
 				
                 
             },

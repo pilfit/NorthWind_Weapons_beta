@@ -170,7 +170,64 @@
       <Model>Models\C100AmmoMag.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="C100mmAmmo" />
-    </AmmoMagazine>	    
+    </AmmoMagazine>
+
+	<AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C300AmmoAP</SubtypeId>
+      </Id>
+      <DisplayName>300mm AP Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>60</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C300Shells.mwm</Model>
+      <Capacity>3</Capacity>
+      <AmmoDefinitionId Subtype="C300AmmoAP" />
+    </AmmoMagazine>	
+
+	<AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C300AmmoHE</SubtypeId>
+      </Id>
+      <DisplayName>300mm HE Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>60</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C300Shells.mwm</Model>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="C300AmmoHE" />
+    </AmmoMagazine>	
+
+	<AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C300AmmoG</SubtypeId>
+      </Id>
+      <DisplayName>300mm Smart Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>60</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C300Shells.mwm</Model>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="C300AmmoG" />
+    </AmmoMagazine>	            	    
 	
   </AmmoMagazines>
 

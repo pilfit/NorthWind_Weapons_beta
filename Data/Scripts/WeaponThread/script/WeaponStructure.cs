@@ -276,6 +276,8 @@ namespace WeaponThread
                     [ProtoMember(8)] internal int MinElevation;
                     [ProtoMember(9)] internal float InventorySize;
                     [ProtoMember(10)] internal ArmorState Armor;
+                    [ProtoMember(11)] internal int HomeAzimuth;
+                    [ProtoMember(12)] internal int HomeElevation;                    
                 }
 
                 [ProtoContract]

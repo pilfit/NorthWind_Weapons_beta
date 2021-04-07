@@ -38,9 +38,9 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>10</X>
-                          <Y>10</Y>
-                          <Z>10</Z>
+                          <X>30</X>
+                          <Y>30</Y>
+                          <Z>30</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
@@ -48,8 +48,8 @@
                       <Key>
                         <Time>0.33</Time>
                         <ValueVector4>
-                          <X>2.9828262</X>
-                          <Y>2.9406007</Y>
+                          <X>12.9828262</X>
+                          <Y>5.9406007</Y>
                           <Z>2.4313402</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -233,12 +233,12 @@
                       </Key>
                       <Key>
                         <Time>0.005299417</Time>
-                        <ValueFloat>8.6</ValueFloat>
+                        <ValueFloat>1.6</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.1651856</Time>
-                        <ValueFloat>3</ValueFloat>
+                        <ValueFloat>1</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>

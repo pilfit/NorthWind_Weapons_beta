@@ -86,12 +86,12 @@ namespace WeaponThread
                     Armor = -1f,
                     Light = -1f,
                     Heavy = 0.4f,
-                    NonArmor = -1f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 4f,
-                    Type = Kinetic,
+                    Modifier = 3f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -252,7 +252,7 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0.8f, end: 1f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -266,7 +266,7 @@ namespace WeaponThread
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 12,
-                        Color = Color(red: 5.585f, green: 1.562f, blue: 0.21f, alpha: 0.8f),
+                        Color = Color(red: 5.585f, green: 2.062f, blue: 0.21f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -370,12 +370,12 @@ namespace WeaponThread
                     Armor = -1f,
                     Light = -1f,
                     Heavy = 0.4f,
-                    NonArmor = -1f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 4f,
-                    Type = Kinetic,
+                    Modifier = 3f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -536,7 +536,7 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0.8f, end: 1f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -550,7 +550,7 @@ namespace WeaponThread
                         Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 15,
-                        Color = Color(red: 5.585f, green: 3.562f, blue: 0.21f, alpha: 0.8f),
+                        Color = Color(red: 5.585f, green: 2.062f, blue: 0.21f, alpha: 0.8f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -738,7 +738,7 @@ namespace WeaponThread
                 DesiredSpeed = 500,
                 MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -819,7 +819,7 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0.8f, end: 1f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
@@ -940,7 +940,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.5f,
+                    Modifier = 0.1f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },

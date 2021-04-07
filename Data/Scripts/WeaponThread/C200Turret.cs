@@ -53,7 +53,7 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "203mm Gun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.1f,
+                DeviateShotAngle = 0.6f,
                 AimingTolerance = 0.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -81,6 +81,8 @@ namespace WeaponThread {
                     FixedOffset = false,
                     InventorySize = 0.341f,
                     Offset = Vector(x: 0, y: 0, z: 0),
+                    HomeAzimuth = 0,
+                    HomeElevation = 5,                    
                 },
                 Other = new OtherDef {
                     GridWeaponCap = 0,
