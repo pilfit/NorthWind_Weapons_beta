@@ -27,6 +27,7 @@
 				<string>LargeMissileTurret/CIWS</string>
 				<string>LargeMissileTurret/C100mmTurret</string>
 				<string>LargeMissileTurret/C200mmTurret</string>
+				<string>LargeMissileTurret/C300mmTurret</string>
 
 			</ItemIds>
 		</Category>
@@ -53,6 +54,7 @@
 				<string>LargeMissileTurret/CIWS</string>	
 				<string>LargeMissileTurret/C100mmTurret</string>
 				<string>LargeMissileTurret/C200mmTurret</string>
+				<string>LargeMissileTurret/C300mmTurret</string>
 
 				</ItemIds>  
 		</Category>

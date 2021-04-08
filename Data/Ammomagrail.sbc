@@ -187,7 +187,7 @@
       <Mass>60</Mass>
       <Volume>100</Volume>
       <Model>Models\C300Shells.mwm</Model>
-      <Capacity>3</Capacity>
+      <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoAP" />
     </AmmoMagazine>	
 

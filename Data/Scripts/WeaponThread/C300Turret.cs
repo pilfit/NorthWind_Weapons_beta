@@ -96,25 +96,25 @@ namespace WeaponThread {
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype	                    
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 400,
+                    RateOfFire = 200,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 12100, //heat generated per shot
+                    HeatPerShot = 2100, //heat generated per shot
                     MaxHeat = 30000, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = .2f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 3000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 3,
-                    DelayAfterBurst = 840, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = true,
+                    DelayAfterBurst = 800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    FireFullBurst = false,
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "",
-                    FiringSound = "ArtilleryFireNW", // WepShipGatlingShot
+                    FiringSound = "HeavyNavalArt", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "",
@@ -124,7 +124,7 @@ namespace WeaponThread {
                 Graphics = new HardPointParticleDef {
 
                     Barrel1 = new ParticleDef {
-                        Name = "LargeMuzzleEffectNW", // Smoke_LargeGunShot
+                        Name = "LargeMuzzleEffectNW300", // Smoke_LargeGunShot
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
 

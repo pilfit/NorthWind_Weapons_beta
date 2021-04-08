@@ -158,10 +158,10 @@
       <DisplayName>300mm AP Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Prerequisites>
-        <Item Amount="390" TypeId="Ingot" SubtypeId="Iron" />
-		<Item Amount="25" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
-		<Item Amount="15" TypeId="Ingot" SubtypeId="Cobalt" />		
+        <Item Amount="1170" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="75" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="45" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoAP" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
@@ -175,10 +175,10 @@
       <DisplayName>300mm HE Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Prerequisites>
-        <Item Amount="190" TypeId="Ingot" SubtypeId="Iron" />
-		<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
-		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />		
+        <Item Amount="570" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="45" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="75" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="30" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoHE" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
@@ -192,12 +192,12 @@
       <DisplayName>300mm Guided Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Prerequisites>
-        <Item Amount="190" TypeId="Ingot" SubtypeId="Iron" />
-		<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="20" TypeId="Ingot" SubtypeId="Magnesium" />
-		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />	
-    <Item Amount="5" TypeId="Ingot" SubtypeId="Silver" />	
-		<Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />    
+        <Item Amount="570" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="45" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="60" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="30" TypeId="Ingot" SubtypeId="Cobalt" />	
+    <Item Amount="15" TypeId="Ingot" SubtypeId="Silver" />	
+		<Item Amount="30" TypeId="Ingot" SubtypeId="Silicon" />    
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoG" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>

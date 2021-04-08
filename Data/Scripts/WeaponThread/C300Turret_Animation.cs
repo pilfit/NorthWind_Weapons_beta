@@ -286,7 +286,7 @@ namespace WeaponThread
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
                         
-                        [Reloading] =
+                        [BurstReload] =
                             new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
                             {
                                  
@@ -350,7 +350,7 @@ namespace WeaponThread
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
                         
-                        [Reloading] =
+                        [BurstReload] =
                             new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
                             {
                                  
@@ -414,7 +414,7 @@ namespace WeaponThread
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
                         
-                        [Reloading] =
+                        [BurstReload] =
                             new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
                             {
 
@@ -481,7 +481,7 @@ namespace WeaponThread
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
                         
-                        [Reloading] =
+                        [BurstReload] =
                             new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
                             {
                                  
@@ -540,7 +540,7 @@ namespace WeaponThread
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
                         
-                        [Reloading] =
+                        [BurstReload] =
                             new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
                             {
                                  
@@ -598,7 +598,7 @@ namespace WeaponThread
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
                         
-                        [Reloading] =
+                        [BurstReload] =
                             new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
                             {
                                  
