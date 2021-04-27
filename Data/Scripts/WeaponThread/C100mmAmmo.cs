@@ -46,7 +46,7 @@ namespace WeaponThread
             {
                 AmmoRound = "C100mmShrapnelbase",
                 Fragments = 1,
-				Reverse = false,
+				Reverse = true,
 				RandomizeDir = false,
                 Degrees = 0, // 0 - 360
             },
@@ -67,7 +67,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 300, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 5, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.1f,
                 VoxelHitModifier = 2f,					
@@ -132,8 +132,8 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 0.2f,
-                    CustomParticle = "LargeArtExplosionLight",
+                    Scale = 0.5f,
+                    CustomParticle = "SmallArtExplosionLight",
                     CustomSound = "ArcWepSmallMissileExpl",
                 },
                 Detonation = new DetonateDef
@@ -171,8 +171,8 @@ namespace WeaponThread
                 DesiredSpeed = 700,
                 MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: -5, end: 5), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: -12, end: 8), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: -15, end: 10), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -328,11 +328,11 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "C100mmShrapnelbase",
-                Fragments = 1,
+                AmmoRound = "C100mmShrapnel",
+                Fragments = 50,
 				Reverse = false,
 				RandomizeDir = false,
-                Degrees = 0, // 0 - 360
+                Degrees = 360, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -351,7 +351,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 90, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 30, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.1f,
                 VoxelHitModifier = 2f,					
@@ -416,8 +416,8 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 0.2f,
-                    CustomParticle = "LargeArtExplosionLight",
+                    Scale = 0.5f,
+                    CustomParticle = "SmallArtExplosionLight",
                     CustomSound = "ArcWepSmallMissileExpl",
                 },
                 Detonation = new DetonateDef
@@ -635,7 +635,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 10, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 4f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = -1f,
                 VoxelHitModifier = 1,					
@@ -723,7 +723,7 @@ namespace WeaponThread
             },
             Beams = new BeamDef
             {
-                Enable = false,
+                Enable = true,
                 VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
                 ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
                 RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
@@ -806,16 +806,16 @@ namespace WeaponThread
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Length = 1f,
                         Width = 0.1f,
                         Color = Color(red: 40.0f, green: 5.20f, blue: 1.1f, alpha: 1f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
-                        DecayTime = 1,
+                        DecayTime = 10,
                         Color = Color(red: 5.585f, green: 3.562f, blue: 2.21f, alpha: 1f),
                         Back = false,
                         CustomWidth = 0.3f,
@@ -850,7 +850,7 @@ namespace WeaponThread
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 0f,
             DecayPerShot = 0f,			
-			HardPointUsable = true,
+			HardPointUsable = false,
             IgnoreWater = false,			
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
@@ -888,7 +888,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 500, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 4, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -936,11 +936,11 @@ namespace WeaponThread
             },
             AreaEffect = new AreaDamageDef
             {
-                AreaEffect = DotField, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
+                AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 1f, // the sphere of influence of area effects
-                    EffectStrength = 1f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Radius = 0f, // the sphere of influence of area effects
+                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
@@ -967,10 +967,10 @@ namespace WeaponThread
                 },
                 Explosions = new ExplosionDef
                 {
-                    NoVisuals = false,
-                    NoSound = false,
-                    NoShrapnel = false,
-                    NoDeformation = false,
+                    NoVisuals = true,
+                    NoSound = true,
+                    NoShrapnel = true,
+                    NoDeformation = true,
                     Scale = 0.3f,
                     CustomParticle = "",
                     CustomSound = "",
@@ -980,7 +980,7 @@ namespace WeaponThread
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
                     DetonationDamage = 1,
-                    DetonationRadius = 1f,
+                    DetonationRadius = 10f,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
                 },
                 EwarFields = new EwarFieldsDef
@@ -1006,8 +1006,8 @@ namespace WeaponThread
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 2, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AccelPerSec = 500f,
-                DesiredSpeed = 1,
+                AccelPerSec = 0f,
+                DesiredSpeed = 600,
                 MaxTrajectory = 1f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1034,14 +1034,14 @@ namespace WeaponThread
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",
-                VisualProbability = 0.1f,
+                VisualProbability = 1f,
                 ShieldHitDraw = false,
                 Particles = new AmmoParticleDef
                 {
                     Ammo = new ParticleDef
                     {
                         Name = "", //ShipWelderArc
-                        Color = Color(red: 255, green: 60, blue: 1, alpha: 1),
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
@@ -1049,7 +1049,7 @@ namespace WeaponThread
                             Restart = false,
                             MaxDistance = 5000,
                             MaxDuration = 1,
-                            Scale = 0.1f,
+                            Scale = 1f,
                         },
                     },
                     Hit = new ParticleDef

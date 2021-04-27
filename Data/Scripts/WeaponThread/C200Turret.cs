@@ -53,7 +53,7 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "203mm Gun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.6f,
+                DeviateShotAngle = 0.55f,
                 AimingTolerance = 0.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -108,7 +108,7 @@ namespace WeaponThread {
                     HeatSinkRate = 1000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 2,
-                    DelayAfterBurst = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayAfterBurst = 300, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                 },
                 Audio = new HardPointAudioDef {
@@ -151,7 +151,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                C200mmAmmo, C200mmShrapnel, C200mmShrapnelbase, C200mmAmmoImpact, C200mmAmmoAP,               
+                C200mmAmmo, C200mmShrapnel, C200mmShrapnelbase, C200mmAmmoImpact, C200mmAmmoAP, C200mmAPHEShrapbase,               
 
             },
             Animations = C200Turret_Animation,

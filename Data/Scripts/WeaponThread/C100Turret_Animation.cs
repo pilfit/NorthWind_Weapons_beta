@@ -114,7 +114,7 @@ namespace WeaponThread
                 {
                     SubpartId = Names("C100Barrel"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
-                    StartupFireDelay = 50,
+                    StartupFireDelay = 1,
                     AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
@@ -140,7 +140,7 @@ namespace WeaponThread
                                 new RelMove
                                 {
                                     CenterEmpty = "",
-                                    TicksToMove = 10, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 8, //number of ticks to complete motion, 60 = 1 second
                                     MovementType = Delay,
                                     LinearPoints = new XYZ[0],
                                     Rotation = Transformation(0, 0, 0), //degrees
@@ -150,7 +150,7 @@ namespace WeaponThread
                                 new RelMove
                                 {
                                     CenterEmpty = "",
-                                    TicksToMove = 30, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 20, //number of ticks to complete motion, 60 = 1 second
                                     MovementType = Linear, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
                                     LinearPoints = new[]
                                     {
@@ -165,51 +165,7 @@ namespace WeaponThread
 				},  
 
 
-                new PartAnimationSetDef()
-                {                    
 
-                    SubpartId = Names("EjectorEmpty"),
-                    BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
-                    StartupFireDelay = 60,
-                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0),//Delay before animation starts
-                    Reverse = Events(),
-                    Loop = Events(),
-                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
-                    {
-                        
-                        [PreFire] =
-                            new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
-                            {
-                                 
-                               new RelMove
-                                {
-                                    CenterEmpty = "",
-                                    TicksToMove = 4, //number of ticks to complete motion, 60 = 1 second
-                                    MovementType = Linear, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
-                                    LinearPoints = new[]
-                                    {
-                                        Transformation(0, 0, 0.3), //linear movement
-                                    },
-                                    Rotation = Transformation(0, 0, 0), //degrees
-                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
-                                },
-                        
-                                new RelMove
-                                {
-                                    CenterEmpty = "",
-                                    TicksToMove = 3, //number of ticks to complete motion, 60 = 1 second
-                                    MovementType = Linear, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
-                                    LinearPoints = new[]
-                                    {
-                                        Transformation(0, 0, -0.3), //linear movement
-                                    },
-                                    Rotation = Transformation(0, 0, 0), //degrees
-                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
-                                },
-                            },
-                        
-                    }
-                },
                
 				#endregion
 

@@ -88,7 +88,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0f,
+                    Heavy = 0.01f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -582,7 +582,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = 5f,
-                    Heavy = 0f,
+                    Heavy = 0.01f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -836,7 +836,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0f,
+                    Heavy = 0.01f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -1089,7 +1089,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0f,
+                    Heavy = 0.01f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -1343,7 +1343,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0f,
+                    Heavy = 0.01f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -2333,7 +2333,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = 0.5f,
-                    Heavy = 0f,
+                    Heavy = 0.01f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -2696,7 +2696,7 @@ namespace WeaponThread
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",
-                VisualProbability = 1f,
+                VisualProbability = 0.5f,
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {

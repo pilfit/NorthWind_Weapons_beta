@@ -45,10 +45,10 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "railgunShrapnel",
-                Fragments = 10,
+                Fragments = 3,
 				Reverse = false,
 				RandomizeDir = false,
-                Degrees = 190, // 0 - 360
+                Degrees = 45, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -79,18 +79,18 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.1f,
+                    Small = 0.2f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = -1f,
-                    NonArmor = -1f,
+                    Heavy = 2f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.4f,
+                    Modifier = -1f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -103,7 +103,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -270,7 +270,7 @@ namespace WeaponThread
             AmmoRound = "railgunShrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.00000000001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 800f,
+            BaseDamage = 6000f,
             Mass = 1f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 0f,
@@ -304,18 +304,18 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.5f,
+                    Small = 0.2f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
                     Light = -1f,
                     Heavy = -1f,
-                    NonArmor = -1f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.1f,
+                    Modifier = 0.5f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -328,7 +328,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -374,7 +374,7 @@ namespace WeaponThread
             },
             Beams = new BeamDef
             {
-                Enable = false,
+                Enable = true,
                 VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
                 ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
                 RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
@@ -495,7 +495,7 @@ namespace WeaponThread
             AmmoRound = "RailFXshots",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 1f,
+            BaseDamage = 600f,
             Mass = 0f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60f,
@@ -542,13 +542,13 @@ namespace WeaponThread
                 Characters = -1f,
 				FallOff = new FallOffDef
                 {
-                 Distance = 1000f, // Distance at which max damage begins falling off.
-                 MinMultipler = 0.5f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 Distance = 100f, // Distance at which max damage begins falling off.
+                 MinMultipler = 0.1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.1f,
+                    Small = 0.5f,
                 },
                 Armor = new ArmorDef
                 {
@@ -559,8 +559,8 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1f,
-                    Type = Kinetic,
+                    Modifier = 20f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -572,7 +572,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -632,7 +632,7 @@ namespace WeaponThread
                 MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 3000,
-                MaxTrajectory = 1000f,
+                MaxTrajectory = 800f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
@@ -817,7 +817,7 @@ namespace WeaponThread
                         new CustomBlocksDef
                         {
                             SubTypeId = "LargeHeavyBlockArmorBlock",
-                            Modifier = 2f,
+                            Modifier = -1f,
                         },
                         new CustomBlocksDef
                         {
@@ -877,7 +877,7 @@ namespace WeaponThread
                 MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 1300,
-                MaxTrajectory = 500f,
+                MaxTrajectory = 400f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory

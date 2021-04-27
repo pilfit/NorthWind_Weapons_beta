@@ -28,6 +28,7 @@
 				<string>LargeMissileTurret/C100mmTurret</string>
 				<string>LargeMissileTurret/C200mmTurret</string>
 				<string>LargeMissileTurret/C300mmTurret</string>
+				<string>LargeMissileTurret/C400mmTurret</string>
 
 			</ItemIds>
 		</Category>
@@ -55,6 +56,7 @@
 				<string>LargeMissileTurret/C100mmTurret</string>
 				<string>LargeMissileTurret/C200mmTurret</string>
 				<string>LargeMissileTurret/C300mmTurret</string>
+				<string>LargeMissileTurret/C400mmTurret</string>
 
 				</ItemIds>  
 		</Category>

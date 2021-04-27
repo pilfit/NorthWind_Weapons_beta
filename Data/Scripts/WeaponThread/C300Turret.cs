@@ -54,10 +54,11 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "300mm Gun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.5f,
-                AimingTolerance = 0.15f, // 0 - 180 firing angle
+                DeviateShotAngle = 0.6f,
+                AimingTolerance = 0.25f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                CanShootSubmerged = true,
 
                 Ui = new UiDef {
                     RateOfFire = false,
@@ -109,7 +110,7 @@ namespace WeaponThread {
                     HeatSinkRate = 3000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 3,
-                    DelayAfterBurst = 800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayAfterBurst = 850, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                 },
                 Audio = new HardPointAudioDef {
@@ -152,7 +153,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                C300mmAmmoAP, C300mmShrapnel, C300mmAmmoHE, C300mmAmmoG, C300GSecond,               
+                C300mmAmmoAP, C300mmShrapnel, C300mmAmmoHE, C300mmAmmoG, C300GSecond, C300mmAPHEShrapbase,               
 
             },
             Animations = C300Turret_Animation,

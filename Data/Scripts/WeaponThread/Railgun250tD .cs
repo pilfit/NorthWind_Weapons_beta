@@ -54,7 +54,7 @@ namespace WeaponThread {
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
-                    RateOfFire = true,
+                    RateOfFire = false,
                     DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload =  false,

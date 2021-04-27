@@ -128,12 +128,12 @@ namespace WeaponThread
                 },
                 Explosions = new ExplosionDef
                 {
-                    NoVisuals = true,
+                    NoVisuals = false,
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 1,
-                    CustomParticle = "",
+                    Scale = 0.8f,
+                    CustomParticle = "LargeArtExplosionLight",
                     CustomSound = "",
                 },
                 Detonation = new DetonateDef
@@ -215,7 +215,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "LargeArtExplosion",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 1),
@@ -466,7 +466,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "LargeArtExplosion",
+                        Name = "LargeArtExplosionLight",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 1),
@@ -1249,7 +1249,7 @@ namespace WeaponThread
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 10,
                         Color = Color(red: 5.585f, green: 3.562f, blue: 2.21f, alpha: 1f),

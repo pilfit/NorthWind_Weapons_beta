@@ -48,13 +48,13 @@ namespace WeaponThread {
             HardPoint = new HardPointDef 
             {
                 WeaponName = "RailgunxTurret3", // name of weapon in terminal
-                DeviateShotAngle = 0.2f,
+                DeviateShotAngle = 0.35f,
                 AimingTolerance = 1.0f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
-                    RateOfFire = true,
+                    RateOfFire = false,
                     DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload =  false,
@@ -90,12 +90,12 @@ namespace WeaponThread {
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 720, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    DelayUntilFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 18000, //heat generated per shot
+                    ReloadTime = 280, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    HeatPerShot = 22000, //heat generated per shot
                     MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .50f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 700, //amount of heat lost per second
+                    Cooldown = .25f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 1000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

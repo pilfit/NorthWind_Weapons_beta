@@ -2491,7 +2491,7 @@
       <DurationMax>0.65</DurationMax>
       <Version>0</Version>
       <ParticleGenerations>
-        <ParticleGeneration Name="Smoke" Version="0">
+        <ParticleGeneration Name="Sparks" Version="0">
           <GenerationType>GPU</GenerationType>
           <Properties>
             <Property Name="Array size" AnimationType="Const" Type="Vector3">
@@ -2502,10 +2502,10 @@
               </ValueVector3>
             </Property>
             <Property Name="Array offset" AnimationType="Const" Type="Int">
-              <ValueInt>64</ValueInt>
+              <ValueInt>4</ValueInt>
             </Property>
             <Property Name="Array modulo" AnimationType="Const" Type="Int">
-              <ValueInt>72</ValueInt>
+              <ValueInt>8</ValueInt>
             </Property>
             <Property Name="Color" AnimationType="Animated2D" Type="Vector4">
               <Keys>
@@ -2516,7 +2516,7 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>1</X>
+                          <X>15</X>
                           <Y>0.9573696</Y>
                           <Z>0.6940805</Z>
                           <W>1</W>
@@ -2526,7 +2526,7 @@
                       <Key>
                         <Time>0.4642289</Time>
                         <ValueVector4>
-                          <X>0.034692</X>
+                          <X>10.034692</X>
                           <Y>0.02736195</Y>
                           <Z>0.0193569</Z>
                           <W>0.07843138</W>
@@ -2536,7 +2536,7 @@
                       <Key>
                         <Time>0.7763646</Time>
                         <ValueVector4>
-                          <X>0.008526365</X>
+                          <X>5.008526365</X>
                           <Y>0.008526365</Y>
                           <Z>0.008526365</Z>
                           <W>0.07843138</W>
@@ -2566,22 +2566,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>4</ValueFloat>
+                        <ValueFloat>400</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.09566126</Time>
-                        <ValueFloat>2</ValueFloat>
+                        <ValueFloat>400</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.749608</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>200</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>100</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -2597,9 +2597,9 @@
                 <Key>
                   <Time>0</Time>
                   <ValueVector3>
-                    <X>0.02</X>
-                    <Y>0.02</Y>
-                    <Z>0.02</Z>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
                   </ValueVector3>
                   <Value2D />
                 </Key>
@@ -2625,7 +2625,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>0.05</ValueFloat>
+                  <ValueFloat>20</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -2706,22 +2706,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>0.25</ValueFloat>
+                        <ValueFloat>0.02</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.003136435</Time>
-                        <ValueFloat>0.25</ValueFloat>
+                        <ValueFloat>0.02</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.9964311</Time>
-                        <ValueFloat>0.7</ValueFloat>
+                        <ValueFloat>0.02</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>0.7</ValueFloat>
+                        <ValueFloat>0.02</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -2730,19 +2730,19 @@
               </Keys>
             </Property>
             <Property Name="Life" AnimationType="Const" Type="Float">
-              <ValueFloat>1.2</ValueFloat>
+              <ValueFloat>0.08</ValueFloat>
             </Property>
             <Property Name="Soft particle distance scale" AnimationType="Const" Type="Float">
               <ValueFloat>2</ValueFloat>
             </Property>
             <Property Name="Streak multiplier" AnimationType="Const" Type="Float">
-              <ValueFloat>4</ValueFloat>
+              <ValueFloat>0.45</ValueFloat>
             </Property>
             <Property Name="Animation frame time" AnimationType="Const" Type="Float">
               <ValueFloat>0.3</ValueFloat>
             </Property>
             <Property Name="Enabled" AnimationType="Const" Type="Bool">
-              <ValueBool>false</ValueBool>
+              <ValueBool>true</ValueBool>
             </Property>
             <Property Name="Particles per second" AnimationType="Animated" Type="Float">
               <Keys>
@@ -2781,7 +2781,7 @@
               <ValueVector3>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>-0.07</Z>
+                <Z>0</Z>
               </ValueVector3>
             </Property>
             <Property Name="Rotation velocity var" AnimationType="Const" Type="Float">
@@ -2800,7 +2800,7 @@
               <ValueFloat>0.2</ValueFloat>
             </Property>
             <Property Name="Streaks" AnimationType="Const" Type="Bool">
-              <ValueBool>false</ValueBool>
+              <ValueBool>true</ValueBool>
             </Property>
             <Property Name="Rotation reference" AnimationType="Const" Type="Int">
               <ValueInt>0</ValueInt>
@@ -2941,8 +2941,8 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -2951,8 +2951,8 @@
                       <Key>
                         <Time>0.299654</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -2961,8 +2961,8 @@
                       <Key>
                         <Time>0.66</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -3156,7 +3156,7 @@
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property Name="Streak multiplier" AnimationType="Const" Type="Float">
-              <ValueFloat>4</ValueFloat>
+              <ValueFloat>2</ValueFloat>
             </Property>
             <Property Name="Animation frame time" AnimationType="Const" Type="Float">
               <ValueFloat>0.03</ValueFloat>
@@ -3367,28 +3367,28 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
-                          <Z>1</Z>
+                          <X>8</X>
+                          <Y>5</Y>
+                          <Z>15</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.299654</Time>
+                        <Time>0.099654</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
-                          <Z>1</Z>
+                          <X>10</X>
+                          <Y>2</Y>
+                          <Z>10</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.66</Time>
+                        <Time>0.26</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -3397,8 +3397,8 @@
                       <Key>
                         <Time>1</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -3498,7 +3498,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>0</ValueFloat>
+                  <ValueFloat>5</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -3594,7 +3594,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>0</ValueFloat>
+                  <ValueFloat>1</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -3627,7 +3627,7 @@
               <ValueVector3>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>-0.42</Z>
+                <Z>-1.0</Z>
               </ValueVector3>
             </Property>
             <Property Name="Rotation velocity var" AnimationType="Const" Type="Float">
@@ -3646,7 +3646,7 @@
               <ValueFloat>0</ValueFloat>
             </Property>
             <Property Name="Streaks" AnimationType="Const" Type="Bool">
-              <ValueBool>false</ValueBool>
+              <ValueBool>true</ValueBool>
             </Property>
             <Property Name="Rotation reference" AnimationType="Const" Type="Int">
               <ValueInt>1</ValueInt>
@@ -3673,22 +3673,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>0.5</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.003709592</Time>
-                        <ValueFloat>0.4</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.9962904</Time>
-                        <ValueFloat>0.4</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>0.5</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -3793,28 +3793,28 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
-                          <Z>1</Z>
+                          <X>8</X>
+                          <Y>5</Y>
+                          <Z>15</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.299654</Time>
+                        <Time>0.099654</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
-                          <Z>1</Z>
+                          <X>10</X>
+                          <Y>2</Y>
+                          <Z>10</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.66</Time>
+                        <Time>0.26</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -3823,8 +3823,8 @@
                       <Key>
                         <Time>1</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -4053,7 +4053,7 @@
               <ValueVector3>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>-0.42</Z>
+                <Z>-1.0</Z>
               </ValueVector3>
             </Property>
             <Property Name="Rotation velocity var" AnimationType="Const" Type="Float">
@@ -4072,7 +4072,7 @@
               <ValueFloat>0</ValueFloat>
             </Property>
             <Property Name="Streaks" AnimationType="Const" Type="Bool">
-              <ValueBool>false</ValueBool>
+              <ValueBool>true</ValueBool>
             </Property>
             <Property Name="Rotation reference" AnimationType="Const" Type="Int">
               <ValueInt>1</ValueInt>
@@ -4099,22 +4099,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.002649708</Time>
-                        <ValueFloat>0.7</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.9973503</Time>
-                        <ValueFloat>0.7</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -4219,28 +4219,28 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
-                          <Z>1</Z>
+                          <X>8</X>
+                          <Y>5</Y>
+                          <Z>15</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.299654</Time>
+                        <Time>0.099654</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
-                          <Z>1</Z>
+                          <X>10</X>
+                          <Y>2</Y>
+                          <Z>10</Z>
                           <W>1</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.66</Time>
+                        <Time>0.26</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -4249,8 +4249,8 @@
                       <Key>
                         <Time>1</Time>
                         <ValueVector4>
-                          <X>1</X>
-                          <Y>1</Y>
+                          <X>15</X>
+                          <Y>2</Y>
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
@@ -4479,7 +4479,7 @@
               <ValueVector3>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>-0.42</Z>
+                <Z>-1.0</Z>
               </ValueVector3>
             </Property>
             <Property Name="Rotation velocity var" AnimationType="Const" Type="Float">
@@ -4498,7 +4498,7 @@
               <ValueFloat>0</ValueFloat>
             </Property>
             <Property Name="Streaks" AnimationType="Const" Type="Bool">
-              <ValueBool>false</ValueBool>
+              <ValueBool>true</ValueBool>
             </Property>
             <Property Name="Rotation reference" AnimationType="Const" Type="Int">
               <ValueInt>1</ValueInt>
@@ -4525,22 +4525,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>1.1</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.002649708</Time>
-                        <ValueFloat>0.7</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.9973503</Time>
-                        <ValueFloat>0.7</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>1.2</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -4744,7 +4744,7 @@
                           <X>0.01002596</X>
                           <Y>0.008591111</Y>
                           <Z>0.004501693</Z>
-                          <W>0.2509804</W>
+                          <W>0.1509804</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
@@ -4754,22 +4754,22 @@
                           <X>0.004867177</X>
                           <Y>0.002771699</Y>
                           <Z>0.00206616</Z>
-                          <W>0.5019608</W>
+                          <W>0.1019608</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.2437732</Time>
                         <ValueVector4>
-                          <X>0.01448386</X>
-                          <Y>0.01448386</Y>
-                          <Z>0.01448386</Z>
-                          <W>0.2764706</W>
+                          <X>0.004448386</X>
+                          <Y>0.00448386</Y>
+                          <Z>0.00448386</Z>
+                          <W>0.0164706</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>1.2</Time>
+                        <Time>2</Time>
                         <ValueVector4>
                           <X>0</X>
                           <Y>0</Y>
@@ -4847,13 +4847,13 @@
               </ValueVector3>
             </Property>
             <Property Name="Velocity" AnimationType="Animated" Type="Float">
-              <Keys>
-                <Key>
-                  <Time>0</Time>
-                  <ValueFloat>15.3</ValueFloat>
-                  <Value2D />
-                </Key>
-              </Keys>
+							<Keys>
+								<Key>
+									<Time>0</Time>
+									<ValueFloat>10</ValueFloat>
+									<Value2D />
+								</Key>							
+							</Keys>
             </Property>
             <Property Name="Velocity var" AnimationType="Animated" Type="Float">
               <Keys>
@@ -4945,8 +4945,8 @@
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>1.5</Time>
-                        <ValueFloat>1.55</ValueFloat>
+                        <Time>2</Time>
+                        <ValueFloat>10.55</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -4961,7 +4961,7 @@
               <ValueFloat>2</ValueFloat>
             </Property>
             <Property Name="Streak multiplier" AnimationType="Const" Type="Float">
-              <ValueFloat>4</ValueFloat>
+              <ValueFloat>0.5</ValueFloat>
             </Property>
             <Property Name="Animation frame time" AnimationType="Const" Type="Float">
               <ValueFloat>0.03</ValueFloat>
@@ -4991,10 +4991,10 @@
               <ValueBool>false</ValueBool>
             </Property>
             <Property Name="Light" AnimationType="Const" Type="Bool">
-              <ValueBool>true</ValueBool>
+              <ValueBool>false</ValueBool>
             </Property>
             <Property Name="VolumetricLight" AnimationType="Const" Type="Bool">
-              <ValueBool>true</ValueBool>
+              <ValueBool>false</ValueBool>
             </Property>
             <Property Name="Target coverage" AnimationType="Const" Type="Float">
               <ValueFloat>1</ValueFloat>
@@ -5006,7 +5006,7 @@
               <ValueVector3>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>0</Z>
+                <Z>0.2</Z>
               </ValueVector3>
             </Property>
             <Property Name="Rotation velocity var" AnimationType="Const" Type="Float">
@@ -5025,7 +5025,7 @@
               <ValueFloat>0</ValueFloat>
             </Property>
             <Property Name="Streaks" AnimationType="Const" Type="Bool">
-              <ValueBool>false</ValueBool>
+              <ValueBool>true</ValueBool>
             </Property>
             <Property Name="Rotation reference" AnimationType="Const" Type="Int">
               <ValueInt>0</ValueInt>
@@ -5135,7 +5135,7 @@
               <ValueBool>false</ValueBool>
             </Property>
             <Property Name="Ambient light factor" AnimationType="Const" Type="Float">
-              <ValueFloat>1</ValueFloat>
+              <ValueFloat>0.1</ValueFloat>
             </Property>
             <Property Name="Radius var" AnimationType="Const" Type="Float">
               <ValueFloat>0</ValueFloat>

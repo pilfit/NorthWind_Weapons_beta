@@ -18,9 +18,15 @@
       <Model>Models\R75ammo.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="R75ammo" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
     </AmmoMagazine>
-	
-	<AmmoMagazine>
+
+    <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
         <SubtypeId>R150ammo</SubtypeId>
@@ -37,8 +43,14 @@
       <Model>Models\R150ammo.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="R150ammo" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
     </AmmoMagazine>
-	
+
     <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
@@ -56,9 +68,15 @@
       <Model>Models\R250ammo.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="R250ammo" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
     </AmmoMagazine>
-	
-	<AmmoMagazine>
+
+    <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
         <SubtypeId>H203Ammo</SubtypeId>
@@ -75,9 +93,15 @@
       <Model>Models\203howitzerMag.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="H203Ammo" />
-    </AmmoMagazine>		
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
 
-	<AmmoMagazine>
+    <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
         <SubtypeId>H203AmmoAP</SubtypeId>
@@ -94,7 +118,13 @@
       <Model>Models\203howitzerMag.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="H203AmmoAP" />
-    </AmmoMagazine>	    
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
 
     <AmmoMagazine>
       <Id>
@@ -113,8 +143,14 @@
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="C30Ammo" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
     </AmmoMagazine>
-	
+
     <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
@@ -132,7 +168,13 @@
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="C30DUammo" />
-    </AmmoMagazine>	
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
 
     <AmmoMagazine>
       <Id>
@@ -151,7 +193,13 @@
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="CRAM30mmAmmo" />
-    </AmmoMagazine>	
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
 
     <AmmoMagazine>
       <Id>
@@ -170,9 +218,15 @@
       <Model>Models\C100AmmoMag.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="C100mmAmmo" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
     </AmmoMagazine>
 
-	<AmmoMagazine>
+    <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
         <SubtypeId>C300AmmoAP</SubtypeId>
@@ -187,11 +241,17 @@
       <Mass>60</Mass>
       <Volume>100</Volume>
       <Model>Models\C300Shells.mwm</Model>
-      <Capacity>1</Capacity>
+      <Capacity>3</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoAP" />
-    </AmmoMagazine>	
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
 
-	<AmmoMagazine>
+    <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
         <SubtypeId>C300AmmoHE</SubtypeId>
@@ -206,11 +266,17 @@
       <Mass>60</Mass>
       <Volume>100</Volume>
       <Model>Models\C300Shells.mwm</Model>
-      <Capacity>1</Capacity>
+      <Capacity>3</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoHE" />
-    </AmmoMagazine>	
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
 
-	<AmmoMagazine>
+    <AmmoMagazine>
       <Id>
         <TypeId>AmmoMagazine</TypeId>
         <SubtypeId>C300AmmoG</SubtypeId>
@@ -225,30 +291,123 @@
       <Mass>60</Mass>
       <Volume>100</Volume>
       <Model>Models\C300Shells.mwm</Model>
-      <Capacity>1</Capacity>
+      <Capacity>3</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoG" />
-    </AmmoMagazine>	            	    
-	
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
+
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C400AmmoAP</SubtypeId>
+      </Id>
+      <DisplayName>400mm AP Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>60</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C400Shell.mwm</Model>
+      <Capacity>2</Capacity>
+      <AmmoDefinitionId Subtype="C400AmmoAP" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
+
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C400AmmoHE</SubtypeId>
+      </Id>
+      <DisplayName>400mm HE Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>60</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C400Shell.mwm</Model>
+      <Capacity>2</Capacity>
+      <AmmoDefinitionId Subtype="C400AmmoHE" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>
+    
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C400AmmoCluster</SubtypeId>
+      </Id>
+      <DisplayName>400mm Cluster Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>60</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C400Shell.mwm</Model>
+      <Capacity>2</Capacity>
+      <AmmoDefinitionId Subtype="C400AmmoCluster" />
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>    
+
+
+
   </AmmoMagazines>
 
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>C100ShellCasing</SubtypeId>
-            </Id>
-            <DisplayName>100mm Casing Scrap</DisplayName>
-            <Icon>Textures\GUI\Icons\component\ScrapMetalComponent.dds</Icon>
-            <Size>
-                <X>0.2</X>
-                <Y>0.2</Y>
-                <Z>0.1</Z>
-            </Size>
-            <Mass>1</Mass>
-            <Volume>0.254</Volume>
-            <Model>Models\C100ShellCasing.mwm</Model>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-        </Component>
-</Components>
+  <Components>
+    <Component>
+      <Id>
+        <TypeId>Component</TypeId>
+        <SubtypeId>C100ShellCasing</SubtypeId>
+      </Id>
+      <DisplayName>100mm Casing Scrap</DisplayName>
+      <Icon>Textures\GUI\Icons\component\ScrapMetalComponent.dds</Icon>
+      <Size>
+        <X>0.2</X>
+        <Y>0.2</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>1</Mass>
+      <Volume>0.254</Volume>
+      <Model>Models\C100ShellCasing.mwm</Model>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <MaxIntegrity>40</MaxIntegrity>
+      <DropProbability>0.3</DropProbability>
+      <Health>14</Health>
+      <IconSymbol>IconSymbol_Fe</IconSymbol>
+      <MinimalPricePerUnit>100</MinimalPricePerUnit>
+      <MinimumOfferAmount>250</MinimumOfferAmount>
+      <MaximumOfferAmount>2500</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>1000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </Component>
+  </Components>
 
 </Definitions>
