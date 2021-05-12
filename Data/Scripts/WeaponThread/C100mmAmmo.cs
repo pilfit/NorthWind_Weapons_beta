@@ -67,7 +67,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 5, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 4, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.1f,
                 VoxelHitModifier = 2f,					
@@ -140,8 +140,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 500,
-                    DetonationRadius = 5,
+                    DetonationDamage = 1,
+                    DetonationRadius = 15,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -171,8 +171,8 @@ namespace WeaponThread
                 DesiredSpeed = 700,
                 MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -12, end: 8), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: -15, end: 10), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: 5, end: 5), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: -5, end: 15), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -265,8 +265,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 10,
-                        Color = Color(red: 2.585f, green: 0.562f, blue: 0.21f, alpha: 0.8f),
+                        DecayTime = 15,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.3f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -549,8 +549,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 10,
-                        Color = Color(red: 2.585f, green: 0.562f, blue: 0.21f, alpha: 0.8f),
+                        DecayTime = 15,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.3f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -888,7 +888,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 4, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 16, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -906,13 +906,13 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = -1f,
-                    NonArmor = -1f,
+                    Heavy = 0.4f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = -1f,
-                    Type = Kinetic,
+                    Modifier = 3f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -979,8 +979,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1,
-                    DetonationRadius = 10f,
+                    DetonationDamage = 500,
+                    DetonationRadius = 5f,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
                 },
                 EwarFields = new EwarFieldsDef

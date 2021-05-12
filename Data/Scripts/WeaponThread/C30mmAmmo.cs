@@ -230,19 +230,19 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                     ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f,
-                        Width = 0.1f,
+                        Length = 9f,
+                        Width = 0.05f,
                         Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 1,
                         Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.1f),
@@ -1485,19 +1485,19 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                     ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f,
-                        Width = 0.1f,
+                        Length = 9f,
+                        Width = 0.01f,
                         Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 1,
                         Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.1f),
@@ -1733,19 +1733,19 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                     ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f,
-                        Width = 0.1f,
+                        Length = 9f,
+                        Width = 0.05f,
                         Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 1,
                         Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.1f),
@@ -2228,19 +2228,19 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                     ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f,
-                        Width = 0.1f,
+                        Length = 9f,
+                        Width = 0.05f,
                         Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 1,
                         Color = Color(red: 20.0f, green: 15.0f, blue: 10.0f, alpha: 0.1f),
@@ -2481,7 +2481,7 @@ namespace WeaponThread
                 },
                 Lines = new LineDef
                 {
-                    TracerMaterial = "WeaponLaser", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                     ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
@@ -2493,7 +2493,7 @@ namespace WeaponThread
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 1,
                         Color = Color(red: 1.985f, green: 0f, blue: 0f, alpha: 0.8f),

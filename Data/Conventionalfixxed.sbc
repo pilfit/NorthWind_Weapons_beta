@@ -10,7 +10,7 @@
 		  </Id>
       <DisplayName>30mm Rotary Cannon</DisplayName>
       <Icon>Textures\icons\RotaryCannon.png</Icon>
-	  <Description>30mm Rotary Cannon, can be loaded with Standard 30mm rounds for or DU rounds for anti armor.</Description>
+	  <Description>30mm Rotary Cannon, can be loaded with Standard 30mm rounds for or DU rounds for anti armor. 800m/s projectile speed.</Description>
       <CubeSize>Small</CubeSize>
       <GuiVisible>true</GuiVisible>
       <BlockTopology>TriangleMesh</BlockTopology>

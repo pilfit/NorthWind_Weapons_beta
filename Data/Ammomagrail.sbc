@@ -18,7 +18,7 @@
       <Model>Models\R75ammo.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="R75ammo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -43,7 +43,7 @@
       <Model>Models\R150ammo.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="R150ammo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -68,7 +68,7 @@
       <Model>Models\R250ammo.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="R250ammo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -88,12 +88,12 @@
         <Y>0.2</Y>
         <Z>0.2</Z>
       </Size>
-      <Mass>60</Mass>
+      <Mass>160</Mass>
       <Volume>100</Volume>
       <Model>Models\203howitzerMag.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="H203Ammo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -113,12 +113,12 @@
         <Y>0.2</Y>
         <Z>0.2</Z>
       </Size>
-      <Mass>60</Mass>
+      <Mass>200</Mass>
       <Volume>100</Volume>
       <Model>Models\203howitzerMag.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="H203AmmoAP" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -143,7 +143,7 @@
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="C30Ammo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -168,7 +168,7 @@
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="C30DUammo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -193,7 +193,7 @@
       <Model>Models\30mmAmmobox.mwm</Model>
       <Capacity>120</Capacity>
       <AmmoDefinitionId Subtype="CRAM30mmAmmo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -213,12 +213,12 @@
         <Y>0.2</Y>
         <Z>0.2</Z>
       </Size>
-      <Mass>70</Mass>
+      <Mass>150</Mass>
       <Volume>47</Volume>
       <Model>Models\C100AmmoMag.mwm</Model>
       <Capacity>1</Capacity>
       <AmmoDefinitionId Subtype="C100mmAmmo" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -234,16 +234,16 @@
       <DisplayName>300mm AP Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Size>
-        <X>0.25</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
+        <X>0.5</X>
+        <Y>0.3</Y>
+        <Z>0.3</Z>
       </Size>
-      <Mass>60</Mass>
+      <Mass>600</Mass>
       <Volume>100</Volume>
       <Model>Models\C300Shells.mwm</Model>
       <Capacity>3</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoAP" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -259,16 +259,16 @@
       <DisplayName>300mm HE Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Size>
-        <X>0.25</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
+        <X>0.5</X>
+        <Y>0.3</Y>
+        <Z>0.3</Z>
       </Size>
       <Mass>60</Mass>
-      <Volume>100</Volume>
+      <Volume>500</Volume>
       <Model>Models\C300Shells.mwm</Model>
       <Capacity>3</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoHE" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -284,16 +284,16 @@
       <DisplayName>300mm Smart Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Size>
-        <X>0.25</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
+        <X>0.5</X>
+        <Y>0.3</Y>
+        <Z>0.3</Z>
       </Size>
-      <Mass>60</Mass>
+      <Mass>500</Mass>
       <Volume>100</Volume>
       <Model>Models\C300Shells.mwm</Model>
       <Capacity>3</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoG" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -309,16 +309,16 @@
       <DisplayName>400mm AP Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Size>
-        <X>0.25</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
+        <X>0.6</X>
+        <Y>0.4</Y>
+        <Z>0.4</Z>
       </Size>
-      <Mass>60</Mass>
+      <Mass>1200</Mass>
       <Volume>100</Volume>
       <Model>Models\C400Shell.mwm</Model>
       <Capacity>2</Capacity>
       <AmmoDefinitionId Subtype="C400AmmoAP" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -334,16 +334,16 @@
       <DisplayName>400mm HE Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Size>
-        <X>0.25</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
+        <X>0.6</X>
+        <Y>0.4</Y>
+        <Z>0.4</Z>
       </Size>
-      <Mass>60</Mass>
+      <Mass>1000</Mass>
       <Volume>100</Volume>
       <Model>Models\C400Shell.mwm</Model>
       <Capacity>2</Capacity>
       <AmmoDefinitionId Subtype="C400AmmoHE" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -359,16 +359,16 @@
       <DisplayName>400mm Cluster Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Size>
-        <X>0.25</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
+        <X>0.6</X>
+        <Y>0.4</Y>
+        <Z>0.4</Z>
       </Size>
-      <Mass>60</Mass>
+      <Mass>1000</Mass>
       <Volume>100</Volume>
       <Model>Models\C400Shell.mwm</Model>
       <Capacity>2</Capacity>
       <AmmoDefinitionId Subtype="C400AmmoCluster" />
-      <IconSymbol>IconSymbol_Fe</IconSymbol>
+
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
       <MinimumOrderAmount>100</MinimumOrderAmount>

@@ -90,7 +90,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.5f,
+                    Modifier = -1f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -168,7 +168,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 500,
+                DesiredSpeed = 400,
                 MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
@@ -265,8 +265,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 25,
-                        Color = Color(red: 5.585f, green: 3.562f, blue: 0.21f, alpha: 0.5f),
+                        DecayTime = 45,
+                        Color = Color(red: 2.585f, green: 2.562f, blue: 2.21f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -369,12 +369,12 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0.4f,
+                    Heavy = 0.6f,
                     NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 3f,
+                    Modifier = 6f,
                     Type = Energy,
                     BypassModifier = -1f,
                 },
@@ -447,15 +447,15 @@ namespace WeaponThread
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = None,
+                Guidance = DetectFixed,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 550,
+                DesiredSpeed = 450,
                 MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -10, end: 10), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -20, end: 20), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -469,9 +469,9 @@ namespace WeaponThread
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
+                    DetectRadius = 50,
                     DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    FieldTime = 1,
                     Cloak = false,
                     Persist = false,
                 },
@@ -549,8 +549,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 25,
-                        Color = Color(red: 5.585f, green: 2.062f, blue: 0.21f, alpha: 0.8f),
+                        DecayTime = 45,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -612,10 +612,10 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "C400CSecond",
-                Fragments = 100,
-				Reverse = false,
+                Fragments = 30,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 360, // 0 - 360
+                Degrees = 45, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -760,11 +760,11 @@ namespace WeaponThread
                 TargetLossTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 550,
-                MaxTrajectory = 4000,
+                DesiredSpeed = 400,
+                MaxTrajectory = 10000,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 500, end: 500), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: -5, end: 10), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 300, end: 300), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -844,21 +844,21 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 1.5f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 1.8f, end: 2f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f,
+                        Length = 5f,
                         Width = 0.1f,
-                        Color = Color(red: 25.80f, green: 20.20f, blue: 40.0f, alpha: 0.8f),
+                        Color = Color(red: 20.80f, green: 20.20f, blue: 25.0f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 25,
-                        Color = Color(red: 4.585f, green: 2.562f, blue: 4.21f, alpha: 0.5f),
+                        DecayTime = 45,
+                        Color = Color(red: 2.585f, green: 2.562f, blue: 2.21f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -906,6 +906,7 @@ namespace WeaponThread
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
 			HardPointUsable = false,
+            IgnoreWater = true,
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -960,7 +961,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0.9f,
+                    Heavy = -1f,
                     NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
@@ -1218,7 +1219,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 5f,
+                    Modifier = 3f,
                     Type = Energy,
                     BypassModifier = -1f,
                 },
@@ -1286,8 +1287,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1000,
-                    DetonationRadius = 2.5f,
+                    DetonationDamage = 500,
+                    DetonationRadius = 10f,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -1321,10 +1322,10 @@ namespace WeaponThread
                 TargetLossTime = 120, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 100,
-                MaxTrajectory = 4000f,
+                DesiredSpeed = 150,
+                MaxTrajectory = 600f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -50, end: 50), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -75, end: 75), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: -200, end: 200), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -1406,21 +1407,21 @@ namespace WeaponThread
                 Lines = new LineDef
                 {
                     TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 1f, end: 1.8f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
                         Length = 10f,
                         Width = 0.1f,
-                        Color = Color(red: 22.80f, green: 19.20f, blue: 25.0f, alpha: 1f),
+                        Color = Color(red: 22.80f, green: 22.20f, blue: 25.0f, alpha: 1f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 25,
-                        Color = Color(red: 3.585f, green: 3.562f, blue: 4.21f, alpha: 0.8f),
+                        DecayTime = 15,
+                        Color = Color(red: 4.585f, green: 3.862f, blue: 3.21f, alpha: 0.2f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -1455,7 +1456,7 @@ namespace WeaponThread
             BackKickForce = 0f,
             DecayPerShot = 0f,			
 			HardPointUsable = false,
-            IgnoreWater = false,			
+            IgnoreWater = true,			
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -1510,7 +1511,7 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 1.5f,
+                    Heavy = 2f,
                     NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef

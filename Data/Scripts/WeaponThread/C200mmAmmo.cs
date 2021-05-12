@@ -67,7 +67,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 4, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 6, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.1f,
                 VoxelHitModifier = 2f,					
@@ -140,7 +140,7 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 50,
+                    DetonationDamage = 5,
                     DetonationRadius = 20,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
@@ -171,8 +171,8 @@ namespace WeaponThread
                 DesiredSpeed = 550,
                 MaxTrajectory = 3500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -22, end: 12), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: -15, end: 15), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: 5, end: 5), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: -5, end: 20), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -265,8 +265,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 12,
-                        Color = Color(red: 5.585f, green: 2.062f, blue: 0.21f, alpha: 0.8f),
+                        DecayTime = 25,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -549,8 +549,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 15,
-                        Color = Color(red: 5.585f, green: 2.062f, blue: 0.21f, alpha: 0.8f),
+                        DecayTime = 25,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -832,8 +832,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 15,
-                        Color = Color(red: 5.585f, green: 3.562f, blue: 0.21f, alpha: 0.5f),
+                        DecayTime = 25,
+                        Color = Color(red: 2.585f, green: 2.562f, blue: 2.21f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -881,6 +881,7 @@ namespace WeaponThread
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
 			HardPointUsable = false,
+            IgnoreWater = true,            
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -1170,7 +1171,7 @@ namespace WeaponThread
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 4, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 25, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 VoxelHitModifier = 10,				
                 Characters = -1f,
@@ -1188,13 +1189,13 @@ namespace WeaponThread
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = -1f,
-                    NonArmor = -1f,
+                    Heavy = 0.4f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = -1f,
-                    Type = Kinetic,
+                    Modifier = 3f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -1289,7 +1290,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 3, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 400,
+                DesiredSpeed = 550,
                 MaxTrajectory = 3f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1404,7 +1405,7 @@ namespace WeaponThread
             BackKickForce = 0f,
             DecayPerShot = 0f,			
 			HardPointUsable = false,
-            IgnoreWater = false,			
+            IgnoreWater = true,			
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -1419,7 +1420,7 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "C200mmShrapnel",
-                Fragments = 40,
+                Fragments = 20,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360

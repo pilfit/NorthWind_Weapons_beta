@@ -90,7 +90,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.5f,
+                    Modifier = -1f,
                     Type = Kinetic,
                     BypassModifier = -1f,
                 },
@@ -265,8 +265,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 20,
-                        Color = Color(red: 5.585f, green: 3.562f, blue: 0.21f, alpha: 0.5f),
+                        DecayTime = 35,
+                        Color = Color(red: 2.585f, green: 2.562f, blue: 2.21f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -374,7 +374,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 3f,
+                    Modifier = 4f,
                     Type = Energy,
                     BypassModifier = -1f,
                 },
@@ -549,8 +549,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 25,
-                        Color = Color(red: 5.585f, green: 2.062f, blue: 0.21f, alpha: 0.8f),
+                        DecayTime = 35,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.5f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -1193,7 +1193,7 @@ namespace WeaponThread
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 3f,
+                    Modifier = 4f,
                     Type = Energy,
                     BypassModifier = -1f,
                 },
@@ -1289,7 +1289,7 @@ namespace WeaponThread
                 TargetLossTime = 120, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 200f,
-                DesiredSpeed = 550,
+                DesiredSpeed = 100,
                 MaxTrajectory = 4000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1438,7 +1438,7 @@ namespace WeaponThread
             Shrapnel = new ShrapnelDef
             {
                 AmmoRound = "C300mmShrapnel",
-                Fragments = 50,
+                Fragments = 25,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360

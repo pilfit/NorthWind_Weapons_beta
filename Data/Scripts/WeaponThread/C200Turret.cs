@@ -46,7 +46,7 @@ namespace WeaponThread {
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
                 MaxTargetDistance = 3500, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 20, // 0 = unlimited, Min target distance that targets will be automatically shot at.                
-                TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
+                TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
             },
@@ -79,7 +79,7 @@ namespace WeaponThread {
                     MinElevation = -10,
                     MaxElevation = 85,
                     FixedOffset = false,
-                    InventorySize = 0.341f,
+                    InventorySize = 0.8f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     HomeAzimuth = 0,
                     HomeElevation = 5,                    

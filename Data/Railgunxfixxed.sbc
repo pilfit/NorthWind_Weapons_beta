@@ -10,12 +10,13 @@
 		  </Id>
       <DisplayName>Railgun75mm</DisplayName>
       <Icon>Textures\icons\Railgunf75icon.png</Icon>
-	  <Description>75mm Fixed Railgun.</Description>
+	  <Description>75mm Fixed Railgun. 3000m/s projectile speed.</Description>
       <CubeSize>Small</CubeSize>
       <GuiVisible>true</GuiVisible>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="11" />
       <ModelOffset x="0" y="0" z="0" />
+      <Center x="0" y="0" z="10" />      
       <Model>Models\Railgun75f.mwm</Model>
 	  <UseModelIntersection>true</UseModelIntersection>
 	  <BuildProgressModels>
@@ -71,12 +72,13 @@
 		  </Id>
       <DisplayName>Railgun150mm</DisplayName>
       <Icon>Textures\icons\Railgunf150icon.png</Icon>
-	  <Description>150mm Fixed Railgun.</Description>
+	  <Description>150mm Fixed Railgun. 2500m/s projectile speed.</Description>
       <CubeSize>Small</CubeSize>
       <GuiVisible>true</GuiVisible>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="3" y="3" z="22" />
       <ModelOffset x="0" y="0" z="0" />
+      <Center x="1" y="1" z="21" />      
       <Model>Models\Railgun150.mwm</Model>
 	  <UseModelIntersection>true</UseModelIntersection>	  
 	  <BuildProgressModels>
@@ -131,12 +133,13 @@
       </Id>
       <DisplayName>Railgun250mm</DisplayName>
       <Icon>Textures\icons\Railgunf250icon.png</Icon>
-	  <Description>250mm Fixed Railgun.</Description>
+	  <Description>250mm Fixed Railgun. 2000m/s projectile speed.</Description>
       <CubeSize>Large</CubeSize>
       <GuiVisible>true</GuiVisible>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="9" />
       <ModelOffset x="0" y="0" z="0" />
+      <Center x="0" y="0" z="8" />      
       <Model>Models\Railgun250.mwm</Model>
 	  <UseModelIntersection>true</UseModelIntersection>	  
 	  <BuildProgressModels>

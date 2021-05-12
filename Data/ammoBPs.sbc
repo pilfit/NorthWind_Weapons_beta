@@ -60,7 +60,7 @@
       <Prerequisites>
         <Item Amount="55" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="10" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="H203Ammo" />
@@ -77,7 +77,7 @@
       <Prerequisites>
         <Item Amount="120" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="3" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="H203AmmoAP" />
@@ -94,7 +94,7 @@
       <Prerequisites>
         <Item Amount="50" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="6" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30Ammo" />
       <BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -110,7 +110,7 @@
       <Prerequisites>
         <Item Amount="50" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="6" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="0.2" TypeId="Ingot" SubtypeId="Uranium" />
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C30DUammo" />
@@ -127,7 +127,7 @@
       <Prerequisites>
         <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="4" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="7" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="CRAM30mmAmmo" />
       <BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -143,7 +143,7 @@
       <Prerequisites>
         <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="4" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
     <Item Amount="2" TypeId="Ingot" SubtypeId="Cobalt" />
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C100mmAmmo" />
@@ -160,7 +160,7 @@
       <Prerequisites>
         <Item Amount="1170" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="75" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="45" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoAP" />
@@ -177,7 +177,7 @@
       <Prerequisites>
         <Item Amount="570" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="45" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="75" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="16" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="30" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C300AmmoHE" />
@@ -194,7 +194,7 @@
       <Prerequisites>
         <Item Amount="570" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="45" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="60" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="12" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="30" TypeId="Ingot" SubtypeId="Cobalt" />	
     <Item Amount="15" TypeId="Ingot" SubtypeId="Silver" />	
 		<Item Amount="30" TypeId="Ingot" SubtypeId="Silicon" />    
@@ -211,9 +211,9 @@
       <DisplayName>400mm AP Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Prerequisites>
-        <Item Amount="1170" TypeId="Ingot" SubtypeId="Iron" />
-		<Item Amount="75" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
+        <Item Amount="1370" TypeId="Ingot" SubtypeId="Iron" />
+		<Item Amount="78" TypeId="Ingot" SubtypeId="Nickel" />
+		<Item Amount="12" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="45" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C400AmmoAP" />
@@ -228,9 +228,9 @@
       <DisplayName>400mm HE Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Prerequisites>
-        <Item Amount="1170" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="770" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="75" TypeId="Ingot" SubtypeId="Nickel" />
-		<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
+		<Item Amount="20" TypeId="Ingot" SubtypeId="Magnesium" />
 		<Item Amount="45" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C400AmmoHE" />
@@ -240,17 +240,17 @@
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>C400AmmoEMP</SubtypeId>
+        <SubtypeId>C400AmmoCluster</SubtypeId>
       </Id>
-      <DisplayName>400mm EMP Ammo</DisplayName>
+      <DisplayName>400mm Cluster Ammo</DisplayName>
       <Icon>Textures\icons\300mmShellsIcon.png</Icon>
       <Prerequisites>
-        <Item Amount="1170" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="770" TypeId="Ingot" SubtypeId="Iron" />
 		<Item Amount="75" TypeId="Ingot" SubtypeId="Nickel" />
 		<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
-		<Item Amount="45" TypeId="Ingot" SubtypeId="Cobalt" />		
+		<Item Amount="50" TypeId="Ingot" SubtypeId="Cobalt" />		
       </Prerequisites>
-      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C400AmmoEMP" />
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="C400AmmoCluster" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
     </Blueprint>      
 
@@ -287,21 +287,21 @@
    <BlueprintClassEntries>
    
 	
-		<Entry Class="Components" BlueprintSubtypeId="R75ammo" />	
-		<Entry Class="Components" BlueprintSubtypeId="R150ammo" />	
-		<Entry Class="Components" BlueprintSubtypeId="R250ammo" />	
-		<Entry Class="Components" BlueprintSubtypeId="H203Ammo" />
-		<Entry Class="Components" BlueprintSubtypeId="H203AmmoAP" />    
-		<Entry Class="Components" BlueprintSubtypeId="C30Ammo" />
-		<Entry Class="Components" BlueprintSubtypeId="C30DUammo" />		
-		<Entry Class="Components" BlueprintSubtypeId="CRAM30mmAmmo" />	
-		<Entry Class="Components" BlueprintSubtypeId="C100mmAmmo" />	
-		<Entry Class="Components" BlueprintSubtypeId="C300AmmoAP" />
-		<Entry Class="Components" BlueprintSubtypeId="C300AmmoHE" />
-    <Entry Class="Components" BlueprintSubtypeId="C300AmmoG" />    
-    <Entry Class="Components" BlueprintSubtypeId="C400AmmoAP" />
-		<Entry Class="Components" BlueprintSubtypeId="C400AmmoHE" />
-    <Entry Class="Components" BlueprintSubtypeId="C400AmmoCluster" />  
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="R75ammo" />	
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="R150ammo" />	
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="R250ammo" />	
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="H203Ammo" />
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="H203AmmoAP" />    
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="C30Ammo" />
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="C30DUammo" />		
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="CRAM30mmAmmo" />	
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="C100mmAmmo" />	
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="C300AmmoAP" />
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="C300AmmoHE" />
+    <Entry Class="EliteConsumables" BlueprintSubtypeId="C300AmmoG" />    
+    <Entry Class="EliteConsumables" BlueprintSubtypeId="C400AmmoAP" />
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="C400AmmoHE" />
+    <Entry Class="EliteConsumables" BlueprintSubtypeId="C400AmmoCluster" />  
         
 
 	
@@ -317,9 +317,9 @@
 		<Entry Class="Ammo" BlueprintSubtypeId="C300AmmoAP" />
 		<Entry Class="Ammo" BlueprintSubtypeId="C300AmmoHE" />
     <Entry Class="Ammo" BlueprintSubtypeId="C300AmmoG" />     
-    <Entry Class="Components" BlueprintSubtypeId="C400AmmoAP" />
-		<Entry Class="Components" BlueprintSubtypeId="C400AmmoHE" />
-    <Entry Class="Components" BlueprintSubtypeId="C400AmmoCluster" />  
+    <Entry Class="Ammo" BlueprintSubtypeId="C400AmmoAP" />
+		<Entry Class="Ammo" BlueprintSubtypeId="C400AmmoHE" />
+    <Entry Class="Ammo" BlueprintSubtypeId="C400AmmoCluster" />  
 
 
     <Entry Class="CommonMetals" BlueprintSubtypeId="C100ShellCasingToIron" />    

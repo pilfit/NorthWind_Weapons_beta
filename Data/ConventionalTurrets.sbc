@@ -9,7 +9,9 @@
 			<SubtypeId>CIWS</SubtypeId>
 		  </Id>
 			<DisplayName>30mm CIWS Turret</DisplayName>
-			<Description>30mm CIWS Turret Intended for protection from fighters and missiles. Can be loaded with Standard 30mm rounds or DU rounds for anti armor. The targeting systems on this turret will not work if placed near another CIWS, must be placed at least 3 blocks appart.</Description>
+			<Description>30mm CIWS Turret Intended for protection from fighters and missiles.
+						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 800m/s projectile speed.
+						 The targeting systems on this turret will not work if placed near another CIWS, must be placed at least 3 blocks appart.</Description>
 			<Icon>Textures\icons\CIWS.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -79,7 +81,7 @@
 			<SubtypeId>C100mmTurret</SubtypeId>
 		  </Id>
 			<DisplayName>100mm Gun Turret</DisplayName>
-			<Description>100mm dual purpose gun turret. Proximity fused shells function as flak. </Description>
+			<Description>100mm dual purpose gun turret. Uses 100mm HE shells(600m/s), they can be set to act as flak or impact HE with Ammo Cycle. Use flak fuse for anti fighter or missile. </Description>
 			<Icon>Textures\icons\100mmIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -149,7 +151,7 @@
 			<SubtypeId>C200mmTurret</SubtypeId>
 		  </Id>
 			<DisplayName>203mm Gun Turret</DisplayName>
-			<Description>203mm dual purpose gun turret. Proximity fused shells function as flak. Uses 203mm HE Ammo. </Description>
+			<Description>203mm dual purpose gun turret. 203mm HE ammo(550m/s) can be set to flak or impact HE with ammo cycle, can also fire 203mm AP(500m/s). </Description>
 			<Icon>Textures\icons\C200TurretIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -177,7 +179,7 @@
 				<MountPoint Side="Right" StartX="1.80" StartY="0.00" EndX="3.00" EndY="1.00" />
 				<MountPoint Side="Right" StartX="0.00" StartY="1.00" EndX="3.00" EndY="2.00" />
 				<MountPoint Side="Right" StartX="0.00" StartY="2.00" EndX="3.00" EndY="4.00" Enabled="false" />			
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" Default="true" />
 				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" Enabled="false" />
 			</MountPoints>
 			<BuildProgressModels>
@@ -238,7 +240,7 @@
 			<SubtypeId>C300mmTurret</SubtypeId>
 		  </Id>
 			<DisplayName>300mm Gun Turret</DisplayName>
-			<Description>300mm gun turret. Uses 300mm Ammo. </Description>
+			<Description>300mm gun turret. Can fire AP(500m/s), HE or Guided 300mm shells(550m/s). Guided shells have limited smart tracking at the cost of reduced HE damage. </Description>
 			<Icon>Textures\icons\300mmTurretIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -257,7 +259,7 @@
 				<MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
 				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
 				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Default="true" />
 			</MountPoints>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\C300mm_BS1.mwm"/>
@@ -318,7 +320,8 @@
 			  <SubtypeId>C400mmTurret</SubtypeId>
 			</Id>
 			  <DisplayName>400mm Gun Turret</DisplayName>
-			  <Description>400mm gun turret. Uses 400mm Ammo. </Description>
+			  <Description>400mm gun turret. Can fire 400mm AP(400m/s, HE and Cluster shells(450m/s). Cluster shells release a large number small explosive submunitions 300m before the target.
+				  Cluster ammo requires the turret AI to control the fuse so it will not work with manual camera aiming. </Description>
 			  <Icon>Textures\icons\C400Icon.png</Icon>
 			  <CubeSize>Large</CubeSize>
 			  <GuiVisible>true</GuiVisible>
@@ -337,7 +340,7 @@
 				  <MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
 				  <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
 				  <MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				  <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0"/>
+				  <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Default="true" />
 			  </MountPoints>
 			  <BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Con400mm_BS1.mwm"/>
@@ -366,11 +369,11 @@
 			   <Component Subtype="Construction" Count="190" />
 			   <Component Subtype="MetalGrid" Count="50" />
 			   <Component Subtype="SmallTube" Count="25" /> 
-			   <Component Subtype="LargeTube" Count="30" />
-			   <Component Subtype="Motor" Count="30" />			 
+			   <Component Subtype="LargeTube" Count="40" />
+			   <Component Subtype="Motor" Count="20" />			 
 			   <Component Subtype="Computer" Count="20" />
-			   <Component Subtype="MetalGrid" Count="50" />			 
-			   <Component Subtype="SteelPlate" Count="800" />
+			   <Component Subtype="MetalGrid" Count="55" />			 
+			   <Component Subtype="SteelPlate" Count="850" />
 			  </Components>
 			  <CriticalComponent Subtype="Computer" Index="0" />
 			  <BlockPairName>400mmTurret</BlockPairName>

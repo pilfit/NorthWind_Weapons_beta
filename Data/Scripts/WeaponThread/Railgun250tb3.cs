@@ -74,7 +74,7 @@ namespace WeaponThread {
                     MinElevation = -5,
                     MaxElevation = 35,
                     FixedOffset = false,
-                    InventorySize = 0.361f,
+                    InventorySize = 0.8f,
                     Offset = Vector(x: -2.3, y: 0, z: 0),
                 },
                 Other = new OtherDef {
@@ -94,7 +94,7 @@ namespace WeaponThread {
                     DelayUntilFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 22000, //heat generated per shot
                     MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .25f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 1000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,

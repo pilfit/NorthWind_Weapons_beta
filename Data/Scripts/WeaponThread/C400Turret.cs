@@ -43,9 +43,9 @@ namespace WeaponThread {
                 ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.                
-                MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
+                MinimumDiameter = 15, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 4000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 5000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 20, // 0 = unlimited, Min target distance that targets will be automatically shot at.                
                 TopTargets = 0, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
@@ -55,7 +55,7 @@ namespace WeaponThread {
             {
                 WeaponName = "400mm Gun Turret", // name of weapon in terminal
                 DeviateShotAngle = 0.55f,
-                AimingTolerance = 0.1f, // 0 - 180 firing angle
+                AimingTolerance = 0.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
@@ -73,14 +73,14 @@ namespace WeaponThread {
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.002f,
+                    RotateRate = 0.003f,
                     ElevateRate = 0.002f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -8,
                     MaxElevation = 45,
                     FixedOffset = false,
-                    InventorySize = 0.341f,
+                    InventorySize = 1f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     HomeAzimuth = 0,
                     HomeElevation = 10,
@@ -109,7 +109,7 @@ namespace WeaponThread {
                     HeatSinkRate = 3000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 2,
-                    DelayAfterBurst = 1200, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayAfterBurst = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
                 },
                 Audio = new HardPointAudioDef {

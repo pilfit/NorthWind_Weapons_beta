@@ -72,7 +72,7 @@ namespace WeaponThread {
                     MinElevation = 0,
                     MaxElevation = 0,
                     FixedOffset = false,
-                    InventorySize = 0.062f,
+                    InventorySize = 0.15f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                 },
                 Other = new OtherDef {
@@ -83,17 +83,17 @@ namespace WeaponThread {
                     Debug = false,
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 8,
+                    RateOfFire = 7,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 480, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 13000, //heat generated per shot
-                    MaxHeat = 25000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .50f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 450, //amount of heat lost per second
+                    HeatPerShot = 17000, //heat generated per shot
+                    MaxHeat = 35000, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 500, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
