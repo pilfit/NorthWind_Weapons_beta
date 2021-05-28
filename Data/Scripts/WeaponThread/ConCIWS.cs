@@ -147,7 +147,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-               C30mmAmmoT, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoATT, C30mmAmmoDU, C30mmCRAMAmmo, C30mmCRAMAmmoS,
+               C30mmAmmoT, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoATT, C30mmAmmoDU, C30mmCRAMAmmo, C30mmCRAMAmmoS, C30mmAmmoR,
 
             },
             Animations = ConCIWSAnim,

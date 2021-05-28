@@ -46,9 +46,9 @@ namespace WeaponThread
             {
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
-				Reverse = true,
-				RandomizeDir = false,
-                Degrees = 0, // 0 - 360
+				Reverse = false,
+				RandomizeDir = true,
+                Degrees = 120, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -132,16 +132,16 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 0.8f,
+                    Scale = 0.5f,
                     CustomParticle = "LargeArtExplosionLight",
-                    CustomSound = "",
+                    CustomSound = "ArcWepLrgWarheadExpl",
                 },
                 Detonation = new DetonateDef
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1500,
-                    DetonationRadius = 15,
+                    DetonationDamage = 15,
+                    DetonationRadius = 1,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -297,9 +297,9 @@ namespace WeaponThread
             {
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
-				Reverse = true,
-				RandomizeDir = false,
-                Degrees = 0, // 0 - 360
+				Reverse = false,
+				RandomizeDir = true,
+                Degrees = 150, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -383,16 +383,16 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 1,
-                    CustomParticle = "",
-                    CustomSound = "",
+                    Scale = 0.5f,
+                    CustomParticle = "LargeArtExplosionLight",
+                    CustomSound = "ArcWepLrgWarheadExpl",
                 },
                 Detonation = new DetonateDef
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1500,
-                    DetonationRadius = 15,
+                    DetonationDamage = 15,
+                    DetonationRadius = 1,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -466,7 +466,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "LargeArtExplosionLight",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 1),
@@ -548,9 +548,9 @@ namespace WeaponThread
             {
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
-				Reverse = true,
-				RandomizeDir = false,
-                Degrees = 0, // 0 - 360
+				Reverse = false,
+				RandomizeDir = true,
+                Degrees = 180, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -634,16 +634,16 @@ namespace WeaponThread
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 1,
-                    CustomParticle = "",
-                    CustomSound = "",
+                    Scale = 0.5f,
+                    CustomParticle = "LargeArtExplosionLight",
+                    CustomSound = "ArcWepLrgWarheadExpl",
                 },
                 Detonation = new DetonateDef
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1500,
-                    DetonationRadius = 15,
+                    DetonationDamage = 15,
+                    DetonationRadius = 1,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -717,7 +717,7 @@ namespace WeaponThread
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "LargeArtExplosion",
+                        Name = "",
                         ApplyToShield = true,
                         ShrinkByDistance = true,
                         Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 1),
@@ -893,8 +893,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1500,
-                    DetonationRadius = 15,
+                    DetonationDamage = 15,
+                    DetonationRadius = 1,
                     MinArmingTime = 1, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
@@ -1031,7 +1031,7 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 150f,
-            Mass = 2f, // in kilograms
+            Mass = 20000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
 			HardPointUsable = false,
@@ -1159,7 +1159,7 @@ namespace WeaponThread
             },
             Beams = new BeamDef
             {
-                Enable = false,
+                Enable = true,
                 VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
                 ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
                 RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
@@ -1172,8 +1172,8 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 250,
-                MaxTrajectory = 75f,
+                DesiredSpeed = 0,
+                MaxTrajectory = 30f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
@@ -1251,7 +1251,7 @@ namespace WeaponThread
                     {
                         Enable = false,
                         Material = "WeaponLaser",
-                        DecayTime = 10,
+                        DecayTime = 90,
                         Color = Color(red: 5.585f, green: 3.562f, blue: 2.21f, alpha: 1f),
                         Back = false,
                         CustomWidth = 0.3f,
@@ -1336,19 +1336,19 @@ namespace WeaponThread
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.2f,
+                    Small = 0.3f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
-                    Light = -1f,
-                    Heavy = -1f,
-                    NonArmor = -1f,
+                    Light = 0.9f,
+                    Heavy = 0.4f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1.2f,
-                    Type = Kinetic,
+                    Modifier = 3f,
+                    Type = Energy,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -1372,11 +1372,11 @@ namespace WeaponThread
             },
             AreaEffect = new AreaDamageDef
             {
-                AreaEffect = DotField, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
+                AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
                 Base = new AreaInfluence
                 {
-                    Radius = 10f, // the sphere of influence of area effects
-                    EffectStrength = 100f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Radius = 5f, // the sphere of influence of area effects
+                    EffectStrength = 200f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
                 },
                 Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
                 {
@@ -1403,11 +1403,11 @@ namespace WeaponThread
                 },
                 Explosions = new ExplosionDef
                 {
-                    NoVisuals = false,
-                    NoSound = false,
+                    NoVisuals = true,
+                    NoSound = true,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 0.3f,
+                    Scale = 1f,
                     CustomParticle = "",
                     CustomSound = "",
                 },
@@ -1415,8 +1415,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1,
-                    DetonationRadius = 1f,
+                    DetonationDamage = 1500,
+                    DetonationRadius = 15f,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
                 },
                 EwarFields = new EwarFieldsDef
@@ -1441,14 +1441,14 @@ namespace WeaponThread
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 6, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 3, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 350,
-                MaxTrajectory = 3f,
+                DesiredSpeed = 300,
+                MaxTrajectory = 1f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -100, end: 100), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.

@@ -48,7 +48,7 @@ namespace WeaponThread {
                 WeaponName = "203mm Howitzer", // name of weapon in terminal
                 DeviateShotAngle = 0.8f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
-                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {

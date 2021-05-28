@@ -368,7 +368,7 @@ namespace WeaponThread
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
-                    Light = -1f,
+                    Light = 0.7f,
                     Heavy = 0.6f,
                     NonArmor = 0.8f,
                 },
@@ -615,7 +615,7 @@ namespace WeaponThread
                 Fragments = 30,
 				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 45, // 0 - 360
+                Degrees = 30, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -761,7 +761,7 @@ namespace WeaponThread
                 MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 400,
-                MaxTrajectory = 10000,
+                MaxTrajectory = 4000,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 10), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 300, end: 300), // subtracts value from MaxTrajectory
@@ -777,7 +777,7 @@ namespace WeaponThread
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 100,
+                    DetectRadius = 400,
                     DeCloakRadius = 100,
                     FieldTime = 1800,
                     Cloak = false,
@@ -902,7 +902,7 @@ namespace WeaponThread
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 400f,
-            Mass = 2f, // in kilograms
+            Mass = 30000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
 			HardPointUsable = false,
@@ -1044,7 +1044,7 @@ namespace WeaponThread
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 20, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 900,
+                DesiredSpeed = 0,
                 MaxTrajectory = 30f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1213,7 +1213,7 @@ namespace WeaponThread
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
-                    Light = -1f,
+                    Light = 0.7f,
                     Heavy = 0.4f,
                     NonArmor = -1f,
                 },

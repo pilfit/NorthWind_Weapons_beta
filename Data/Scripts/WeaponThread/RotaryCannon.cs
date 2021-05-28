@@ -142,7 +142,7 @@ namespace WeaponThread {
                 },
             },
             Ammos = new [] {
-                C30mmAmmo, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoAT, C30mmAmmoDU, C30mmCRAMAmmo, C30mmCRAMAmmoS,
+                C30mmAmmo, C30mmAmmoAP, C30mmAmmoHE, C30mmAmmoAT, C30mmAmmoDU, C30mmCRAMAmmo, C30mmCRAMAmmoS, C30mmAmmoR,
 				
                 
             },
