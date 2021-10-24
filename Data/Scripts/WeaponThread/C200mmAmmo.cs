@@ -172,7 +172,7 @@ namespace WeaponThread
                 MaxTrajectory = 3500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: -5, end: 20), // subtracts value from MaxTrajectory
+                RangeVariance = Random(start: -15, end: 15), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {

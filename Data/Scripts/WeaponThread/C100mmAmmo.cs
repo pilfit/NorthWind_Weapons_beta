@@ -163,16 +163,16 @@ namespace WeaponThread
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = None,
+                Guidance = TravelTo,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 4000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 400, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 700,
-                MaxTrajectory = 40000f,
+                MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: -10, end: 10), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -265,8 +265,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 150,
-                        Color = Color(red: 2.585f, green: 2.062f, blue: 20.01f, alpha: 0.3f),
+                        DecayTime = 15,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.3f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,
@@ -450,12 +450,12 @@ namespace WeaponThread
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 8000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 800, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 500,
-                MaxTrajectory = 80000f,
+                DesiredSpeed = 700,
+                MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -549,8 +549,8 @@ namespace WeaponThread
                     {
                         Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 150,
-                        Color = Color(red: 18.585f, green: 8.062f, blue: 8.01f, alpha: 0.8f),
+                        DecayTime = 15,
+                        Color = Color(red: 2.585f, green: 2.062f, blue: 2.01f, alpha: 0.3f),
                         Back = false,
                         CustomWidth = 0.1f,
                         UseWidthVariance = false,

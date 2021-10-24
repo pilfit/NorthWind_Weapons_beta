@@ -50,7 +50,7 @@ namespace WeaponThread
                 Fragments = 1,
 				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 30, // 0 - 360
+                Degrees = 50, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {
@@ -1549,11 +1549,11 @@ namespace WeaponThread
             },
             Shrapnel = new ShrapnelDef
             {
-                AmmoRound = "",
-                Fragments = 0,
-				Reverse = false,
+                AmmoRound = "30mmAmmoTR",
+                Fragments = 1,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 120, // 0 - 360
+                Degrees = 50, // 0 - 360
             },
             Pattern = new AmmoPatternDef
             {

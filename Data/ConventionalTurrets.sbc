@@ -191,8 +191,8 @@
            <VoxelPlacement>
              <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
             <StaticMode>
-            <PlacementMode>OutsideVoxel</PlacementMode>
-            <MaxAllowed>0.2</MaxAllowed>
+            <PlacementMode>Volumetric</PlacementMode>
+            <MaxAllowed>0.8</MaxAllowed>
             <MinAllowed>0</MinAllowed>
             </StaticMode>
             <DynamicMode>
@@ -270,7 +270,7 @@
            <VoxelPlacement>
              <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
             <StaticMode>
-            <PlacementMode>OutsideVoxel</PlacementMode>
+            <PlacementMode>Volumetric</PlacementMode>
             <MaxAllowed>0.2</MaxAllowed>
             <MinAllowed>0</MinAllowed>
             </StaticMode>
@@ -351,7 +351,7 @@
 			 <VoxelPlacement>
 			   <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
 			  <StaticMode>
-			  <PlacementMode>OutsideVoxel</PlacementMode>
+			  <PlacementMode>Volumetric</PlacementMode>
 			  <MaxAllowed>0.2</MaxAllowed>
 			  <MinAllowed>0</MinAllowed>
 			  </StaticMode>

@@ -1287,8 +1287,8 @@ namespace WeaponThread
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 500,
-                    DetonationRadius = 10f,
+                    DetonationDamage = 1000,
+                    DetonationRadius = 5f,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
                 EwarFields = new EwarFieldsDef
