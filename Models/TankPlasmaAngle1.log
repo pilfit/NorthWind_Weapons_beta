@@ -1,0 +1,22 @@
+Running from: C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\ 
+Command: E:\Blender Projects\StollieMWMBuilder\MwmBuilder.exe /f /s:C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\ /m:TankPlasmaAngle1*.fbx /o:C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\ /x:E:\blender installer\SEUT\SEUT\Materials 
+E:\blender installer\SEUT\SEUT\Materials\Armors.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Character.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Custom.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Foliage.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Items.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Materials.xml: 
+    Materialslib
+Material Libraries: 
+    Material libraries were successfully loaded from path: E:\blender installer\SEUT\SEUT\Materials
+Meshes: 
+    Found 1 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaAngle1.fbx: 
+    : Finished in 0.6s

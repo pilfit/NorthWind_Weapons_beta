@@ -19,7 +19,7 @@
 			<Size x="3" y="2" z="3"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\CIWS.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
+			<UseModelIntersection>false</UseModelIntersection>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
 			</MountPoints>
@@ -89,7 +89,7 @@
 			<Size x="3" y="2" z="3"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\C100mmTurret.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
+			<UseModelIntersection>false</UseModelIntersection>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0"/>
 			</MountPoints>
@@ -159,7 +159,7 @@
 			<Size x="3" y="4" z="3"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\C200mm.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
+			<UseModelIntersection>false</UseModelIntersection>
 			<MountPoints>
 		        <MountPoint Side="Front" StartX="0.80" StartY="0.00" EndX="2.20" EndY="1.0" />
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="0.20" EndY="1.0" />
@@ -248,16 +248,20 @@
 			<Size x="5" y="5" z="5"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\C300mm.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
+			<UseModelIntersection>false</UseModelIntersection>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Front" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
 				<MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
 				<MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
 				<MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
 				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Enabled="false" />
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Default="true" />
 			</MountPoints>
@@ -329,18 +333,22 @@
 			  <Size x="5" y="5" z="5"/>
 			  <ModelOffset x="0" y="0" z="0"/>
 			  <Model>Models\C400mmTurret.mwm</Model>
-			  <UseModelIntersection>true</UseModelIntersection>
+			  <UseModelIntersection>false</UseModelIntersection>
 			  <MountPoints>
-				  <MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				  <MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
-				  <MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				  <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
-				  <MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				  <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
-				  <MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				  <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="5.0" EndY="3.0"/>
-				  <MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				  <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Default="true" />
+				<MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Front" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0" Default="true" />
 			  </MountPoints>
 			  <BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Con400mm_BS1.mwm"/>
@@ -393,6 +401,161 @@
 			  <PCU>525</PCU>
 						  
 		  </Definition>		
+
+        <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+          <Id>
+            <TypeId>ConveyorSorter</TypeId>
+			<SubtypeId>C500mmTurret</SubtypeId>
+		  </Id>
+			<DisplayName>500mm Gun Turret</DisplayName>
+			<Description>500mm gun turret. Can fire AP(500m/s), HE or Guided 300mm shells(550m/s). Guided shells have limited smart tracking at the cost of reduced HE damage. </Description>
+			<Icon>Textures\icons\300mmTurretIcon.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="7" z="7"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Con500mm.mwm</Model>
+			<UseModelIntersection>false</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Front" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="7.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="7.0" EndY="1.5"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="2.5" EndX="7.0" EndY="3.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="7.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="7.0" EndY="1.5"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="2.5" EndX="7.0" EndY="3.0"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="7.0" EndY="5.0" Enabled="false" />
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="7.0" EndY="5.0" Default="true" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Con500mm_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\Con500mm_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\Con500mm_BS3.mwm"/>
+			</BuildProgressModels>
+			
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>Volumetric</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+		   
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="800" />
+             <Component Subtype="Construction" Count="190" />
+             <Component Subtype="MetalGrid" Count="50" />
+			 <Component Subtype="SmallTube" Count="25" /> 
+             <Component Subtype="LargeTube" Count="30" />
+             <Component Subtype="Motor" Count="30" />			 
+             <Component Subtype="Computer" Count="20" />
+             <Component Subtype="MetalGrid" Count="50" />			 
+             <Component Subtype="SteelPlate" Count="800" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>500mmTurret</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>			
+			<WeaponDefinitionId Subtype="C500mmTurret" />
+			<InventoryMaxVolume>0.062</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+			<MaxRangeMeters>4000</MaxRangeMeters>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>525</PCU>
+            			
+		</Definition>	
+
+        <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		
+			<Id>
+			  <TypeId>LargeMissileTurret</TypeId>
+			<SubtypeId>C30mmSingleT</SubtypeId>
+		  </Id>
+			<DisplayName>30mm Turret</DisplayName>
+			<Description>30mm CIWS Turret Intended for protection from fighters and missiles.
+						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 800m/s projectile speed.
+						 The targeting systems on this turret will not work if placed near another CIWS, must be placed at least 3 blocks appart.</Description>
+			<Icon>Textures\icons\CIWS.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\C30mmSingleT.mwm</Model>
+			<UseModelIntersection>false</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\C30mmSingleT_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\C30mmSingleT_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\C30mmSingleT_BS3.mwm"/>
+			</BuildProgressModels>
+			
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+		   
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="50" />
+             <Component Subtype="Construction" Count="80" />
+             <Component Subtype="MetalGrid" Count="20" />
+			 <Component Subtype="SmallTube" Count="12" /> 
+             <Component Subtype="LargeTube" Count="6" />
+             <Component Subtype="Motor" Count="30" />			 
+             <Component Subtype="Computer" Count="20" />
+             <Component Subtype="SteelPlate" Count="200" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>C30mmSingleT</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>			
+			<WeaponDefinitionId Subtype="C30mmSingleT" />
+			<InventoryMaxVolume>0.062</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+			<MaxRangeMeters>4000</MaxRangeMeters>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>525</PCU>
+            <IsAirTight>false</IsAirTight> 			
+		</Definition>			  
 
 	</CubeBlocks>
 </Definitions>

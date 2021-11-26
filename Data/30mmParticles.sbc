@@ -2487,8 +2487,8 @@
       <Preload>0</Preload>
       <LowRes>false</LowRes>
       <Loop>true</Loop>
-      <DurationMin>0.65</DurationMin>
-      <DurationMax>0.65</DurationMax>
+      <DurationMin>0.5</DurationMin>
+      <DurationMax>0</DurationMax>
       <Version>0</Version>
       <ParticleGenerations>
         <ParticleGeneration Name="Sparks" Version="0">

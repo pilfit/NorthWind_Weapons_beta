@@ -52,7 +52,45 @@
       </Waves>
     </Sound>
 	
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>C30mmFiring</SubtypeId>
+      </Id>
+      <Volume>1.0</Volume>
+      <Category>SHOT</Category>
+      <MaxDistance>200</MaxDistance>
+      <DistantSounds>
+        <DistantSound DistanceCrossfade="30" Distance="200" Sound="C30FiringDist" />
+      </DistantSounds>
 
+      <PreventSynchronization>1</PreventSynchronization>
+      <SoundLimit>10</SoundLimit>
+
+	  <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\SmallCannonX1.wav</Start>
+        </Wave>
+
+      </Waves>
+    </Sound>
+
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>C30FiringDist</SubtypeId>
+      </Id>
+      <Category>SHOT</Category>
+      <MaxDistance>1000</MaxDistance>
+      <Volume>1.0</Volume>
+      <Loopable>false</Loopable>	  
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\SmallCannonDistant.wav</Start>
+        </Wave>		
+      </Waves>
+    </Sound>    
 	
   </Sounds>
 </Definitions>

@@ -91,7 +91,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = -1f,
+                    Modifier = 1.5f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
@@ -172,7 +172,7 @@ namespace Scripts
                 DesiredSpeed = 3000,
                 MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -30, end: 30), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -322,7 +322,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.5f,
+                    Modifier = 1.5f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
@@ -572,7 +572,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 20f,
+                    Modifier = 25f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
@@ -651,7 +651,7 @@ namespace Scripts
                 MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 3000,
-                MaxTrajectory = 800f,
+                MaxTrajectory = 1000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory

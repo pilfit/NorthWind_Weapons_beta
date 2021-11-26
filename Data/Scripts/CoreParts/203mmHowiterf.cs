@@ -86,7 +86,7 @@ namespace Scripts {
                     Debug = false,
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 60,
+                    RateOfFire = 30,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
@@ -94,7 +94,7 @@ namespace Scripts {
                     ReloadTime = 960, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 3, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 600, //heat generated per shot
+                    HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = .50f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 1000, //amount of heat lost per second
@@ -143,7 +143,7 @@ namespace Scripts {
                 },
             },
             Ammos = new [] {
-                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase, 
+                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase,
 				
                 
             },

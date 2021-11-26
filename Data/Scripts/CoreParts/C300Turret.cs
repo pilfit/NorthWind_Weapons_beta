@@ -56,7 +56,7 @@ namespace Scripts {
             HardPoint = new HardPointDef 
             {
                 PartName = "300mm Gun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.6f,
+                DeviateShotAngle = 0.4f,
                 AimingTolerance = 0.25f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

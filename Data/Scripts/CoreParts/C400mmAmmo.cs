@@ -91,15 +91,15 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = -1f,
+                    Modifier = 2f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
                     Base = Kinetic,
-                    AreaEffect = Energy,
-                    Detonation = Energy,
+                    AreaEffect = Kinetic,
+                    Detonation = Kinetic,
                     Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
                 },
                 Custom = new CustomScalesDef
@@ -381,16 +381,16 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f,
+                    Modifier = 8f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
                     Base = Kinetic,
-                    AreaEffect = Energy,
-                    Detonation = Energy,
-                    Shield = Energy, // Damage against shields is currently all of one type per projectile.
+                    AreaEffect = Kinetic,
+                    Detonation = Kinetic,
+                    Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
                 },
                 Custom = new CustomScalesDef
                 {
@@ -468,7 +468,7 @@ namespace Scripts
                 DesiredSpeed = 450,
                 MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -20, end: 20), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
@@ -625,10 +625,10 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "C400CSecond",
-                Fragments = 30,
+                Fragments = 40,
 				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 30, // 0 - 360
+                Degrees = 25, // 0 - 360
             },
             Pattern = new PatternDef
             {
@@ -985,16 +985,16 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.1f,
+                    Modifier = 0.5f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
                     Base = Kinetic,
-                    AreaEffect = Energy,
-                    Detonation = Energy,
-                    Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
+                    AreaEffect = Kinetic,
+                    Detonation = Kinetic,
+                    Shield = Energy, // Damage against shields is currently all of one type per projectile.
                 },
                 Custom = new CustomScalesDef
                 {
@@ -1244,7 +1244,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 3f,
+                    Modifier = 4f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
@@ -1310,7 +1310,7 @@ namespace Scripts
                     NoSound = false,
                     NoShrapnel = false,
                     NoDeformation = false,
-                    Scale = 4.5f,
+                    Scale = 2.5f,
                     CustomParticle = "Small30mmExplo",
                     CustomSound = "",
                 },
@@ -1547,16 +1547,16 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = -1f,
+                    Modifier = 1.5f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
                     Base = Kinetic,
-                    AreaEffect = Energy,
-                    Detonation = Energy,
-                    Shield = Energy, // Damage against shields is currently all of one type per projectile.
+                    AreaEffect = Kinetic,
+                    Detonation = Kinetic,
+                    Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
                 },
                 Custom = new CustomScalesDef
                 {

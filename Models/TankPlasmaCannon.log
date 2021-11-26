@@ -1,0 +1,76 @@
+Running from: C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\ 
+Command: E:\Blender Projects\StollieMWMBuilder\MwmBuilder.exe /f /s:C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\ /m:TankPlasmaCannon*.fbx /o:C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\ /x:E:\blender installer\SEUT\SEUT\Materials 
+E:\blender installer\SEUT\SEUT\Materials\Armors.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Character.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Custom.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Foliage.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Items.xml: 
+    Materialslib
+E:\blender installer\SEUT\SEUT\Materials\Materials.xml: 
+    Materialslib
+Material Libraries: 
+    Material libraries were successfully loaded from path: E:\blender installer\SEUT\SEUT\Materials
+Meshes: 
+    Found 28 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon.fbx: 
+    : Finished in 0.3s
+Meshes: 
+    Found 22 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_LOD2.fbx: 
+    : Finished in 0.3s
+Meshes: 
+    Found 28 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_LOD1.fbx: 
+    : Finished in 0.4s
+Meshes: 
+    Found 17 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_BS3.fbx: WARNING: 
+    LOD model Models\TankPlasmaCannon_BS_LOD is missing
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_BS3.fbx: 
+    : Finished in 0.4s
+Meshes: 
+    Found 7 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_BS2.fbx: WARNING: 
+    LOD model Models\TankPlasmaCannon_BS_LOD is missing
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_BS2.fbx: 
+    : Finished in 0.4s
+Meshes: 
+    Found 7 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_BS_LOD.fbx: 
+    : Finished in 0.4s
+Meshes: 
+    Found 5 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_LOD3.fbx: 
+    : Finished in 0.5s
+Meshes: 
+    Found 5 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_BS1.fbx: WARNING: 
+    LOD model Models\TankPlasmaCannon_BS_LOD is missing
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon_BS1.fbx: 
+    : Finished in 0.5s
+Meshes: 
+    Found 2 meshe(s).
+Animations: 
+    Found 0 animation(s).
+C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon.hkt.fbx: 
+    : Finished in 0.5s

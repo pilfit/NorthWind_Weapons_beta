@@ -9,7 +9,7 @@
 			<LowRes>false</LowRes>
 			<Loop>false</Loop>
 			<DurationMin>0.81</DurationMin>
-			<DurationMax>0.81</DurationMax>
+			<DurationMax>0</DurationMax>
 			<Version>0</Version>
 			<ParticleGenerations>
 				<ParticleGeneration Name="Explosion" Version="0">

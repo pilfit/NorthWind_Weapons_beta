@@ -99,7 +99,7 @@ namespace Scripts {
                     BarrelsPerShot = 2,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 1, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 276, //heat generated per shot
                     MaxHeat = 140000, //max heat before weapon enters cooldown (70% of max heat)
@@ -116,7 +116,7 @@ namespace Scripts {
                     FiringSoundPerShot = false,
                     ReloadSound = "",
                     NoAmmoSound = "",
-                    HardPointRotationSound = "30mmMotorLoop",
+                    HardPointRotationSound = "WepTurretGatlingRotate",
                     BarrelRotationSound = "WepShipGatlingRotation",
                 },
                 Graphics = new HardPointParticleDef {

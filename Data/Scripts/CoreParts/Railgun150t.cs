@@ -50,7 +50,7 @@ namespace Scripts {
             HardPoint = new HardPointDef 
             {
                 PartName = "150mm Railgun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.25f,
+                DeviateShotAngle = 0.15f,
                 AimingTolerance = 0.8f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

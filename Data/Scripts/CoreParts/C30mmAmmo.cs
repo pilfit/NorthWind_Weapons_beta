@@ -1004,23 +1004,23 @@ namespace Scripts
                 Lines = new LineDef
                 {
                     TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    ColorVariance = Random(start: 0.1f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 1.1f, end: 1.3f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f,
-                        Width = 0.1f,
-                        Color = Color(red: 5.80f, green: 0.0f, blue: 0.0f, alpha: 0f),
+                        Length = 9f,
+                        Width = 0.05f,
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
                         Enable = false,
                         Material = "WeaponLaser",
-                        DecayTime = 8,
-                        Color = Color(red: 18.985f, green: 18.162f, blue: 0.81f, alpha: 1f),
+                        DecayTime = 1,
+                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.1f),
                         Back = false,
-                        CustomWidth = 0.1f,
+                        CustomWidth = 0.05f,
                         UseWidthVariance = true,
                         UseColorFade = true,
                     },
@@ -2626,7 +2626,7 @@ namespace Scripts
                 SelfDamage = false, // true = allow self damage.
                 HealthHitModifier = 0.8, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
-                VoxelHitModifier = 10,				
+                VoxelHitModifier = -1,				
                 Characters = -1f,
 				FallOff = new FallOffDef
                 {
@@ -2641,7 +2641,7 @@ namespace Scripts
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
-                    Light = 0.5f,
+                    Light = -1f,
                     Heavy = 0.01f,
                     NonArmor = -1f,
                 },
@@ -2656,7 +2656,7 @@ namespace Scripts
                     Base = Kinetic,
                     AreaEffect = Energy,
                     Detonation = Energy,
-                    Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
+                    Shield = Energy, // Damage against shields is currently all of one type per projectile.
                 },
                 Custom = new CustomScalesDef
                 {

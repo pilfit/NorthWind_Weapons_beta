@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>TankPlasmaCannon</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_TankPlasmaCannon</DisplayName>
+			<Description>Description_TankPlasmaCannon</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="1" z="9"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\TankPlasmaCannon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="9" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="9" EndY="1.0"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="9"/>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="9"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\TankPlasmaCannon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\TankPlasmaCannon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\TankPlasmaCannon_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>TankPlasmaCannon</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

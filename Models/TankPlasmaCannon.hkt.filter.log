@@ -1,0 +1,12 @@
+Command: E:\blender installer\SEUT\SEUT\Tools\Havok\HavokContentTools\hctStandAloneFilterManager.exe -t -s C:\Users\Bob\AppData\Local\Temp\space_engineers__b0ntg4t.hko -p C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon.hkt C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon.hkt 
+[ Processing All Configurations... ]
+    
+    ========== Started: Thu Nov 25 09:38:13 2021, Configuration: default ==========
+    
+    [ [Physics 2012] Create Rigid Bodies Filter ]
+        Created 2 rigid bodies.
+    [ Prune Types Filter ]
+    [ Write to Platform Filter ]
+        Wrote layout for [Tagfile] to file [C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\TankPlasmaCannon.hkt].
+    
+    ========== Finished in 00:00:00, 0 Errors, 0 Warnings ==========

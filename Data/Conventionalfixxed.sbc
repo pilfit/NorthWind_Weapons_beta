@@ -18,7 +18,7 @@
       <ModelOffset x="0" y="0" z="0" />
       <Center x="1" y="0" z="4" />
       <Model>Models\RotaryCannon.mwm</Model>
-	  <UseModelIntersection>true</UseModelIntersection>
+	  <UseModelIntersection>false</UseModelIntersection>
 	  <BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\RotaryCannon_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.66" File="Models\RotaryCannon_BS2.mwm"/>
@@ -79,7 +79,7 @@
       <ModelOffset x="0" y="0" z="0" />
       <Center x="1" y="1" z="19" />
       <Model>Models\203mmHowitzer.mwm</Model>
-	  <UseModelIntersection>true</UseModelIntersection>	  
+	  <UseModelIntersection>false</UseModelIntersection>	  
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\203mmHowitzer_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.66" File="Models\203mmHowitzer_BS2.mwm"/>
