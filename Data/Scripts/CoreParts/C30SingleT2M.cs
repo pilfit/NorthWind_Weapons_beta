@@ -91,8 +91,8 @@ namespace Scripts {
                     EnergyPriority = 0,
                     MuzzleCheck = false,
                     Debug = false,
-                    RestrictionRadius = 2.5f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
+                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype					
                 },
                 Loading = new LoadingDef {
@@ -120,24 +120,25 @@ namespace Scripts {
                     NoAmmoSound = "",
                     HardPointRotationSound = "",
                     BarrelRotationSound = "",
+                    FireSoundEndDelay = 10, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..)	
                 },
                 Graphics = new HardPointParticleDef {
 
                     Effect1 = new ParticleDef {
-                        Name = "RotaryCannonFlash", // Smoke_LargeGunShot
+                        Name = "C30AutoFlash", // Smoke_LargeGunShot
                         Color = Color(red: 15, green: 2, blue: 1, alpha: 0.8f),
                         Offset = Vector(x: 0, y: 0, z: 0),
 
                         Extras = new ParticleOptionDef {
-                            Loop = true,
-                            Restart = true,
+                            Loop = false,
+                            Restart = false,
                             MaxDistance = 300,
                             MaxDuration = 0f,
                             Scale = 1f,
                         },
                     },
                     Effect2 = new ParticleDef {
-                        Name = "RotarycannonSmoke",//Muzzle_Flash_Large
+                        Name = "",//Muzzle_Flash_Large
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
 

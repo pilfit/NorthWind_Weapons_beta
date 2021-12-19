@@ -55,7 +55,7 @@ namespace Scripts {
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
-                    RateOfFire = true,
+                    RateOfFire = false,
                     DamageModifier = false,
                     ToggleGuidance = false,
                     EnableOverload = false,
@@ -63,8 +63,8 @@ namespace Scripts {
                 Ai = new AiDef {
                     TrackTargets = false,
                     TurretAttached = false,
-                    TurretController = true,
-                    PrimaryTracking = true,
+                    TurretController = false,
+                    PrimaryTracking = false,
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
@@ -92,7 +92,7 @@ namespace Scripts {
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 1, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 15, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 276, //heat generated per shot
                     MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
@@ -100,7 +100,7 @@ namespace Scripts {
                     HeatSinkRate = 3200, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
-                    DelayAfterBurst = 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFullBurst = false,
 					DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
                 },

@@ -418,20 +418,24 @@
 			<Model>Models\Con500mm.mwm</Model>
 			<UseModelIntersection>false</UseModelIntersection>
 			<MountPoints>
-				<MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
-				<MountPoint Side="Front" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
-				<MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="5.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.5"/>
-				<MountPoint Side="Back" StartX="0.0" StartY="2.5" EndX="5.0" EndY="3.0"/>
-				<MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="7.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="7.0" EndY="1.5"/>
-				<MountPoint Side="Left" StartX="0.0" StartY="2.5" EndX="7.0" EndY="3.0"/>
-				<MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="7.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="7.0" EndY="1.5"/>
-				<MountPoint Side="Right" StartX="0.0" StartY="2.5" EndX="7.0" EndY="3.0"/>
-				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="7.0" EndY="5.0" Enabled="false" />
-				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="7.0" EndY="5.0" Default="true" />
+				<MountPoint Side="Front" StartX="0.0" StartY="2.9" EndX="5.0" EndY="4.0"/>
+				<MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.0"/>
+				<MountPoint Side="Front" StartX="0.0" StartY="4.0" EndX="5.0" EndY="7.0" Enabled="false" />
+				<MountPoint Side="Front" StartX="1.4" StartY="1.9" EndX="3.6" EndY="2.1"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="5.0" EndY="1.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="2.9" EndX="5.0" EndY="4.0"/>
+				<MountPoint Side="Back" StartX="0.0" StartY="4.0" EndX="5.0" EndY="7.0" Enabled="false" />
+				<MountPoint Side="Back" StartX="1.4" StartY="1.9" EndX="3.6" EndY="2.1"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="7.0" EndY="1.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="2.9" EndX="7.0" EndY="4.0"/>
+				<MountPoint Side="Left" StartX="0.0" StartY="4.0" EndX="7.0" EndY="7.0" Enabled="false" />
+				<MountPoint Side="Left" StartX="1.4" StartY="1.9" EndX="3.6" EndY="2.1"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="7.0" EndY="1.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="2.9" EndX="7.0" EndY="4.0"/>
+				<MountPoint Side="Right" StartX="0.0" StartY="4.0" EndX="7.0" EndY="7.0" Enabled="false" />
+				<MountPoint Side="Right" StartX="3.4" StartY="1.9" EndX="5.6" EndY="2.1"/>
+				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="5.0" EndY="7.0" Enabled="false" />
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="7.0"/>
 			</MountPoints>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Con500mm_BS1.mwm"/>

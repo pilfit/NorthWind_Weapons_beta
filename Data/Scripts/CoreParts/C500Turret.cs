@@ -156,7 +156,7 @@ namespace Scripts {
                 },
             },
             Ammos = new [] {
-                C500mmAmmoAP, C500mmShrapnel, C500mmAmmoHE, C500mmAmmoN, C500NSecond, C500mmAPHEShrapbase, C500Effect,               
+                C500mmAmmoAP, C500mmShrapnel, C500mmAmmoHE, C500mmAmmoN, C500NSecond, C500mmAPHEShrapbase, C500Effect, C500mmAmmoNP,               
 
             },
             Animations = C500Turret_Animation,

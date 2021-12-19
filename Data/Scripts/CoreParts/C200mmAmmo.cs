@@ -336,7 +336,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "C200mmShrapnel",
-                Fragments = 100,
+                Fragments = 0,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360

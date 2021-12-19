@@ -1,7 +1,7 @@
-Command: E:\blender installer\SEUT\SEUT\Tools\Havok\HavokContentTools\hctStandAloneFilterManager.exe -t -s C:\Users\Bob\AppData\Local\Temp\space_engineers_i2r0kpoi.hko -p C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\Con500mm.hkt C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\Con500mm.hkt 
+Command: E:\blender installer\SEUT\SEUT\Tools\Havok\HavokContentTools\hctStandAloneFilterManager.exe -t -s C:\Users\Bob\AppData\Local\Temp\space_engineers_ltk9h12l.hko -p C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\Con500mm.hkt C:\Users\Bob\AppData\Roaming\SpaceEngineers\Mods\NorthWind_Weapons_beta\Models\Con500mm.hkt 
 [ Processing All Configurations... ]
     
-    ========== Started: Mon Nov 15 16:10:03 2021, Configuration: default ==========
+    ========== Started: Sun Dec 05 23:59:20 2021, Configuration: default ==========
     
     [ [Physics 2012] Create Rigid Bodies Filter ]
         [0xabba873d] Warning : Degenerate Capsule (Cylinder.051): Using Sphere Shape Instead
