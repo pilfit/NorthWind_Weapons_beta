@@ -437,7 +437,7 @@ namespace Scripts
                 {
                     DetonateOnEnd = true,
                     ArmOnlyOnHit = false,
-                    DetonationDamage = 1500,
+                    DetonationDamage = 3500,
                     DetonationRadius = 10,
                     MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
                 },
