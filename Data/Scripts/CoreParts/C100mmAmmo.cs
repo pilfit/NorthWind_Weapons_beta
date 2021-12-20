@@ -8,10 +8,12 @@ using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef.AreaEffectType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef.PushPullDef.Force;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.Falloff;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarMode;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarType;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.PushPullDef.Force;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.TracerBaseDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
@@ -120,44 +122,86 @@ namespace Scripts
                     },
                 },
             },
-            AreaEffect = new AreaDamageDef
+            AreaOfDamage = new AreaOfDamageDef
             {
-                AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
-                Base = new AreaInfluence
+                ByBlockHit = new ByBlockHitDef
                 {
-                    Radius = 0f, // the sphere of influence of area effects
-                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Enable = false,
+                    Radius = 0f,
+                    Damage = 0f,
+                    Depth = 0f,
+                    MaxAbsorb = 0f,
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                 },
-                Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
+                EndOfLife = new EndOfLifeDef
                 {
-                    Interval = 0,
-                    PulseChance = 0,
-                },
-                Explosions = new ExplosionDef
-                {
+                    Enable = true,
+                    Radius = 1.25f,
+                    Damage = 500f,
+                    Depth = 2f,
+                    MaxAbsorb = 0f,
+                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
+                    ArmOnlyOnHit = false,
+                    MinArmingTime = 0,
                     NoVisuals = false,
                     NoSound = false,
-                    NoShrapnel = false,
-                    NoDeformation = false,
-                    Scale = 0.5f,
+                    ParticleScale = 0.5f,
                     CustomParticle = "SmallArtExplosionLight",
                     CustomSound = "ArcWepSmallMissileExpl",
                 },
-                Detonation = new DetonateDef
+            },
+            Ewar = new EwarDef
+            {
+                Enable = false,
+                Type = EnergySink,
+                Mode = Effect,
+                Strength = 0f,
+                Radius = 0f,
+                Duration = 0,
+                StackDuration = true,
+                Depletable = true,
+                MaxStacks = 0,
+                NoHitParticle = false,
+                Force = new PushPullDef
                 {
-                    DetonateOnEnd = true,
-                    ArmOnlyOnHit = false,
-                    DetonationDamage = 1,
-                    DetonationRadius = 15,
-                    MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
+                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    DisableRelativeMass = false,
+                    TractorRange = 0,
+                    ShooterFeelsForce = false,
                 },
-                EwarFields = new EwarFieldsDef
+                Field = new FieldDef
                 {
-                    Duration = 1,
-                    StackDuration = true,
-                    Depletable = false,
-                    MaxStacks = 10,
-                    TriggerRange = 5f,
+                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second).
+                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
+                    HideModel = false, // Hide the projectile model if it has one.
+                    ShowParticle = false, // Deprecated.
+                    Particle = new ParticleDef // Particle effect to generate at the field's position.
+                    {
+                        Name = "", // SubtypeId of field particle effect.
+                        ShrinkByDistance = false, // Deprecated.
+                        Color = Color(red: 0, green: 0, blue: 0, alpha: 0), // Deprecated, set color in particle sbc.
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false, // Deprecated, set this in particle sbc.
+                            Restart = false, // Not used.
+                            MaxDistance = 5000, // Not used.
+                            MaxDuration = 1, // Not used.
+                            Scale = 1, // Scale of effect.
+                        },
+                    },
                 },
             },
             Beams = new BeamDef
@@ -335,11 +379,11 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "C100mmShrapnel",
-                Fragments = 50,
-				Reverse = false,
+                AmmoRound = "C100mmShrapnelbase",
+                Fragments = 1,
+				Reverse = true,
 				RandomizeDir = false,
-                Degrees = 360, // 0 - 360
+                Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
             {
@@ -410,44 +454,86 @@ namespace Scripts
                     },
                 },
             },
-            AreaEffect = new AreaDamageDef
+            AreaOfDamage = new AreaOfDamageDef
             {
-                AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
-                Base = new AreaInfluence
+                ByBlockHit = new ByBlockHitDef
                 {
-                    Radius = 0f, // the sphere of influence of area effects
-                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Enable = false,
+                    Radius = 0f,
+                    Damage = 0f,
+                    Depth = 0f,
+                    MaxAbsorb = 0f,
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                 },
-                Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
+                EndOfLife = new EndOfLifeDef
                 {
-                    Interval = 0,
-                    PulseChance = 0,
-                },
-                Explosions = new ExplosionDef
-                {
+                    Enable = true,
+                    Radius = 1.25f,
+                    Damage = 500f,
+                    Depth = 2f,
+                    MaxAbsorb = 0f,
+                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
+                    ArmOnlyOnHit = false,
+                    MinArmingTime = 0,
                     NoVisuals = false,
                     NoSound = false,
-                    NoShrapnel = false,
-                    NoDeformation = false,
-                    Scale = 0.5f,
+                    ParticleScale = 0.5f,
                     CustomParticle = "SmallArtExplosionLight",
                     CustomSound = "ArcWepSmallMissileExpl",
                 },
-                Detonation = new DetonateDef
+            },
+            Ewar = new EwarDef
+            {
+                Enable = false,
+                Type = EnergySink,
+                Mode = Effect,
+                Strength = 0f,
+                Radius = 0f,
+                Duration = 0,
+                StackDuration = true,
+                Depletable = true,
+                MaxStacks = 0,
+                NoHitParticle = false,
+                Force = new PushPullDef
                 {
-                    DetonateOnEnd = true,
-                    ArmOnlyOnHit = false,
-                    DetonationDamage = 500,
-                    DetonationRadius = 5,
-                    MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
+                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    DisableRelativeMass = false,
+                    TractorRange = 0,
+                    ShooterFeelsForce = false,
                 },
-                EwarFields = new EwarFieldsDef
+                Field = new FieldDef
                 {
-                    Duration = 1,
-                    StackDuration = true,
-                    Depletable = false,
-                    MaxStacks = 10,
-                    TriggerRange = 5f,
+                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second).
+                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
+                    HideModel = false, // Hide the projectile model if it has one.
+                    ShowParticle = false, // Deprecated.
+                    Particle = new ParticleDef // Particle effect to generate at the field's position.
+                    {
+                        Name = "", // SubtypeId of field particle effect.
+                        ShrinkByDistance = false, // Deprecated.
+                        Color = Color(red: 0, green: 0, blue: 0, alpha: 0), // Deprecated, set color in particle sbc.
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false, // Deprecated, set this in particle sbc.
+                            Restart = false, // Not used.
+                            MaxDistance = 5000, // Not used.
+                            MaxDuration = 1, // Not used.
+                            Scale = 1, // Scale of effect.
+                        },
+                    },
                 },
             },
             Beams = new BeamDef
@@ -700,44 +786,86 @@ namespace Scripts
                     },
                 },
             },
-            AreaEffect = new AreaDamageDef
+            AreaOfDamage = new AreaOfDamageDef
             {
-                AreaEffect = Disabled, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
-                Base = new AreaInfluence
+                ByBlockHit = new ByBlockHitDef
                 {
-                    Radius = 0f, // the sphere of influence of area effects
-                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Enable = false,
+                    Radius = 0f,
+                    Damage = 0f,
+                    Depth = 0f,
+                    MaxAbsorb = 0f,
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                 },
-                Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
+                EndOfLife = new EndOfLifeDef
                 {
-                    Interval = 0,
-                    PulseChance = 0,
-                },
-                Explosions = new ExplosionDef
-                {
+                    Enable = false,
+                    Radius = 0f,
+                    Damage = 0f,
+                    Depth = 0f,
+                    MaxAbsorb = 0f,
+                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
+                    ArmOnlyOnHit = false,
+                    MinArmingTime = 0,
                     NoVisuals = false,
                     NoSound = false,
-                    NoShrapnel = false,
-                    NoDeformation = false,
-                    Scale = 1,
+                    ParticleScale = 0.5f,
                     CustomParticle = "",
                     CustomSound = "",
                 },
-                Detonation = new DetonateDef
+            },
+            Ewar = new EwarDef
+            {
+                Enable = false,
+                Type = EnergySink,
+                Mode = Effect,
+                Strength = 0f,
+                Radius = 0f,
+                Duration = 0,
+                StackDuration = true,
+                Depletable = true,
+                MaxStacks = 0,
+                NoHitParticle = false,
+                Force = new PushPullDef
                 {
-                    DetonateOnEnd = true,
-                    ArmOnlyOnHit = false,
-                    DetonationDamage = 0,
-                    DetonationRadius = 0,
-                    MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)					
+                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    DisableRelativeMass = false,
+                    TractorRange = 0,
+                    ShooterFeelsForce = false,
                 },
-                EwarFields = new EwarFieldsDef
+                Field = new FieldDef
                 {
-                    Duration = 60,
-                    StackDuration = true,
-                    Depletable = false,
-                    MaxStacks = 10,
-                    TriggerRange = 5f,
+                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second).
+                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
+                    HideModel = false, // Hide the projectile model if it has one.
+                    ShowParticle = false, // Deprecated.
+                    Particle = new ParticleDef // Particle effect to generate at the field's position.
+                    {
+                        Name = "", // SubtypeId of field particle effect.
+                        ShrinkByDistance = false, // Deprecated.
+                        Color = Color(red: 0, green: 0, blue: 0, alpha: 0), // Deprecated, set color in particle sbc.
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false, // Deprecated, set this in particle sbc.
+                            Restart = false, // Not used.
+                            MaxDistance = 5000, // Not used.
+                            MaxDuration = 1, // Not used.
+                            Scale = 1, // Scale of effect.
+                        },
+                    },
                 },
             },
             Beams = new BeamDef
@@ -959,62 +1087,86 @@ namespace Scripts
                     },
                 },
             },
-            AreaEffect = new AreaDamageDef
+            AreaOfDamage = new AreaOfDamageDef
             {
-                AreaEffect = Explosive, // Disabled = do not use area effect at all, Explosive, Radiant, AntiSmart, JumpNullField, JumpNullField, EnergySinkField, AnchorField, EmpField, OffenseField, NavField, DotField.
-                Base = new AreaInfluence
+                ByBlockHit = new ByBlockHitDef
                 {
-                    Radius = 0f, // the sphere of influence of area effects
-                    EffectStrength = 0f, // For ewar it applies this amount per pulse/hit, non-ewar applies this as damage per tick per entity in area of influence. For radiant 0 == use spillover from BaseDamage, otherwise use this value.
+                    Enable = false,
+                    Radius = 0f,
+                    Damage = 0f,
+                    Depth = 0f,
+                    MaxAbsorb = 0f,
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                 },
-                Pulse = new PulseDef // interval measured in game ticks (60 == 1 second), pulseChance chance (0 - 100) that an entity in field will be hit
+                EndOfLife = new EndOfLifeDef
                 {
-                    Interval = 6,
-                    PulseChance = 100,
-                    GrowTime = 1,
-                    HideModel = false,
-                    ShowParticle = true,
-                    Particle = new ParticleDef
-                    {
-                        Name = "", //ShipWelderArc
-                        ShrinkByDistance = false,
-                        Color = Color(red: 128, green: 0, blue: 0, alpha: 32),
-                        Offset = Vector(x: 0, y: -1, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Loop = false,
-                            Restart = false,
-                            MaxDistance = 5000,
-                            MaxDuration = 1,
-                            Scale = 1,
-                        },
-                    },
-                },
-                Explosions = new ExplosionDef
-                {
+                    Enable = true,
+                    Radius = 5f,
+                    Damage = 500f,
+                    Depth = 2f,
+                    MaxAbsorb = 0f,
+                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
+                    ArmOnlyOnHit = false,
+                    MinArmingTime = 0,
                     NoVisuals = true,
                     NoSound = true,
-                    NoShrapnel = true,
-                    NoDeformation = true,
-                    Scale = 0.3f,
+                    ParticleScale = 1,
                     CustomParticle = "",
                     CustomSound = "",
                 },
-                Detonation = new DetonateDef
+            },
+            Ewar = new EwarDef
+            {
+                Enable = false,
+                Type = EnergySink,
+                Mode = Effect,
+                Strength = 0f,
+                Radius = 0f,
+                Duration = 0,
+                StackDuration = true,
+                Depletable = true,
+                MaxStacks = 0,
+                NoHitParticle = false,
+                Force = new PushPullDef
                 {
-                    DetonateOnEnd = true,
-                    ArmOnlyOnHit = false,
-                    DetonationDamage = 500,
-                    DetonationRadius = 5f,
-                    MinArmingTime = 0, //Min time in ticks before projectile will arm for detonation (will also affect shrapnel spawning)
+                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    DisableRelativeMass = false,
+                    TractorRange = 0,
+                    ShooterFeelsForce = false,
                 },
-                EwarFields = new EwarFieldsDef
+                Field = new FieldDef
                 {
-                    Duration = 1,
-                    StackDuration = false,
-                    Depletable = false,
-                    MaxStacks = 10,
-                    TriggerRange = 5f,
+                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second).
+                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
+                    HideModel = false, // Hide the projectile model if it has one.
+                    ShowParticle = false, // Deprecated.
+                    Particle = new ParticleDef // Particle effect to generate at the field's position.
+                    {
+                        Name = "", // SubtypeId of field particle effect.
+                        ShrinkByDistance = false, // Deprecated.
+                        Color = Color(red: 0, green: 0, blue: 0, alpha: 0), // Deprecated, set color in particle sbc.
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false, // Deprecated, set this in particle sbc.
+                            Restart = false, // Not used.
+                            MaxDistance = 5000, // Not used.
+                            MaxDuration = 1, // Not used.
+                            Scale = 1, // Scale of effect.
+                        },
+                    },
                 },
             },
             Beams = new BeamDef

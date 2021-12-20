@@ -114,7 +114,7 @@ namespace Scripts {
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFullBurst = false,
+                    FireFull = false,
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "",
@@ -156,7 +156,7 @@ namespace Scripts {
                 },
             },
             Ammos = new [] {
-                C500mmAmmoAP, C500mmShrapnel, C500mmAmmoHE, C500mmAmmoN, C500NSecond, C500mmAPHEShrapbase, C500Effect, C500mmAmmoNP,               
+                C500mmAmmoAP, C500mmShrapnel, C500mmAmmoHE, C500mmAmmoN, C500NSecond, C500mmAPHEShrapbase, C500Effect, C500mmAmmoNP, C500mmHEShrapbase,               
 
             },
             Animations = C500Turret_Animation,

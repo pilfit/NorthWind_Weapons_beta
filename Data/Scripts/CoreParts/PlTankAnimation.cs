@@ -117,7 +117,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent01"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -172,7 +172,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent02"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -228,7 +228,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent03"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -284,7 +284,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent04"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -339,7 +339,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent05"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -394,7 +394,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent06"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -449,7 +449,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent07"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -504,7 +504,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent08"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -559,7 +559,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent09"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -614,7 +614,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent10"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -669,7 +669,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent11"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -724,7 +724,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent12"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -779,7 +779,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent13"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -834,7 +834,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent14"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -889,7 +889,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent15"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -944,7 +944,7 @@ namespace Scripts
                     SubpartId = Names("Heatvent16"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 60,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0, stopFiringDelay: 0, stopTrackingDelay:0, initDelay:0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>

@@ -114,7 +114,7 @@ namespace Scripts
                     SubpartId = Names("C400Recoil1"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 0,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -168,7 +168,7 @@ namespace Scripts
                     SubpartId = Names("C400Recoil2"),
                     BarrelId = "muzzle_missile_2", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 0,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -227,7 +227,7 @@ namespace Scripts
                     SubpartId = Names("C400ShellCarrage2"),
                     BarrelId = "muzzle_missile_2", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 0,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -291,7 +291,7 @@ namespace Scripts
                     SubpartId = Names("C400ShellCarrage1"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 0,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -360,7 +360,7 @@ namespace Scripts
                     SubpartId = Names("C400Shell2"),
                     BarrelId = "muzzle_missile_2", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 0,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
@@ -419,7 +419,7 @@ namespace Scripts
                     SubpartId = Names("C400Shell1"),
                     BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
                     StartupFireDelay = 0,
-                    AnimationDelays = Delays(firingDelay : 0, reloadingDelay: 0, overheatedDelay: 0, trackingDelay: 0, lockedDelay: 0, onDelay: 0, offDelay: 0, burstReloadDelay: 0, outOfAmmoDelay: 0, preFireDelay: 0),//Delay before animation starts
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
                     Reverse = Events(),
                     Loop = Events(),
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>

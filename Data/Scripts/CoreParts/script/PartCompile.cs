@@ -74,24 +74,24 @@ namespace Scripts
             return new XYZ { x = X, y = Y, z = Z };
         }
 
-        internal Dictionary<EventTriggers, uint> Delays(uint firingDelay = 0, uint reloadingDelay = 0, uint overheatedDelay = 0, uint trackingDelay = 0, uint lockedDelay = 0, uint onDelay = 0, uint offDelay = 0, uint burstReloadDelay = 0, uint outOfAmmoDelay = 0, uint preFireDelay = 0, uint stopFiringDelay = 0, uint stopTrackingDelay = 0, uint initDelay = 0)
+        internal Dictionary<EventTriggers, uint> Delays(uint FiringDelay = 0, uint ReloadingDelay = 0, uint OverheatedDelay = 0, uint TrackingDelay = 0, uint LockedDelay = 0, uint OnDelay = 0, uint OffDelay = 0, uint BurstReloadDelay = 0, uint OutOfAmmoDelay = 0, uint PreFireDelay = 0, uint StopFiringDelay = 0, uint StopTrackingDelay = 0, uint InitDelay = 0)
         {
             return new Dictionary<EventTriggers, uint>
             {
-                [Firing] = firingDelay,
-                [Reloading] = reloadingDelay,
-                [Overheated] = overheatedDelay,
-                [Tracking] = trackingDelay,
-                [TurnOn] = onDelay,
-                [TurnOff] = offDelay,
-                [BurstReload] = burstReloadDelay,
-                [NoMagsToLoad] = outOfAmmoDelay,
-                [PreFire] = preFireDelay,
+                [Firing] = FiringDelay,
+                [Reloading] = ReloadingDelay,
+                [Overheated] = OverheatedDelay,
+                [Tracking] = TrackingDelay,
+                [TurnOn] = OnDelay,
+                [TurnOff] = OffDelay,
+                [BurstReload] = BurstReloadDelay,
+                [NoMagsToLoad] = OutOfAmmoDelay,
+                [PreFire] = PreFireDelay,
                 [EmptyOnGameLoad] = 0,
-                [StopFiring] = stopFiringDelay,
-                [StopTracking] = stopTrackingDelay,
-                [LockDelay] = lockedDelay,
-                [Init] = initDelay,
+                [StopFiring] = StopFiringDelay,
+                [StopTracking] = StopTrackingDelay,
+                [LockDelay] = LockedDelay,
+                [Init] = InitDelay,
             };
         }
 
