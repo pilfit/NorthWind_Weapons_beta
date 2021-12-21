@@ -953,16 +953,16 @@ namespace Scripts
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = false,
+                        Enable = true,
                         Length = 1f,
                         Width = 0.1f,
                         Color = Color(red: 40.0f, green: 5.20f, blue: 1.1f, alpha: 1f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = false,
+                        Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 10,
+                        DecayTime = 100,
                         Color = Color(red: 5.585f, green: 3.562f, blue: 2.21f, alpha: 1f),
                         Back = false,
                         CustomWidth = 0.3f,
@@ -1110,7 +1110,7 @@ namespace Scripts
                     Damage = 500f,
                     Depth = 2f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius

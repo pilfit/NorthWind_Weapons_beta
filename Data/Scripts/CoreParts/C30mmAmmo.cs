@@ -1053,7 +1053,7 @@ namespace Scripts
                     Damage = 20f,
                     Depth = 0.5f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -2261,7 +2261,7 @@ namespace Scripts
                     Damage = 30f,
                     Depth = 0.5f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -2864,7 +2864,7 @@ namespace Scripts
                     Damage = 30f,
                     Depth = 0.5f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -3162,10 +3162,10 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 1f,
-                    Damage = 30f,
+                    Damage = 20f,
                     Depth = 0.5f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius

@@ -381,10 +381,12 @@ namespace Scripts
             {
                 AmmoRound = "C400mmHEShrapbase",
                 Fragments = 1,
-				Reverse = true,
+				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 0, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
+                Offset = 35f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+
             },
             Pattern = new PatternDef
             {
@@ -420,9 +422,9 @@ namespace Scripts
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
-                    Light = 0.7f,
-                    Heavy = 0.6f,
-                    NonArmor = 0.8f,
+                    Light = 0.8f,
+                    Heavy = 0.4f,
+                    NonArmor = -1f,
                 },
                 Shields = new ShieldDef
                 {
@@ -474,11 +476,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 5f,
-                    Damage = 10000f,
-                    Depth = 7.5f,
+                    Radius = 20f,
+                    Damage = 35000f,
+                    Depth = 20f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1141,7 +1143,7 @@ namespace Scripts
                     Damage = 0f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1149,8 +1151,8 @@ namespace Scripts
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     ArmOnlyOnHit = false,
                     MinArmingTime = 0,
-                    NoVisuals = false,
-                    NoSound = false,
+                    NoVisuals = true,
+                    NoSound = true,
                     ParticleScale = 0.5f,
                     CustomParticle = "",
                     CustomSound = "",
@@ -1437,12 +1439,12 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
+                    Enable = true,
                     Radius = 2.5f,
                     Damage = 5000f,
                     Depth = 2f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1762,7 +1764,7 @@ namespace Scripts
                     Damage = 9000f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1955,8 +1957,8 @@ namespace Scripts
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
-                Shape = LineShape,
-                Diameter = 0.5,
+                Shape = SphereShape,
+                Diameter = 5.5,
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -1966,7 +1968,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "C400mmShrapnel",
-                Fragments = 1,
+                Fragments = 50,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360
@@ -2059,9 +2061,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 20f,
-                    Damage = 15000f,
-                    Depth = 5f,
+                    Radius = 5.5f,
+                    Damage = 10000f,
+                    Depth = 5.5f,
                     MaxAbsorb = 0f,
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
@@ -2071,7 +2073,7 @@ namespace Scripts
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     ArmOnlyOnHit = false,
                     MinArmingTime = 0,
-                    NoVisuals = true,
+                    NoVisuals = false,
                     NoSound = true,
                     ParticleScale = 1,
                     CustomParticle = "",
@@ -2124,7 +2126,7 @@ namespace Scripts
             },
             Beams = new BeamDef
             {
-                Enable = false,
+                Enable = true,
                 VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
                 ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
                 RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
@@ -2136,9 +2138,9 @@ namespace Scripts
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 100, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                AccelPerSec = 800f,
-                DesiredSpeed = 100,
-                MaxTrajectory = 2f,
+                AccelPerSec = 0f,
+                DesiredSpeed = 0,
+                MaxTrajectory = 1f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory

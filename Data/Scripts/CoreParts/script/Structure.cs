@@ -561,6 +561,7 @@ namespace Scripts
                 [ProtoMember(23)] internal bool IgnoreWater;
                 [ProtoMember(24)] internal AreaOfDamageDef AreaOfDamage;
                 [ProtoMember(25)] internal EwarDef Ewar;
+                [ProtoMember(26)] internal bool IgnoreVoxels;
 
                 [ProtoContract]
                 public struct DamageScaleDef
@@ -605,8 +606,16 @@ namespace Scripts
                     [ProtoContract]
                     public struct CustomScalesDef
                     {
+                        internal enum SkipMode
+                        {
+                            NoSkip,
+                            Inclusive,
+                            Exclusive,
+                        }
+
                         [ProtoMember(1)] internal CustomBlocksDef[] Types;
                         [ProtoMember(2)] internal bool IgnoreAllOthers;
+                        [ProtoMember(3)] internal SkipMode SkipOthers;
                     }
 
                     [ProtoContract]
@@ -783,6 +792,7 @@ namespace Scripts
                     [ProtoMember(6)] internal bool Reverse;
                     [ProtoMember(7)] internal bool RandomizeDir;
                     [ProtoMember(8)] internal bool DropVelocity;
+                    [ProtoMember(9)] internal float Offset;
                 }
 
                 [ProtoContract]
