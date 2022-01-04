@@ -49,9 +49,11 @@ namespace Scripts
             {
                 AmmoRound = "C300mmAPHEShrapbase",
                 Fragments = 1,
-				Reverse = true,
+				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 120, // 0 - 360
+                DropVelocity = true, // fragments will not inherit velocity from parent.
+                Offset = -0.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).                
             },
             Pattern = new PatternDef
             {
@@ -381,7 +383,7 @@ namespace Scripts
             {
                 AmmoRound = "C300mmHEShrapbase",
                 Fragments = 1,
-				Reverse = true,
+				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 0, // 0 - 360
             },
@@ -473,11 +475,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 4f,
-                    Damage = 5000f,
-                    Depth = 7.5f,
+                    Radius = 3.5f,
+                    Damage = 2000f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1023,7 +1025,7 @@ namespace Scripts
             AmmoRound = "C300mmShrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 600f,
+            BaseDamage = 1500f,
             Mass = 25000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -1344,7 +1346,7 @@ namespace Scripts
             {
                 AmmoRound = "C300mmHEShrapbase",
                 Fragments = 1,
-				Reverse = true,
+				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 0, // 0 - 360
             },
@@ -1436,11 +1438,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 4f,
-                    Damage = 2000f,
-                    Depth = 5f,
+                    Radius = 2f,
+                    Damage = 1000f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1663,7 +1665,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "C300mmShrapnel",
-                Fragments = 50,
+                Fragments = 25,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360
@@ -1756,11 +1758,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 5f,
+                    Radius = 2.5f,
                     Damage = 5000f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1834,7 +1836,7 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 200, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 350,
+                DesiredSpeed = 100,
                 MaxTrajectory = 100f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -25, end: 25), // subtracts value from DesiredSpeed
@@ -1964,10 +1966,12 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "C300mmShrapnel",
-                Fragments = 50,
+                Fragments = 25,
 				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 360, // 0 - 360
+                DropVelocity = false, // fragments will not inherit velocity from parent.
+                Offset = -2.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).                 
             },
             Pattern = new PatternDef
             {
@@ -2057,11 +2061,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 15f,
-                    Damage = 3000f,
-                    Depth = 4f,
+                    Radius = 4f,
+                    Damage = 35000f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -2122,7 +2126,7 @@ namespace Scripts
             },
             Beams = new BeamDef
             {
-                Enable = true,
+                Enable = false,
                 VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
                 ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
                 RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
@@ -2135,8 +2139,8 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 100, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 0,
-                MaxTrajectory = 1f,
+                DesiredSpeed = 100,
+                MaxTrajectory = 10f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory

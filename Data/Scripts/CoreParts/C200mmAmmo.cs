@@ -48,7 +48,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "C200mmShrapnelbase",
-                Fragments = 1,
+                Fragments = 0,
 				Reverse = true,
 				RandomizeDir = false,
                 Degrees = 0, // 0 - 360
@@ -141,11 +141,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 2f,
-                    Damage = 2000f,
-                    Depth = 4f,
+                    Radius = 10f,
+                    Damage = 900000f,
+                    Depth = 1f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -379,11 +379,13 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "C200mmShrapnelbase",
-                Fragments = 1,
-				Reverse = true,
+                AmmoRound = "C200mmShrapnel",
+                Fragments = 360,
+				Reverse = false,
 				RandomizeDir = false,
-                Degrees = 0, // 0 - 360
+                Degrees = 360, // 0 - 360
+                DropVelocity = false, // fragments will not inherit velocity from parent.
+                Offset = -2.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).                 
             },
             Pattern = new PatternDef
             {
@@ -475,9 +477,9 @@ namespace Scripts
                     Enable = true,
                     Radius = 2f,
                     Damage = 2000f,
-                    Depth = 4f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -712,9 +714,11 @@ namespace Scripts
             {
                 AmmoRound = "C200mmAPHEShrapbase",
                 Fragments = 1,
-				Reverse = true,
+				Reverse = false,
 				RandomizeDir = false,
                 Degrees = 120, // 0 - 360
+                DropVelocity = true, // fragments will not inherit velocity from parent.
+                Offset = -0.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).                
             },
             Pattern = new PatternDef
             {
@@ -814,7 +818,7 @@ namespace Scripts
                     //.InvCurve drops off sharply from the middle and tapers to max radius
                     //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
-                    ArmOnlyOnHit = true,
+                    ArmOnlyOnHit = false,
                     MinArmingTime = 0,
                     NoVisuals = true,
                     NoSound = true,
@@ -1140,7 +1144,7 @@ namespace Scripts
                     Damage = 0f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1148,8 +1152,8 @@ namespace Scripts
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     ArmOnlyOnHit = false,
                     MinArmingTime = 0,
-                    NoVisuals = false,
-                    NoSound = false,
+                    NoVisuals = true,
+                    NoSound = true,
                     ParticleScale = 0.5f,
                     CustomParticle = "",
                     CustomSound = "",
@@ -1816,12 +1820,12 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 200, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 400,
+                DesiredSpeed = 100,
                 MaxTrajectory = 100f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -25, end: 25), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -25, end: 50), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 1.5f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -1887,7 +1891,7 @@ namespace Scripts
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f,
+                        Length = 5f,
                         Width = 0.1f,
                         Color = Color(red: 20.80f, green: 15.20f, blue: 10.0f, alpha: 0.8f),
                     },

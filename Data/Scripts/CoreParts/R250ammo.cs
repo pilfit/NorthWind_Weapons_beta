@@ -343,8 +343,9 @@ namespace Scripts
             {
                 AmmoRound = "",
                 Fragments = 0,
-                ForwardDegrees = 15,
-                BackwardDegrees = 0,
+				Reverse = false,
+				RandomizeDir = false,
+                Degrees = 0, // 0 - 360
             },
             DamageScales = new DamageScaleDef
             {

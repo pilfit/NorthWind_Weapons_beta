@@ -3,6 +3,8 @@ using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.ShapeDef.Shapes;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.CustomScalesDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.CustomScalesDef.SkipMode;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
@@ -10,6 +12,7 @@ using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.Falloff;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.AoeShape;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarMode;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarType;
@@ -55,6 +58,7 @@ namespace Scripts
 				RandomizeDir = false,
                 Degrees = 120, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
+                Offset = -10.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
             },
             Pattern = new PatternDef
             {
@@ -130,7 +134,7 @@ namespace Scripts
             {
                 ByBlockHit = new ByBlockHitDef
                 {
-                    Enable = true,
+                    Enable = false,
                     Radius = 0f,
                     Damage = 0f,
                     Depth = 0f,
@@ -145,7 +149,7 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 0.5f,
+                    Radius = 1f,
                     Damage = 1f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
@@ -525,12 +529,12 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 120, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 150,
-                MaxTrajectory = 520f,
+                DesiredSpeed = 75,
+                MaxTrajectory = 200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -50, end: 50), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 1.5f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -596,15 +600,15 @@ namespace Scripts
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 9f,
+                        Length = 1f,
                         Width = 0.05f,
-                        Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.8f),
+                        Color = Color(red: 20.0f, green: 60.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
-                        Enable = false,
+                        Enable = true,
                         Material = "WeaponLaser",
-                        DecayTime = 1,
+                        DecayTime = 100,
                         Color = Color(red: 20.0f, green: 6.20f, blue: 0.5f, alpha: 0.1f),
                         Back = false,
                         CustomWidth = 0.05f,
@@ -1863,8 +1867,9 @@ namespace Scripts
                 Fragments = 1,
 				Reverse = false,
 				RandomizeDir = false,
-                Degrees = 120, // 0 - 360
+                Degrees = 100, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
+                Offset = -0.2f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
             },
             Pattern = new PatternDef
             {

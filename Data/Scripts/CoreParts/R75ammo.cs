@@ -29,7 +29,7 @@ namespace Scripts
             AmmoRound = "R75ammo",
             HybridRound = true, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 6100f,
+            BaseDamage = 3100,
             Mass = 20f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 30000f,
@@ -82,7 +82,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.2f,
+                    Small = 0.3f,
                 },
                 Armor = new ArmorDef
                 {
@@ -327,7 +327,7 @@ namespace Scripts
             AmmoRound = "railgunShrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.00000000001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 6000f,
+            BaseDamage = 3000f,
             Mass = 1f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 0f,
@@ -347,8 +347,9 @@ namespace Scripts
             {
                 AmmoRound = "",
                 Fragments = 0,
-                ForwardDegrees = 15,
-                BackwardDegrees = 0,
+				Reverse = false,
+				RandomizeDir = false,
+                Degrees = 0, // 0 - 360
             },
             DamageScales = new DamageScaleDef
             {
@@ -606,7 +607,7 @@ namespace Scripts
             AmmoRound = "RailFXshots",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 600f,
+            BaseDamage = 500f,
             Mass = 0f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60f,

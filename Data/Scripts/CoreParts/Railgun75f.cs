@@ -96,7 +96,7 @@ namespace Scripts {
                     SkipBarrels = 0,
                     ReloadTime = 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 9800, //heat generated per shot
+                    HeatPerShot = 4000, //heat generated per shot
                     MaxHeat = 35000, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 750, //amount of heat lost per second
