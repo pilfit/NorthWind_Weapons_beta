@@ -476,7 +476,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 3.5f,
-                    Damage = 2000f,
+                    Damage = 4500,
                     Depth = 0f,
                     MaxAbsorb = 0f,
                     Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
@@ -1025,7 +1025,7 @@ namespace Scripts
             AmmoRound = "C300mmShrapnel",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 1500f,
+            BaseDamage = 1000f,
             Mass = 25000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -2062,7 +2062,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 4f,
-                    Damage = 35000f,
+                    Damage = 30000f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius

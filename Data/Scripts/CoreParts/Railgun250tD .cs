@@ -85,7 +85,7 @@ namespace Scripts {
                     RotateBarrelAxis = 0,
                     EnergyPriority = 0,
                     MuzzleCheck = false,
-                    Debug = false,
+                    Debug = true,
                 },
                 Loading = new LoadingDef {
                     RateOfFire = 80,

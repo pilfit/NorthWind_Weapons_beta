@@ -85,7 +85,7 @@ namespace Scripts {
                     RotateBarrelAxis = 0,
                     EnergyPriority = 0,
                     MuzzleCheck = false,
-                    Debug = false,
+                    Debug = true,
                 },
                 Loading = new LoadingDef {
                     RateOfFire = 30,
@@ -95,7 +95,7 @@ namespace Scripts {
                     SkipBarrels = 0,
                     ReloadTime = 280, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 12500, //heat generated per shot
+                    HeatPerShot = 13500, //heat generated per shot
                     MaxHeat = 60000, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 1000, //amount of heat lost per second

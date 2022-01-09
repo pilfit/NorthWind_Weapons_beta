@@ -88,12 +88,12 @@ namespace Scripts
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = -1f,
+                    Heavy = 0.7f,
                     NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 1.5f,
+                    Modifier = 3f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
@@ -141,11 +141,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 2.5f,
-                    Damage = 5000f,
+                    Radius = 2.6f,
+                    Damage = 15000f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -328,7 +328,7 @@ namespace Scripts
             AmmoRound = "PlFXshots",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.0f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 600f,
+            BaseDamage = 1f,
             Mass = 0f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60f,

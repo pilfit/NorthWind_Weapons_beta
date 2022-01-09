@@ -54,19 +54,19 @@ namespace Scripts
                 AmmoRound = "C100mmShrapnelbase", // AmmoRound field of the ammo to spawn.
                 Fragments = 1, // Number of projectiles to spawn.
                 Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
-                Reverse = true, // Spawn projectiles backward instead of forward.
+                Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
-                Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Offset = -1f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
-                MaxChildren = 100,
-                IgnoreArming = true,
+                MaxChildren = 0,
+                IgnoreArming = false,
                 TimedSpawns = new TimedSpawnDef
                 {
-                    Enable = true,
+                    Enable = false,
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
-                    MinProximity = 200,
+                    MinProximity = 0,
                 },
             },
             Pattern = new PatternDef
@@ -98,7 +98,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = 0.5f,
                 },
                 Armor = new ArmorDef
                 {
@@ -157,11 +157,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 1.25f,
-                    Damage = 500f,
-                    Depth = 2f,
+                    Radius = 5f,
+                    Damage = 50f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -239,7 +239,7 @@ namespace Scripts
                 MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: -10, end: 10), // subtracts value from MaxTrajectory
+                RangeVariance = Random(start: -1, end: 15), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -395,11 +395,23 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "C100mmShrapnelbase",
-                Fragments = 1,
-				Reverse = true,
-				RandomizeDir = false,
-                Degrees = 0, // 0 - 360
+                AmmoRound = "C100mmShrapnelbase", // AmmoRound field of the ammo to spawn.
+                Fragments = 1, // Number of projectiles to spawn.
+                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+                Reverse = false, // Spawn projectiles backward instead of forward.
+                DropVelocity = false, // fragments will not inherit velocity from parent.
+                Offset = -1f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                MaxChildren = 0,
+                IgnoreArming = false,
+                TimedSpawns = new TimedSpawnDef
+                {
+                    Enable = false,
+                    Interval = 2,
+                    StartTime = 1,
+                    MaxSpawns = 1,
+                    MinProximity = 0,
+                },
             },
             Pattern = new PatternDef
             {
@@ -418,7 +430,7 @@ namespace Scripts
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 5, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 0.1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = 0.1f,
                 VoxelHitModifier = 2f,					
@@ -430,7 +442,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = 0.5f,
                 },
                 Armor = new ArmorDef
                 {
@@ -489,11 +501,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 1.25f,
-                    Damage = 500f,
-                    Depth = 2f,
+                    Radius = 2.5f,
+                    Damage = 50f,
+                    Depth = 1f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -773,16 +785,16 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.5f,
+                    Modifier = 4f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
-                    Base = Energy,
-                    AreaEffect = Energy,
-                    Detonation = Energy,
-                    Shield = Energy, // Damage against shields is currently all of one type per projectile.
+                    Base = Kinetic,
+                    AreaEffect = Kinetic,
+                    Detonation = Kinetic,
+                    Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
                 },
                 Custom = new CustomScalesDef
                 {
@@ -900,7 +912,7 @@ namespace Scripts
                 MaxLifeTime = 20, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 0,
-                MaxTrajectory = 20f,
+                MaxTrajectory = 40f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
@@ -1029,10 +1041,22 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "C100mmShrapnel",
-                Fragments = 50,
-				Reverse = false,
-				RandomizeDir = false,
-                Degrees = 360, // 0 - 360
+                Fragments = 25, // Number of projectiles to spawn.
+                Degrees = 60, // Cone in which to randomize direction of spawned projectiles.
+                Reverse = false, // Spawn projectiles backward instead of forward.
+                DropVelocity = false, // fragments will not inherit velocity from parent.
+                Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                MaxChildren = 0,
+                IgnoreArming = false,
+                TimedSpawns = new TimedSpawnDef
+                {
+                    Enable = false,
+                    Interval = 2,
+                    StartTime = 1,
+                    MaxSpawns = 1,
+                    MinProximity = 0,
+                },
             },
             Pattern = new PatternDef
             {
@@ -1063,7 +1087,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = 0.5f,
                 },
                 Armor = new ArmorDef
                 {
@@ -1122,11 +1146,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 5f,
-                    Damage = 500f,
-                    Depth = 2f,
+                    Radius = 2.5f,
+                    Damage = 2000f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1201,7 +1225,7 @@ namespace Scripts
                 MaxLifeTime = 3, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 0,
-                MaxTrajectory = 1f,
+                MaxTrajectory = 2f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
