@@ -602,7 +602,7 @@ namespace Scripts
                         Enable = true,
                         Length = 1f,
                         Width = 0.05f,
-                        Color = Color(red: 20.0f, green: 60.20f, blue: 0.5f, alpha: 0.8f),
+                        Color = Color(red: 20.0f, green: 0.20f, blue: 0.5f, alpha: 0.8f),
                     },
                     Trail = new TrailDef
                     {
