@@ -749,7 +749,7 @@ namespace Scripts
                 Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
                     "C500Effect", "C500NSecond",
                 },
-                Enable = true,
+                Enable = false,
                 TriggerChance = 1f,
                 Random = false,
                 RandomMin = 1,
@@ -2991,7 +2991,7 @@ namespace Scripts
                     "C500Chain", "C500ChainEnd",
                 },
                 Mode = Fragment, // Select when to activate this pattern, options: Never, Weapon, Fragment, Both 
-                TriggerChance = 0f,
+                TriggerChance = 0.5f,
                 Random = false,
                 RandomMin = 0,
                 RandomMax = 0,

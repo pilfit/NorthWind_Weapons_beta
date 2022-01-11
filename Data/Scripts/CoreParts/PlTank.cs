@@ -145,7 +145,7 @@ namespace Scripts {
                 },
             },
             Ammos = new [] {
-                TankPlasmaAmmo, PlFXshots, PlFXshots2,
+                ChainAmmoTest, Chain, ChainEnd,
             },
             Animations = TankPlasma_Animation,
             // Don't edit below this line
