@@ -55,7 +55,7 @@ namespace Scripts
                 AmmoRound = "30mmAmmoTR",
                 Fragments = 1,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
                 Offset = -10.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
@@ -359,7 +359,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -661,7 +661,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -962,7 +962,7 @@ namespace Scripts
                 AmmoRound = "30mmCRAMAmmoS",
                 Fragments = 1,
 				Reverse = true,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1264,7 +1264,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1565,7 +1565,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1866,7 +1866,7 @@ namespace Scripts
                 AmmoRound = "30mmAmmoTR",
                 Fragments = 1,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 100, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
                 Offset = -0.2f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
@@ -2170,7 +2170,7 @@ namespace Scripts
                 AmmoRound = "30mmCRAMAmmoS",
                 Fragments = 1,
 				Reverse = true,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -2472,7 +2472,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -2773,7 +2773,7 @@ namespace Scripts
                 AmmoRound = "30mmCRAMAmmoS",
                 Fragments = 1,
 				Reverse = true,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -3075,7 +3075,7 @@ namespace Scripts
                 AmmoRound = "30mmCRAMAmmoS",
                 Fragments = 1,
 				Reverse = true,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -3376,7 +3376,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef

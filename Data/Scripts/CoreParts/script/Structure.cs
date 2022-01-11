@@ -562,6 +562,7 @@ namespace Scripts
                 [ProtoMember(24)] internal AreaOfDamageDef AreaOfDamage;
                 [ProtoMember(25)] internal EwarDef Ewar;
                 [ProtoMember(26)] internal bool IgnoreVoxels;
+                [ProtoMember(27)] internal bool Synchronize;
 
                 [ProtoContract]
                 public struct DamageScaleDef
@@ -790,21 +791,33 @@ namespace Scripts
                     [ProtoMember(4)] internal float BackwardDegrees;
                     [ProtoMember(5)] internal float Degrees;
                     [ProtoMember(6)] internal bool Reverse;
-                    [ProtoMember(7)] internal bool IgnoreArming;                  
+                    [ProtoMember(7)] internal bool IgnoreArming;
                     [ProtoMember(8)] internal bool DropVelocity;
                     [ProtoMember(9)] internal float Offset;
                     [ProtoMember(10)] internal int MaxChildren;
                     [ProtoMember(11)] internal TimedSpawnDef TimedSpawns;
-                    [ProtoMember(12)] internal bool RandomizeDir;                      
+                    [ProtoMember(12)] internal bool FireSound; // not used, can remove
 
                     [ProtoContract]
                     public struct TimedSpawnDef
                     {
+                        public enum PointTypes
+                        {
+                            Direct,
+                            Lead,
+                            Predict,
+                        }
+
                         [ProtoMember(1)] internal bool Enable;
                         [ProtoMember(2)] internal int Interval;
                         [ProtoMember(3)] internal int StartTime;
                         [ProtoMember(4)] internal int MaxSpawns;
-                        [ProtoMember(5)] internal double MinProximity;
+                        [ProtoMember(5)] internal double Proximity;
+                        [ProtoMember(6)] internal bool ParentDies;
+                        [ProtoMember(7)] internal bool PointAtTarget;
+                        [ProtoMember(8)] internal int GroupSize;
+                        [ProtoMember(9)] internal int GroupDelay;
+                        [ProtoMember(10)] internal PointTypes PointType;
                     }
                 }
 
@@ -1085,6 +1098,7 @@ namespace Scripts
                     [ProtoMember(6)] internal string PlayerHitSound;
                     [ProtoMember(7)] internal string FloatingHitSound;
                     [ProtoMember(8)] internal string ShieldHitSound;
+                    [ProtoMember(9)] internal string FragmentSound;
                 }
 
                 [ProtoContract]
@@ -1099,6 +1113,7 @@ namespace Scripts
                         DetectTravelTo,
                         DetectSmart,
                         DetectFixed,
+                        DroneAdvanced,
                     }
 
                     [ProtoMember(1)] internal float MaxTrajectory;

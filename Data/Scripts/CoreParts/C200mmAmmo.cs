@@ -66,7 +66,7 @@ namespace Scripts
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
-                    MinProximity = 0,
+                    Proximity = 0,
                 },
             },
             Pattern = new PatternDef
@@ -410,7 +410,7 @@ namespace Scripts
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
-                    MinProximity = 0,
+                    Proximity = 0,
                 },                
             },
             Pattern = new PatternDef
@@ -741,7 +741,7 @@ namespace Scripts
                 AmmoRound = "C200mmAPHEShrapbase",
                 Fragments = 1,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
                 Offset = -0.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).                
@@ -1075,7 +1075,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1376,7 +1376,7 @@ namespace Scripts
                 AmmoRound = "C200mmShrapnel",
                 Fragments = 50,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 360, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1677,7 +1677,7 @@ namespace Scripts
                 AmmoRound = "C200mmShrapnel",
                 Fragments = 25,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 360, // 0 - 360
             },
             Pattern = new PatternDef

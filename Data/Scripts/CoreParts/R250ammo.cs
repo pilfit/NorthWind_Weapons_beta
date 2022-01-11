@@ -50,7 +50,7 @@ namespace Scripts
                 AmmoRound = "railgunShrapnel3",
                 Fragments = 3,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 65, // 0 - 360
             },
             Pattern = new PatternDef
@@ -344,7 +344,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             DamageScales = new DamageScaleDef
@@ -620,7 +620,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -919,7 +919,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef

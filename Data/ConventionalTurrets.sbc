@@ -409,7 +409,7 @@
 		  </Id>
 			<DisplayName>500mm Gun Turret</DisplayName>
 			<Description>500mm gun turret. Can fire AP(500m/s), HE or Guided 300mm shells(550m/s). Guided shells have limited smart tracking at the cost of reduced HE damage. </Description>
-			<Icon>Textures\icons\300mmTurretIcon.png</Icon>
+			<Icon>Textures\icons\C500mmIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -499,7 +499,7 @@
 			<Description>30mm CIWS Turret Intended for protection from fighters and missiles.
 						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 800m/s projectile speed.
 						 The targeting systems on this turret will not work if placed near another CIWS, must be placed at least 3 blocks appart.</Description>
-			<Icon>Textures\icons\CIWS.png</Icon>
+			<Icon>Textures\icons\C30mmACTIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>

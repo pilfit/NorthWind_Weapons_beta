@@ -50,7 +50,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 45, // 0 - 360
             },
             Pattern = new PatternDef
@@ -349,7 +349,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -648,7 +648,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef

@@ -66,7 +66,7 @@ namespace Scripts
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
-                    MinProximity = 0,
+                    Proximity = 0,
                 },
             },
             Pattern = new PatternDef
@@ -410,7 +410,7 @@ namespace Scripts
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
-                    MinProximity = 0,
+                    Proximity = 0,
                 },
             },
             Pattern = new PatternDef
@@ -742,7 +742,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1055,7 +1055,7 @@ namespace Scripts
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
-                    MinProximity = 0,
+                    Proximity = 0,
                 },
             },
             Pattern = new PatternDef

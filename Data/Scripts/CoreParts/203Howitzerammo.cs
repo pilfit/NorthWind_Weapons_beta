@@ -54,7 +54,7 @@ namespace Scripts
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
 				Reverse = true,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -353,7 +353,7 @@ namespace Scripts
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
 				Reverse = true,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -652,7 +652,7 @@ namespace Scripts
                 AmmoRound = "H203ShrapBase",
                 Fragments = 1,
 				Reverse = true,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -963,7 +963,7 @@ namespace Scripts
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
-                    MinProximity = 200,
+                    Proximity = 200,
                 },
             },
             Pattern = new PatternDef
@@ -1262,7 +1262,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1563,7 +1563,7 @@ namespace Scripts
                 AmmoRound = "H203mmammoShrap",
                 Fragments = 50,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 360, // 0 - 360
             },
             Pattern = new PatternDef

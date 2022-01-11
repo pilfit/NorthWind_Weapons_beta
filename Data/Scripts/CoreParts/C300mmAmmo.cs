@@ -50,7 +50,7 @@ namespace Scripts
                 AmmoRound = "C300mmAPHEShrapbase",
                 Fragments = 1,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
                 Offset = -0.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).                
@@ -384,7 +384,7 @@ namespace Scripts
                 AmmoRound = "C300mmHEShrapbase",
                 Fragments = 1,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -715,7 +715,7 @@ namespace Scripts
                 AmmoRound = "C300GSecond",
                 Fragments = 1,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1046,7 +1046,7 @@ namespace Scripts
                 AmmoRound = "",
                 Fragments = 0,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 120, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1347,7 +1347,7 @@ namespace Scripts
                 AmmoRound = "C300mmHEShrapbase",
                 Fragments = 1,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 0, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1667,7 +1667,7 @@ namespace Scripts
                 AmmoRound = "C300mmShrapnel",
                 Fragments = 25,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 360, // 0 - 360
             },
             Pattern = new PatternDef
@@ -1968,7 +1968,7 @@ namespace Scripts
                 AmmoRound = "C300mmShrapnel",
                 Fragments = 25,
 				Reverse = false,
-				RandomizeDir = false,
+				
                 Degrees = 360, // 0 - 360
                 DropVelocity = false, // fragments will not inherit velocity from parent.
                 Offset = -2.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).                 
