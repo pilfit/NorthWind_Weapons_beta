@@ -58,7 +58,7 @@ namespace Scripts
 				
                 Degrees = 120, // 0 - 360
                 DropVelocity = true, // fragments will not inherit velocity from parent.
-                Offset = -10.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Offset = -0.5f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
             },
             Pattern = new PatternDef
             {

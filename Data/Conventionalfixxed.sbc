@@ -130,7 +130,7 @@
 			<SubtypeId>C30mmRevolver</SubtypeId>
 		  </Id>
       <DisplayName>30mm AutoCannon</DisplayName>
-      <Icon>Textures\icons\RotaryCannon.png</Icon>
+      <Icon>Textures\icons\C30mmRevolverIcon.png</Icon>
 	  <Description>30mm AutoCannon, can be loaded with Standard 30mm rounds for or DU rounds for anti armor. 800m/s projectile speed.</Description>
       <CubeSize>Small</CubeSize>
       <GuiVisible>true</GuiVisible>
@@ -140,7 +140,11 @@
       <Center x="0" y="0" z="3" />
       <Model>Models\C30mmRevolver.mwm</Model>
 	  <UseModelIntersection>false</UseModelIntersection>
-
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\C30mmRevolver_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\C30mmRevolver_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\C30mmRevolver_BS3.mwm"/>
+			</BuildProgressModels>
 
 
            <VoxelPlacement>

@@ -399,10 +399,10 @@ namespace Scripts
                     "Chain", "ChainEnd",
                 },
                 Mode = Fragment, // Select when to activate this pattern, options: Never, Weapon, Fragment, Both 
-                TriggerChance = 0.5f,
-                Random = false,
-                RandomMin = 0,
-                RandomMax = 0,
+                TriggerChance = 1f,
+                Random = true,
+                RandomMin = 1,
+                RandomMax = 2,
                 SkipParent = false,
                 PatternSteps = 1, // Number of Ammos activated per round, will progress in order and loop. Ignored if Random = true.
             },				

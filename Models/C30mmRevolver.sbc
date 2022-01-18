@@ -18,6 +18,11 @@
 				<Component Subtype="SteelPlate" Count="10"/>
 			</Components>
 			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\C30mmRevolver_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\C30mmRevolver_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\C30mmRevolver_BS3.mwm"/>
+			</BuildProgressModels>
 			<BlockPairName>C30mmRevolver</BlockPairName>
 		</Definition>
 	</CubeBlocks>

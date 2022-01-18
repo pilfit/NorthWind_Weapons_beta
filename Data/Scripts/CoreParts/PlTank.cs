@@ -47,7 +47,7 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef 
             {
-                PartName = "TankPlasmaCannon", // name of weapon in terminal
+                PartName = "Fixed 10MJ Plasma Cannon", // name of weapon in terminal
                 DeviateShotAngle = 0.05f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
