@@ -3436,7 +3436,7 @@ namespace Scripts
                 Radius = 40f, // Meters
                 Duration = 600, // In Ticks
                 StackDuration = true, // Combined Durations
-                Depletable = false,
+                Depletable = true,
                 MaxStacks = 3, // Max Debuffs at once
                 NoHitParticle = false,
                 /*
@@ -3464,8 +3464,8 @@ namespace Scripts
                 },
                 Field = new FieldDef
                 {
-                    Interval = 5, // Time between each pulse, in game ticks (60 == 1 second).
-                    PulseChance = 100, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second).
+                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
                     GrowTime = 0, // How many ticks it should take the field to grow to full size.
                     HideModel = false, // Hide the default bubble, or other model if specified.
                     ShowParticle = true, // Show Block damage effect.
