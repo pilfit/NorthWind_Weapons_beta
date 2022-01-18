@@ -834,7 +834,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 8f,
-                    Damage = 100000f,
+                    Damage = 150000f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
@@ -2619,10 +2619,10 @@ namespace Scripts
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
-                        Length = 10f,
-                        Width = 0.5f,
-                        Color = Color(red: 0.80f, green: 0.20f, blue: 0.5f, alpha: 0.1f),
+                        Enable = false,
+                        Length = 1f,
+                        Width = 0.1f,
+                        Color = Color(red: 0.01f, green: 0.01f, blue: 0.01f, alpha: 0.1f),
                     },
                     Trail = new TrailDef
                     {
@@ -2961,7 +2961,7 @@ namespace Scripts
             AmmoRound = "C500Chain",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 3000f,
+            BaseDamage = 5000f,
             Mass = 35000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -3336,7 +3336,7 @@ namespace Scripts
             {
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
-                SelfDamage = false, // true = allow self damage.
+                SelfDamage = true, // true = allow self damage.
                 HealthHitModifier = 20, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = -1f,
@@ -3407,9 +3407,9 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
-                    Radius = 1f,
-                    Damage = 1f,
+                    Enable = true,
+                    Radius = 10f,
+                    Damage = 1000f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
@@ -3430,10 +3430,10 @@ namespace Scripts
             Ewar = new EwarDef
             {
                 Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
-                Type = Offense, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
-                Mode = Field, // Effect , Field
-                Strength = 1000000f,
-                Radius = 10f, // Meters
+                Type = Emp, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
+                Mode = Effect, // Effect , Field
+                Strength = 3000000f,
+                Radius = 40f, // Meters
                 Duration = 600, // In Ticks
                 StackDuration = true, // Combined Durations
                 Depletable = false,
@@ -3466,7 +3466,7 @@ namespace Scripts
                 {
                     Interval = 5, // Time between each pulse, in game ticks (60 == 1 second).
                     PulseChance = 100, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
-                    GrowTime = 1, // How many ticks it should take the field to grow to full size.
+                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
                     HideModel = false, // Hide the default bubble, or other model if specified.
                     ShowParticle = true, // Show Block damage effect.
                     TriggerRange = 250f, //range at which fields are triggered
@@ -3496,8 +3496,8 @@ namespace Scripts
                 MaxLifeTime = 600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 300,
-                MaxTrajectory = 30f,
-                FieldTime = 30, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
+                MaxTrajectory = 100f,
+                FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
@@ -3572,7 +3572,7 @@ namespace Scripts
                     },
                     Trail = new TrailDef
                     {
-                        Enable = false,
+                        Enable = true,
                         Material = "WeaponLaser",
                         DecayTime = 120,
                         Color = Color(red: 5.585f, green: 1.262f, blue: 1.21f, alpha: 1f),
