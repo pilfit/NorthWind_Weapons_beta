@@ -376,7 +376,80 @@
       <CanPlayerOrder>true</CanPlayerOrder>
     </AmmoMagazine>    
 
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C500AmmoAP</SubtypeId>
+      </Id>
+      <DisplayName>500mm AP Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.6</X>
+        <Y>0.4</Y>
+        <Z>0.4</Z>
+      </Size>
+      <Mass>1000</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C400Shell.mwm</Model>
+      <Capacity>2</Capacity>
+      <AmmoDefinitionId Subtype="C400AmmoCluster" />
 
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>  
+
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C500AmmoHE</SubtypeId>
+      </Id>
+      <DisplayName>500mm HE Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.6</X>
+        <Y>0.4</Y>
+        <Z>0.4</Z>
+      </Size>
+      <Mass>1000</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C400Shell.mwm</Model>
+      <Capacity>2</Capacity>
+      <AmmoDefinitionId Subtype="C400AmmoCluster" />
+
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>  
+
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>C500AmmoCasaba</SubtypeId>
+      </Id>
+      <DisplayName>500mm Casaba Ammo</DisplayName>
+      <Icon>Textures\icons\300mmShellsIcon.png</Icon>
+      <Size>
+        <X>0.6</X>
+        <Y>0.4</Y>
+        <Z>0.4</Z>
+      </Size>
+      <Mass>1000</Mass>
+      <Volume>100</Volume>
+      <Model>Models\C400Shell.mwm</Model>
+      <Capacity>2</Capacity>
+      <AmmoDefinitionId Subtype="C400AmmoCluster" />
+
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>  
 
   </AmmoMagazines>
 

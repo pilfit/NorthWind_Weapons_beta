@@ -3407,7 +3407,7 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = true,
+                    Enable = false,
                     Radius = 10f,
                     Damage = 1000f,
                     Depth = 0f,
@@ -3430,14 +3430,14 @@ namespace Scripts
             Ewar = new EwarDef
             {
                 Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
-                Type = Emp, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
+                Type = Offense, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Effect, // Effect , Field
-                Strength = 3000000f,
-                Radius = 40f, // Meters
-                Duration = 600, // In Ticks
+                Strength = 300000000f,
+                Radius = 0f, // Meters
+                Duration = 1200, // In Ticks
                 StackDuration = true, // Combined Durations
                 Depletable = true,
-                MaxStacks = 3, // Max Debuffs at once
+                MaxStacks = 1, // Max Debuffs at once
                 NoHitParticle = false,
                 /*
                 EnergySink : Targets & Shutdowns Power Supplies, such as Batteries & Reactor
@@ -3482,7 +3482,7 @@ namespace Scripts
             },
             Beams = new BeamDef
             {
-                Enable = false,
+                Enable = true,
                 VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
                 ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
                 RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
@@ -3493,9 +3493,9 @@ namespace Scripts
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 300,
+                DesiredSpeed = 0,
                 MaxTrajectory = 100f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed

@@ -52,10 +52,22 @@ namespace Scripts
             Fragment = new FragmentDef
             {
                 AmmoRound = "H203ShrapBase",
-                Fragments = 1,
-				Reverse = true,
-				
-                Degrees = 0, // 0 - 360
+                Fragments = 1, // Number of projectiles to spawn.
+                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+                Reverse = false, // Spawn projectiles backward instead of forward.
+                DropVelocity = false, // fragments will not inherit velocity from parent.
+                Offset = -1f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                MaxChildren = 0,
+                IgnoreArming = false,
+                TimedSpawns = new TimedSpawnDef
+                {
+                    Enable = false,
+                    Interval = 2,
+                    StartTime = 1,
+                    MaxSpawns = 1,
+                    Proximity = 0,
+                },                
             },
             Pattern = new PatternDef
             {
@@ -93,17 +105,17 @@ namespace Scripts
                     Armor = -1f,
                     Light = -1f,
                     Heavy = 0.4f,
-                    NonArmor = -1f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 3f,
+                    Modifier = 4f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
-                    Base = Kinetic,
+                    Base = Energy,
                     AreaEffect = Energy,
                     Detonation = Energy,
                     Shield = Energy, // Damage against shields is currently all of one type per projectile.
@@ -145,11 +157,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 2f,
-                    Damage = 2000f,
-                    Depth = 4f,
+                    Radius = 5f,
+                    Damage = 300f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -351,10 +363,22 @@ namespace Scripts
             Fragment = new FragmentDef
             {
                 AmmoRound = "H203ShrapBase",
-                Fragments = 1,
-				Reverse = true,
-				
-                Degrees = 0, // 0 - 360
+                Fragments = 1, // Number of projectiles to spawn.
+                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+                Reverse = false, // Spawn projectiles backward instead of forward.
+                DropVelocity = false, // fragments will not inherit velocity from parent.
+                Offset = -1f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                MaxChildren = 0,
+                IgnoreArming = false,
+                TimedSpawns = new TimedSpawnDef
+                {
+                    Enable = false,
+                    Interval = 2,
+                    StartTime = 1,
+                    MaxSpawns = 1,
+                    Proximity = 0,
+                },                
             },
             Pattern = new PatternDef
             {
@@ -392,17 +416,17 @@ namespace Scripts
                     Armor = -1f,
                     Light = -1f,
                     Heavy = 0.4f,
-                    NonArmor = -1f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 3f,
+                    Modifier = 4f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
-                    Base = Kinetic,
+                    Base = Energy,
                     AreaEffect = Energy,
                     Detonation = Energy,
                     Shield = Energy, // Damage against shields is currently all of one type per projectile.
@@ -444,11 +468,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 2f,
-                    Damage = 2000f,
-                    Depth = 4f,
+                    Radius = 5f,
+                    Damage = 300f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -650,10 +674,22 @@ namespace Scripts
             Fragment = new FragmentDef
             {
                 AmmoRound = "H203ShrapBase",
-                Fragments = 1,
-				Reverse = true,
-				
-                Degrees = 0, // 0 - 360
+                Fragments = 1, // Number of projectiles to spawn.
+                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+                Reverse = false, // Spawn projectiles backward instead of forward.
+                DropVelocity = false, // fragments will not inherit velocity from parent.
+                Offset = -1f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                MaxChildren = 0,
+                IgnoreArming = false,
+                TimedSpawns = new TimedSpawnDef
+                {
+                    Enable = false,
+                    Interval = 2,
+                    StartTime = 1,
+                    MaxSpawns = 1,
+                    Proximity = 0,
+                },                
             },
             Pattern = new PatternDef
             {
@@ -691,11 +727,11 @@ namespace Scripts
                     Armor = -1f,
                     Light = -1f,
                     Heavy = 0.4f,
-                    NonArmor = -1f,
+                    NonArmor = 0.8f,
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 3f,
+                    Modifier = 4f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
@@ -743,11 +779,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 2f,
-                    Damage = 2000f,
-                    Depth = 4f,
+                    Radius = 5f,
+                    Damage = 300f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1241,7 +1277,7 @@ namespace Scripts
             AmmoRound = "H203mmammoShrap",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-            BaseDamage = 400f,
+            BaseDamage = 200f,
             Mass = 20000f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 60000f,
@@ -1305,16 +1341,16 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 0.5f,
+                    Modifier = 4f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f,
                 },
                 DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
                 {
-                    Base = Energy,
-                    AreaEffect = Energy,
-                    Detonation = Energy,
-                    Shield = Energy, // Damage against shields is currently all of one type per projectile.
+                    Base = Kinetic,
+                    AreaEffect = Kinetic,
+                    Detonation = Kinetic,
+                    Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
                 },
                 Custom = new CustomScalesDef
                 {
@@ -1654,11 +1690,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 10f,
-                    Damage = 1500f,
-                    Depth = 2.5f,
+                    Radius = 5f,
+                    Damage = 7500f,
+                    Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
