@@ -11,7 +11,10 @@ namespace Scripts
         private AnimationDef C500Turret_Animation => new AnimationDef
         {
 			
-
+			            HeatingEmissiveParts = new string[]
+            {
+                "C500Recoil1", "C500Recoil2", "C500Recoil3",
+            },
             //Emissives = new []
             //{
 

@@ -7,6 +7,9 @@ using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.CustomSca
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.CustomScalesDef.SkipMode;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.PatternDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.PatternDef.PatternModes;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef.TimedSpawnDef.PointTypes;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
@@ -55,18 +58,23 @@ namespace Scripts
                 Fragments = 1, // Number of projectiles to spawn.
                 Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
-                DropVelocity = false, // fragments will not inherit velocity from parent.
-                Offset = -1f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                DropVelocity = true, // fragments will not inherit velocity from parent.
+                Offset = -2f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
-                MaxChildren = 0,
-                IgnoreArming = false,
-                TimedSpawns = new TimedSpawnDef
+                MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
+                IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
+                TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below
                 {
-                    Enable = false,
-                    Interval = 2,
-                    StartTime = 1,
-                    MaxSpawns = 1,
-                    Proximity = 0,
+                    Enable = false, // Enables TimedSpawns mechanism
+                    Interval = 1, // Time between spawning fragments, in ticks
+                    StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
+                    MaxSpawns = 1, // Max number of fragment children to spawn
+                    Proximity = 100, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
+                    ParentDies = true, // Parent dies once after it spawns its last child.
+                    PointAtTarget = false, // Start fragment direction pointing at Target
+                    PointType = Direct, // Point accuracy, Direct, Lead (always fire), Predict (only fire if it can hit)
+                    GroupSize = 0, // Number of spawns in each group
+                    GroupDelay = 0, // Delay between each group.
                 },
             },
             Pattern = new PatternDef
@@ -157,11 +165,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 5f,
-                    Damage = 50f,
+                    Radius = 20f,
+                    Damage = 0.1f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = InvCurve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -235,11 +243,11 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 400, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 700,
+                DesiredSpeed = 800,
                 MaxTrajectory = 2500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: -1, end: 15), // subtracts value from MaxTrajectory
+                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 5, end: 10), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -248,7 +256,7 @@ namespace Scripts
                     MaxLateralThrust = 0.5, // controls how sharp the trajectile may turn
                     TrackingDelay = 1, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
+                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
                 },
                 Mines = new MinesDef
                 {
@@ -579,7 +587,7 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 800, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 700,
+                DesiredSpeed = 800,
                 MaxTrajectory = 8000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
@@ -762,7 +770,7 @@ namespace Scripts
                 MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
                 DamageVoxels = false, // true = voxels are vulnerable to this weapon
                 SelfDamage = false, // true = allow self damage.
-                HealthHitModifier = 16f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                HealthHitModifier = 32f, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
                 // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
                 Characters = -1f,
                 VoxelHitModifier = 1,					
@@ -981,7 +989,7 @@ namespace Scripts
                     WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Length = 1f,
                         Width = 0.1f,
                         Color = Color(red: 40.0f, green: 5.20f, blue: 1.1f, alpha: 1f),
@@ -1042,7 +1050,7 @@ namespace Scripts
             {
                 AmmoRound = "C100mmShrapnel",
                 Fragments = 25, // Number of projectiles to spawn.
-                Degrees = 60, // Cone in which to randomize direction of spawned projectiles.
+                Degrees = 80, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).

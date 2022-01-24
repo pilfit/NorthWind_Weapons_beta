@@ -136,6 +136,7 @@
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
             <IsAirTight>false</IsAirTight> 			
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
 		</Definition>
 		
         <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">

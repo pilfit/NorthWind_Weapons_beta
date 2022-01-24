@@ -29,6 +29,11 @@
 				<string>LargeMissileTurret/C200mmTurret</string>
 				<string>LargeMissileTurret/C300mmTurret</string>
 				<string>LargeMissileTurret/C400mmTurret</string>
+				<string>ConveyorSorter/C500mmTurret</string>
+				<string>LargeMissileTurret/C30mmSingleT</string>
+				<string>LargeMissileTurret/C30mmSingleTSG</string>
+				<string>SmallMissileLauncher/C30mmRevolver</string>
+				<string>SmallMissileLauncher/TankPlasmaCannon</string>
 
 			</ItemIds>
 		</Category>
@@ -57,6 +62,11 @@
 				<string>LargeMissileTurret/C200mmTurret</string>
 				<string>LargeMissileTurret/C300mmTurret</string>
 				<string>LargeMissileTurret/C400mmTurret</string>
+				<string>ConveyorSorter/C500mmTurret</string>
+				<string>LargeMissileTurret/C30mmSingleT</string>
+				<string>LargeMissileTurret/C30mmSingleTSG</string>
+				<string>SmallMissileLauncher/C30mmRevolver</string>
+				<string>SmallMissileLauncher/TankPlasmaCannon</string>				
 
 				</ItemIds>  
 		</Category>

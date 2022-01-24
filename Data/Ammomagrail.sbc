@@ -390,9 +390,9 @@
       </Size>
       <Mass>1000</Mass>
       <Volume>100</Volume>
-      <Model>Models\C400Shell.mwm</Model>
-      <Capacity>2</Capacity>
-      <AmmoDefinitionId Subtype="C400AmmoCluster" />
+      <Model>Models\C500Shell.mwm</Model>
+      <Capacity>3</Capacity>
+      <AmmoDefinitionId Subtype="C500AmmoAP" />
 
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
@@ -415,9 +415,9 @@
       </Size>
       <Mass>1000</Mass>
       <Volume>100</Volume>
-      <Model>Models\C400Shell.mwm</Model>
-      <Capacity>2</Capacity>
-      <AmmoDefinitionId Subtype="C400AmmoCluster" />
+      <Model>Models\C500Shell.mwm</Model>
+      <Capacity>3</Capacity>
+      <AmmoDefinitionId Subtype="C500AmmoHE" />
 
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
@@ -440,9 +440,9 @@
       </Size>
       <Mass>1000</Mass>
       <Volume>100</Volume>
-      <Model>Models\C400Shell.mwm</Model>
-      <Capacity>2</Capacity>
-      <AmmoDefinitionId Subtype="C400AmmoCluster" />
+      <Model>Models\C500Shell.mwm</Model>
+      <Capacity>3</Capacity>
+      <AmmoDefinitionId Subtype="C500AmmoCasaba" />
 
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>
@@ -450,6 +450,31 @@
       <MaximumOrderAmount>2000</MaximumOrderAmount>
       <CanPlayerOrder>true</CanPlayerOrder>
     </AmmoMagazine>  
+
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>PlasmaCell10MJ</SubtypeId>
+      </Id>
+      <DisplayName>PlasmaCannon 10MJ Ammo</DisplayName>
+      <Icon>Textures\icons\PlasmaCell10MJIcon.png</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>20</Mass>
+      <Volume>8</Volume>
+      <Model>Models\PlasmaCell10MJ.mwm</Model>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="CRAM30mmAmmo" />
+
+      <MinimumOfferAmount>100</MinimumOfferAmount>
+      <MaximumOfferAmount>1000</MaximumOfferAmount>
+      <MinimumOrderAmount>100</MinimumOrderAmount>
+      <MaximumOrderAmount>2000</MaximumOrderAmount>
+      <CanPlayerOrder>true</CanPlayerOrder>
+    </AmmoMagazine>    
 
   </AmmoMagazines>
 

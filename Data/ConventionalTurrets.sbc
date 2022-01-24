@@ -71,7 +71,8 @@
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
-            <IsAirTight>false</IsAirTight> 			
+            <IsAirTight>false</IsAirTight> 	
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>		
 		</Definition>
 		
         <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -141,7 +142,8 @@
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
-            <IsAirTight>false</IsAirTight> 			
+            <IsAirTight>false</IsAirTight> 		
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>	
 		</Definition>
 
         <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -230,6 +232,7 @@
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
             			
 		</Definition>
 
@@ -314,6 +317,7 @@
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
             			
 		</Definition>
 
@@ -399,6 +403,7 @@
 			  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			  <DestroySound>WepSmallWarheadExpl</DestroySound>
 			  <PCU>525</PCU>
+			  <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
 						  
 		  </Definition>		
 
@@ -409,7 +414,7 @@
 		  </Id>
 			<DisplayName>500mm Gun Turret</DisplayName>
 			<Description>500mm gun turret. Can fire AP(500m/s), HE or Casaba Howizter shells(550m/s). Casaba shells are small nuclear shaped charges that detonate in the barrel, firing a powerful plasma beam at the target.
-			             Warning! Use of the Casaba Howitzer shells will damage the weapon. </Description>
+			Warning! Use of the Casaba Shells may disable near by systems do to EMP. </Description>
 			<Icon>Textures\icons\C500mmIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -560,8 +565,81 @@
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
-            <IsAirTight>false</IsAirTight> 			
+            <IsAirTight>false</IsAirTight> 		
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>	
 		</Definition>			  
+
+        <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+		
+			<Id>
+			  <TypeId>LargeMissileTurret</TypeId>
+			<SubtypeId>C30mmSingleTSG</SubtypeId>
+		  </Id>
+			<DisplayName>30mm AutoCannon Turret SG</DisplayName>
+			<Description>30mm AutoCannon Turret Intended for protection from fighters, missiles and biological threats.
+						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 800m/s projectile speed.</Description>
+			<Icon>Textures\icons\C30mmACTIcon.png</Icon>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>true</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="5" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\C30mmSingleT.mwm</Model>
+			<UseModelIntersection>false</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="5.0" EndY="5.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\C30mmSingleT_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\C30mmSingleT_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\C30mmSingleT_BS3.mwm"/>
+			</BuildProgressModels>
+			
+           <VoxelPlacement>
+             <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+            <StaticMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0</MinAllowed>
+            </StaticMode>
+            <DynamicMode>
+            <PlacementMode>OutsideVoxel</PlacementMode>
+            <MaxAllowed>0.2</MaxAllowed>
+            <MinAllowed>0.01</MinAllowed>
+            </DynamicMode>
+           </VoxelPlacement>
+		   
+		    <MirroringY>Z</MirroringY>
+		    <MirroringZ>Y</MirroringZ>
+			<Components>
+             <Component Subtype="SteelPlate" Count="50" />
+             <Component Subtype="Construction" Count="60" />
+             <Component Subtype="MetalGrid" Count="10" />
+			 <Component Subtype="SmallTube" Count="6" /> 
+             <Component Subtype="LargeTube" Count="3" />
+             <Component Subtype="Motor" Count="10" />			 
+             <Component Subtype="Computer" Count="15" />
+             <Component Subtype="SteelPlate" Count="200" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>C30mmSingleT</BlockPairName>
+            <EdgeType>Light</EdgeType>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>			
+			<WeaponDefinitionId Subtype="C30mmSingleT" />
+			<InventoryMaxVolume>0.062</InventoryMaxVolume>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DisassembleRatio>5</DisassembleRatio>
+			<NavigationDefinition>Default</NavigationDefinition>
+			<MaxRangeMeters>4000</MaxRangeMeters>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>525</PCU>
+            <IsAirTight>false</IsAirTight> 			
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+		</Definition>	
 
 	</CubeBlocks>
 </Definitions>

@@ -25,10 +25,10 @@ namespace Scripts
     {
         private AmmoDef TankPlasmaAmmo => new AmmoDef
         {
-            AmmoMagazine = "R75ammo",
+            AmmoMagazine = "PlasmaCell10MJ",
             AmmoRound = "TankPlasmaAmmo",
             HybridRound = true, //AmmoMagazine based weapon with energy cost
-            EnergyCost = 0.3f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+            EnergyCost = 0.9f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
             BaseDamage = 100f,
             Mass = 20f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
@@ -76,13 +76,13 @@ namespace Scripts
                 Characters = -1f,
 				FallOff = new FallOffDef
                 {
-                 Distance = 1000f, // Distance at which max damage begins falling off.
-                 MinMultipler = 0.5f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+                 Distance = 500f, // Distance at which max damage begins falling off.
+                 MinMultipler = 0.3f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
 		        },
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.2f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {

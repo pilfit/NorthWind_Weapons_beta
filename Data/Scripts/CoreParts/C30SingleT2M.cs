@@ -53,9 +53,9 @@ namespace Scripts {
             HardPoint = new HardPointDef 
             {
                 PartName = "30mm SubTurret2", // name of weapon in terminal
-                DeviateShotAngle = 0.4f,
+                DeviateShotAngle = 0.1f,
                 AimingTolerance = 4.15f, // 0 - 180 firing angle
-                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {
@@ -72,8 +72,8 @@ namespace Scripts {
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.035f,
-                    ElevateRate = 0.028f,
+                    RotateRate = 0.05f,
+                    ElevateRate = 0.05f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -30,

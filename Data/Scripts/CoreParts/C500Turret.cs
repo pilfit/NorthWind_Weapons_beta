@@ -76,8 +76,8 @@ namespace Scripts {
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.006f,
-                    ElevateRate = 0.005f,
+                    RotateRate = 0.003f,
+                    ElevateRate = 0.002f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -8,
@@ -107,10 +107,10 @@ namespace Scripts {
                     SkipBarrels = 0,
                     ReloadTime = 850, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 0, //heat generated per shot
-                    MaxHeat = 30000, //max heat before weapon enters cooldown (70% of max heat)
-                    Cooldown = .2f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
-                    HeatSinkRate = 3000, //amount of heat lost per second
+                    HeatPerShot = 2100, //heat generated per shot
+                    MaxHeat = 60000, //max heat before weapon enters cooldown (70% of max heat)
+                    Cooldown = 0f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
+                    HeatSinkRate = 1000, //amount of heat lost per second
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
