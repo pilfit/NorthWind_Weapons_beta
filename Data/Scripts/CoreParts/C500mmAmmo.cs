@@ -149,21 +149,21 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
-                    Radius = 0f,
-                    Damage = 0f,
+                    Enable = true,
+                    Radius = 1f,
+                    Damage = 0.1f,
                     Depth = 0f,
                     MaxAbsorb = 0f,
-                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
                     //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
-                    ArmOnlyOnHit = false,
+                    ArmOnlyOnHit = true,
                     MinArmingTime = 0,
-                    NoVisuals = false,
-                    NoSound = false,
+                    NoVisuals = true,
+                    NoSound = true,
                     ParticleScale = 0.5f,
                     CustomParticle = "",
                     CustomSound = "",
@@ -1135,7 +1135,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f,
+                    Modifier = 10f,
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = 1f,
                 },
@@ -3373,7 +3373,7 @@ namespace Scripts
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0.9f,
+                    Heavy = -1f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -3450,27 +3450,14 @@ namespace Scripts
                 Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
                 Type = Emp, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Field, // Effect , Field
-                Strength = 300000000f,
-                Radius = 300f, // Meters
-                Duration = 1200, // In Ticks
+                Strength = 30000f,
+                Radius = 350f, // Meters
+                Duration = 2700, // In Ticks
                 StackDuration = true, // Combined Durations
                 Depletable = false,
                 MaxStacks = 1, // Max Debuffs at once
                 NoHitParticle = false,
-                /*
-                EnergySink : Targets & Shutdowns Power Supplies, such as Batteries & Reactor
-                Emp : Targets & Shutdown any Block capable of being powered
-                Offense : Targets & Shutdowns Weaponry
-                Nav : Targets & Shutdown Gyros or Locks them down
-                Dot : Deals Damage to Blocks in radius
-                AntiSmart : Effects & Scrambles the Targeting List of Affected Missiles
-                JumpNull : Shutdown & Stops any Active Jumps, or JumpDrive Units in radius
-                Tractor : Affects target with Physics
-                Pull : Affects target with Physics
-                Push : Affects target with Physics
-                Anchor : Targets & Shutdowns Thrusters
-                
-                */
+
                 Force = new PushPullDef
                 {
                     ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
@@ -3482,12 +3469,12 @@ namespace Scripts
                 },
                 Field = new FieldDef
                 {
-                    Interval = 1, // Time between each pulse, in game ticks (60 == 1 second).
+                    Interval = 1, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
                     PulseChance = 100, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
-                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
+                    GrowTime = 30, // How many ticks it should take the field to grow to full size.
                     HideModel = false, // Hide the default bubble, or other model if specified.
                     ShowParticle = true, // Show Block damage effect.
-                    TriggerRange = 250f, //range at which fields are triggered
+                    TriggerRange = 0f, //range at which fields are triggered
                     Particle = new ParticleDef // Particle effect to generate at the field's position.
                     {
                         Name = "", // SubtypeId of field particle effect.
@@ -3509,13 +3496,13 @@ namespace Scripts
             Trajectory = new TrajectoryDef
             {
                 Guidance = None,
-                TargetLossDegree = 80f,
+                TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 28, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 500,
-                MaxTrajectory = 100f,
-                FieldTime = 60, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
+                DesiredSpeed = 0f,
+                MaxTrajectory = 1000f,
+                FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.

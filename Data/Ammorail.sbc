@@ -114,6 +114,7 @@
       <BasicProperties>
         <DesiredSpeed>0</DesiredSpeed>
         <SpeedVariance>0</SpeedVariance>
+        <IsExplosive>false</IsExplosive>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
       </BasicProperties>

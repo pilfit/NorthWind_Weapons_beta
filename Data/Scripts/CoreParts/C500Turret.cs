@@ -32,7 +32,7 @@ namespace Scripts {
 
                 },
                 Ejector = "",    
-                Scope = "", //Where line of sight checks are performed from must be clear of block collision                            
+                Scope = "scope", //Where line of sight checks are performed from must be clear of block collision                            
             },
             Targeting = new TargetingDef  
             {

@@ -996,7 +996,7 @@ namespace Scripts
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Material = "WeaponLaser",
                         DecayTime = 100,
                         Color = Color(red: 5.585f, green: 3.562f, blue: 2.21f, alpha: 1f),

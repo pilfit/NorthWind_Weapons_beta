@@ -22,6 +22,9 @@ using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Trace
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DamageTypes.Damage;
 
+// Warning: This Config may be hazardous to your health. Extreme caution is advised when reading it. 
+// May cuase headaches, extreme rage, paranoia and vomiting.
+
 namespace Scripts
 { // Don't edit above this line
     partial class Parts
@@ -697,7 +700,7 @@ namespace Scripts
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = 0.6f,
+                    Armor = -1f,
                     Light = 1.5f,
                     Heavy = 0.3f,
                     NonArmor = -1f,

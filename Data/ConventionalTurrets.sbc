@@ -72,7 +72,8 @@
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
             <IsAirTight>false</IsAirTight> 	
-			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>		
+			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>	
+			<CameraDummyName>camera</CameraDummyName>	
 		</Definition>
 		
         <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -144,6 +145,7 @@
             <PCU>525</PCU>
             <IsAirTight>false</IsAirTight> 		
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>	
+			<CameraDummyName>camera</CameraDummyName>
 		</Definition>
 
         <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -233,6 +235,7 @@
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			<CameraDummyName>camera</CameraDummyName>
             			
 		</Definition>
 
@@ -318,6 +321,7 @@
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>525</PCU>
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			<CameraDummyName>camera</CameraDummyName>
             			
 		</Definition>
 
@@ -404,6 +408,7 @@
 			  <DestroySound>WepSmallWarheadExpl</DestroySound>
 			  <PCU>525</PCU>
 			  <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			  <CameraDummyName>camera</CameraDummyName>
 						  
 		  </Definition>		
 
@@ -493,6 +498,7 @@
 			<MaxRangeMeters>4000</MaxRangeMeters>
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
+			
             <PCU>525</PCU>
             			
 		</Definition>	
@@ -567,6 +573,7 @@
             <PCU>525</PCU>
             <IsAirTight>false</IsAirTight> 		
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>	
+			<CameraDummyName>camera</CameraDummyName>
 		</Definition>			  
 
         <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -639,6 +646,7 @@
             <PCU>525</PCU>
             <IsAirTight>false</IsAirTight> 			
 			<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+			<CameraDummyName>camera</CameraDummyName>
 		</Definition>	
 
 	</CubeBlocks>
