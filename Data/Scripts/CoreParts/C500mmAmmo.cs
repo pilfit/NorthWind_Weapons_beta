@@ -557,7 +557,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = None,
+                Guidance = DetectFixed,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -579,9 +579,9 @@ namespace Scripts
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
+                    DetectRadius = 50,
                     DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    FieldTime = 1,
                     Cloak = false,
                     Persist = false,
                 },

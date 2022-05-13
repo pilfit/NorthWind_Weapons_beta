@@ -29,6 +29,7 @@ namespace Scripts {
                     "muzzle_missile_1",
 
                 },
+                Scope = "", //Where line of sight checks are performed from must be clear of block collision     
             },
             Targeting = new TargetingDef  
             {
@@ -73,6 +74,7 @@ namespace Scripts {
                     MaxAzimuth = 0,
                     MinElevation = 0,
                     MaxElevation = 0,
+                     
                     FixedOffset = false,
                     InventorySize = 0.4f,
                     Offset = Vector(x: 0, y: 0, z: 0),
@@ -143,7 +145,7 @@ namespace Scripts {
                 },
             },
             Ammos = new [] {
-                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase, 
+                H203mmammoS, H203mmammoM, H203mmammoL, H203mmammoShrap, H203ShrapBase, H203mmammoF,
 				
                 
             },

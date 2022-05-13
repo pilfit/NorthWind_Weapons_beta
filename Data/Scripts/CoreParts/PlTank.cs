@@ -89,7 +89,7 @@ namespace Scripts {
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype	                      
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 60,
+                    RateOfFire = 12,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.

@@ -63,7 +63,7 @@ namespace Scripts {
                 PartName = "30mm RevolverCannon CIWS", // name of weapon in terminal
                 DeviateShotAngle = 0.1f,
                 AimingTolerance = 4.15f, // 0 - 180 firing angle
-                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
 
                 Ui = new UiDef {

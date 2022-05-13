@@ -264,7 +264,7 @@
         <Z>0.3</Z>
       </Size>
       <Mass>60</Mass>
-      <Volume>500</Volume>
+      <Volume>100</Volume>
       <Model>Models\C300Shells.mwm</Model>
       <Capacity>3</Capacity>
       <AmmoDefinitionId Subtype="C300AmmoHE" />

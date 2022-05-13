@@ -292,7 +292,7 @@ namespace Scripts
                         Enable = true,
                         Length = 80f,
                         Width = 0.3f,
-                        Color = Color(red: 50.0f, green: 15.20f, blue: 5.0f, alpha: 1f),
+                        Color = Color(red: 45.0f, green: 15.20f, blue: 5.0f, alpha: 1f),
                     },
                     Trail = new TrailDef
                     {

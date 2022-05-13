@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>H203Single</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_H203Single</DisplayName>
+			<Description>Description_H203Single</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\H203Single.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\H203Single_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\H203Single_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\H203Single_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>H203Single</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

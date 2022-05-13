@@ -98,7 +98,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -442,7 +442,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -775,7 +775,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.2f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -1107,13 +1107,13 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                      Large = -1f,
-                    Small = 0.5f,
+                    Small = -1f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0.9f,
+                    Heavy = -1f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -1408,7 +1408,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -1709,7 +1709,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.2f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -2022,7 +2022,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = -1f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {

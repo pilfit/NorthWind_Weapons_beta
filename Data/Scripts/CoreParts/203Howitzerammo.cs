@@ -98,7 +98,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -230,7 +230,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = TravelTo,
+                Guidance = DetectFixed,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 3000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -252,9 +252,9 @@ namespace Scripts
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
+                    DetectRadius = 20,
                     DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    FieldTime = 1,
                     Cloak = false,
                     Persist = false,
                 },
@@ -409,7 +409,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -541,7 +541,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = TravelTo,
+                Guidance = DetectFixed,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 3000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -563,9 +563,9 @@ namespace Scripts
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
+                    DetectRadius = 20,
                     DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    FieldTime = 1,
                     Cloak = false,
                     Persist = false,
                 },
@@ -720,7 +720,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -852,7 +852,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = TravelTo,
+                Guidance = DetectFixed,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 3000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -874,9 +874,9 @@ namespace Scripts
                 },
                 Mines = new MinesDef
                 {
-                    DetectRadius = 200,
+                    DetectRadius = 20,
                     DeCloakRadius = 100,
-                    FieldTime = 1800,
+                    FieldTime = 1,
                     Cloak = false,
                     Persist = false,
                 },
@@ -987,15 +987,15 @@ namespace Scripts
                 AmmoRound = "H203ShrapBase", // AmmoRound field of the ammo to spawn.
                 Fragments = 1, // Number of projectiles to spawn.
                 Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
-                Reverse = true, // Spawn projectiles backward instead of forward.
+                Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
-                Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Offset = -1f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 100,
-                IgnoreArming = true,
+                IgnoreArming = false,
                 TimedSpawns = new TimedSpawnDef
                 {
-                    Enable = true,
+                    Enable = false,
                     Interval = 2,
                     StartTime = 1,
                     MaxSpawns = 1,
@@ -1031,7 +1031,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {
@@ -1163,7 +1163,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = Smart,
+                Guidance = TravelTo,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 780, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -1172,7 +1172,7 @@ namespace Scripts
                 MaxTrajectory = 3500f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 100, end: 100), // subtracts value from MaxTrajectory
+                RangeVariance = Random(start: -10, end: 10), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
@@ -1330,13 +1330,13 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.5f,
+                    Small = -1f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
                     Light = -1f,
-                    Heavy = 0.9f,
+                    Heavy = -1f,
                     NonArmor = -1f,
                 },
                 Shields = new ShieldDef
@@ -1631,7 +1631,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = -1f,
-                    Small = 0.3f,
+                    Small = 0.4f,
                 },
                 Armor = new ArmorDef
                 {

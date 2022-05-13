@@ -546,7 +546,7 @@
           </Properties>
         </ParticleLight>
       </ParticleLights>
-      <DistanceMax>2000</DistanceMax>
+      <DistanceMax>4000</DistanceMax>
     </ParticleEffect>
 	</ParticleEffects>
 </Definitions>
