@@ -49,7 +49,7 @@ namespace Scripts {
             HardPoint = new HardPointDef 
             {
                 PartName = "203mm Howitzer", // name of weapon in terminal
-                DeviateShotAngle = 0.8f,
+                DeviateShotAngle = 0.6f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

@@ -56,11 +56,11 @@ namespace Scripts {
             HardPoint = new HardPointDef 
             {
                 PartName = "500mm Gun Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.2f,
+                DeviateShotAngle = 0.1f,
                 AimingTolerance = 0.25f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                CanShootSubmerged = true,
+                CanShootSubmerged = false,
 
                 Ui = new UiDef {
                     RateOfFire = false,
@@ -100,7 +100,7 @@ namespace Scripts {
                     CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype	                    
                 },
                 Loading = new LoadingDef {
-                    RateOfFire = 200,
+                    RateOfFire = 600,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
@@ -114,7 +114,7 @@ namespace Scripts {
                     DegradeRof = false, // progressively lower rate of fire after 80% heat threshold (80% of max heat)
                     ShotsInBurst = 0,
                     DelayAfterBurst = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFull = false,
+                    FireFull = true,
                 },
                 Audio = new HardPointAudioDef {
                     PreFiringSound = "",
@@ -156,7 +156,7 @@ namespace Scripts {
                 },
             },
             Ammos = new [] {
-                C500mmAmmoAP, C500mmShrapnel, C500mmAmmoHE, C500mmAmmoN, C500NSecond, C500mmAPHEShrapbase, C500Effect, C500mmAmmoNP, C500mmHEShrapbase, C500Chain, C500ChainEnd,               
+                C500mmAmmoAP, C500mmShrapnel, C500mmAmmoHE, C500mmAmmoN, C500NSecond, C500mmAPHEShrapbase, C500Effect, C500mmAmmoNP, C500mmHEShrapbase, C500Chain, C500ChainEnd, C500EMPBase,               
 
             },
             Animations = C500Turret_Animation,

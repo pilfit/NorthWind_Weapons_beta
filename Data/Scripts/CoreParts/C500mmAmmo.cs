@@ -41,6 +41,7 @@ namespace Scripts
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 1000000f,
 			HardPointUsable = true,
+            
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -226,10 +227,10 @@ namespace Scripts
                 Guidance = None,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 2000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 400,
-                MaxTrajectory = 8000f,
+                MaxTrajectory = 10000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: -10, end: 10), // subtracts value from MaxTrajectory
@@ -560,10 +561,10 @@ namespace Scripts
                 Guidance = DetectFixed,
                 TargetLossDegree = 80f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 2000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 450,
-                MaxTrajectory = 8000f,
+                MaxTrajectory = 10000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 200), // subtracts value from MaxTrajectory
@@ -708,7 +709,7 @@ namespace Scripts
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             BackKickForce = 1240000f,
 			HardPointUsable = true,
-            HeatModifier = 10f, // Allows this ammo to modify the amount of heat the weapon produces per shot.
+            HeatModifier = 11f, // Allows this ammo to modify the amount of heat the weapon produces per shot.
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -748,7 +749,7 @@ namespace Scripts
             Pattern = new PatternDef
             {
                 Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
-                    "C500Effect", "C500NSecond",
+                    "C500Effect", "C500NSecond", "C500EMPBase",
                 },
                 Enable = true,
                 TriggerChance = 1f,
@@ -912,7 +913,7 @@ namespace Scripts
                 TargetLossTime = 1000, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 200, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 4000,
+                DesiredSpeed = 3500,
                 MaxTrajectory = 5000,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -1721,7 +1722,7 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "C500EMP", // AmmoRound field of the ammo to spawn.
+                AmmoRound = "", // AmmoRound field of the ammo to spawn.
                 Fragments = 1, // Number of projectiles to spawn.
                 Degrees = 5, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = true, // Spawn projectiles backward instead of forward.
@@ -1732,7 +1733,7 @@ namespace Scripts
                 IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
                 TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below
                 {
-                    Enable = true, // Enables TimedSpawns mechanism
+                    Enable = false, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks
                     StartTime = 1, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
@@ -1908,14 +1909,351 @@ namespace Scripts
                 Guidance = None,
                 TargetLossDegree = 45f,
                 TargetLossTime = 120, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 50, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 120, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 4000,
+                DesiredSpeed = 3500,
                 MaxTrajectory = 5000f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
 				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+                Smarts = new SmartsDef
+                {
+                    Inaccuracy = 5f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 1.5f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0.25f, // controls how sharp the trajectile may turn
+                    TrackingDelay = 1, // Measured in Shape diameter units traveled.
+                    MaxChaseTime = 1000, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited                    
+                },
+                Mines = new MinesDef
+                {
+                    DetectRadius = 200,
+                    DeCloakRadius = 100,
+                    FieldTime = 1800,
+                    Cloak = false,
+                    Persist = false,
+                },
+            },
+           AmmoGraphics = new GraphicDef
+            {
+                ModelName = "",
+                VisualProbability = 1f,
+                ShieldHitDraw = true,
+                Particles = new AmmoParticleDef
+                {
+                    Ammo = new ParticleDef
+                    {
+                        Name = "", //ShipWelderArc
+                        Color = Color(red: 50, green: 6, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false,
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 1,
+                            Scale = 0.1f,
+                        },
+                    },
+                    Hit = new ParticleDef
+                    {
+                        Name = "Collision_Sparks",
+                        ApplyToShield = true,
+                        ShrinkByDistance = true,
+                        Color = Color(red: 50, green: 10, blue: 1, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false,
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 1,
+                            Scale = 0.5f,
+                            HitPlayChance = 1f,
+                        },
+                    },
+                    Eject = new ParticleDef
+                    {
+                        Name = "",
+                        ApplyToShield = true,
+                        ShrinkByDistance = false,
+                        Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 1),
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false,
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 300,
+                            Scale = 1,
+                            HitPlayChance = 1f,
+                        },
+                    },
+
+                },
+                Lines = new LineDef
+                {
+                    TracerMaterial = "ProjectileTrailLine", // WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    ColorVariance = Random(start: 1f, end: 1.8f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0.5f), // adds random value to default width (negatives shrinks width)
+                    Tracer = new TracerBaseDef
+                    {
+                        Enable = true,
+                        Length = 15f,
+                        Width = 0.5f,
+                        Color = Color(red: 20.80f, green: 20.20f, blue: 45.0f, alpha: 1f),
+                    },
+                    Trail = new TrailDef
+                    {
+                        Enable = true,
+                        Material = "WeaponLaser",
+                        DecayTime = 45,
+                        Color = Color(red: 15.585f, green: 15.562f, blue: 25.21f, alpha: 0.8f),
+                        Back = false,
+                        CustomWidth = 0.8f,
+                        UseWidthVariance = true,
+                        UseColorFade = true,
+                    },
+                    OffsetEffect = new OffsetEffectDef
+                    {
+                        MaxOffset = 2,// 0 offset value disables this effect
+                        MinLength = 3.2f,
+                        MaxLength = 10,
+                    },
+                },
+            },
+            AmmoAudio = new AmmoAudioDef
+            {
+                TravelSound = "",
+                HitSound = "ArcWepExplSmall",
+                HitPlayChance = 1f,
+                HitPlayShield = true,
+            }, // Don't edit below this line
+        };
+
+          private AmmoDef C500EMPBase => new AmmoDef
+        {
+            AmmoMagazine = "",
+            AmmoRound = "C500EMPBase",
+            HybridRound = false, //AmmoMagazine based weapon with energy cost
+            EnergyCost = 0.0001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+            BaseDamage = 10f,
+            Mass = 50f, // in kilograms
+            Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            BackKickForce = 0f,
+            DecayPerShot = 0f,			
+			HardPointUsable = false,
+            IgnoreWater = false,			
+
+            Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
+            {
+                Shape = LineShape,
+                Diameter = 0.5,
+            },
+            ObjectsHit = new ObjectsHitDef
+            {
+                MaxObjectsHit = 0, // 0 = disabled
+                CountBlocks = false, // counts gridBlocks and not just entities hit
+            },
+            Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
+            {
+                AmmoRound = "C500EMP", // AmmoRound field of the ammo to spawn.
+                Fragments = 1, // Number of projectiles to spawn.
+                Degrees = 5, // Cone in which to randomize direction of spawned projectiles.
+                Reverse = true, // Spawn projectiles backward instead of forward.
+                DropVelocity = true, // fragments will not inherit velocity from parent.
+                Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards).
+                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                MaxChildren = 1, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
+                IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
+                TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below
+                {
+                    Enable = false, // Enables TimedSpawns mechanism
+                    Interval = 0, // Time between spawning fragments, in ticks
+                    StartTime = 1, // Time delay to start spawning fragments, in ticks, of total projectile life
+                    MaxSpawns = 1, // Max number of fragment children to spawn
+                    Proximity = 0, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
+                    ParentDies = false, // Parent dies once after it spawns its last child.
+                    PointAtTarget = false, // Start fragment direction pointing at Target
+                    PointType = Direct, // Point accuracy, Direct, Lead (always fire), Predict (only fire if it can hit)
+                    GroupSize = 1, // Number of spawns in each group
+                    GroupDelay = 1, // Delay between each group.
+                },
+            },
+            Pattern = new PatternDef
+            {
+                Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
+                    "",
+                },
+                Enable = false,
+                TriggerChance = 1f,
+                Random = false,
+                RandomMin = 1,
+                RandomMax = 1,
+                SkipParent = false,
+            },			
+            DamageScales = new DamageScaleDef
+            {
+                MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with currently integrity above 1000 will be immune to damage.
+                DamageVoxels = false, // true = voxels are vulnerable to this weapon
+                SelfDamage = false, // true = allow self damage.
+                HealthHitModifier = 500, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
+                // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
+                VoxelHitModifier = 10,				
+                Characters = 0.1f,
+				FallOff = new FallOffDef
+                {
+                 Distance = 1000f, // Distance at which max damage begins falling off.
+                 MinMultipler = -1f, // value from 0.0f to 1f where 0.1f would be a min damage of 10% of max damage.
+		        },
+                Grids = new GridSizeDef
+                {
+                    Large = -1f,
+                    Small = 0.3f,
+                },
+                Armor = new ArmorDef
+                {
+                    Armor = -1f,
+                    Light = -1f,
+                    Heavy = 0.4f,
+                    NonArmor = 0.8f,
+                },
+                Shields = new ShieldDef
+                {
+                    Modifier = 6f,
+                    Type = Default, // Damage vs healing against shields; Default, Heal
+                    BypassModifier = -1f,
+                },
+                DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
+                {
+                    Base = Kinetic,
+                    AreaEffect = Kinetic,
+                    Detonation = Kinetic,
+                    Shield = Kinetic, // Damage against shields is currently all of one type per projectile.
+                },
+                Custom = new CustomScalesDef
+                {
+                    IgnoreAllOthers = false,
+                    Types = new[]
+                    {
+                        new CustomBlocksDef
+                        {
+                            SubTypeId = "LargeHeavyBlockArmorBlock",
+                            Modifier = -1f,
+                        },
+                        new CustomBlocksDef
+                        {
+                            SubTypeId = "Test2",
+                            Modifier = -1f,
+                        },
+                    },
+                },
+            },
+            AreaOfDamage = new AreaOfDamageDef
+            {
+                ByBlockHit = new ByBlockHitDef
+                {
+                    Enable = false,
+                    Radius = 0f,
+                    Damage = 0f,
+                    Depth = 0f,
+                    MaxAbsorb = 0f,
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
+                },
+                EndOfLife = new EndOfLifeDef
+                {
+                    Enable = false,
+                    Radius = 0f,
+                    Damage = 0f,
+                    Depth = 0f,
+                    MaxAbsorb = 0f,
+                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
+                    //.Linear drops evenly by distance from center out to max radius
+                    //.Curve drops off damage sharply as it approaches the max radius
+                    //.InvCurve drops off sharply from the middle and tapers to max radius
+                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
+                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
+                    ArmOnlyOnHit = false,
+                    MinArmingTime = 0,
+                    NoVisuals = false,
+                    NoSound = false,
+                    ParticleScale = 0.5f,
+                    CustomParticle = "",
+                    CustomSound = "",
+                },
+            },
+            Ewar = new EwarDef
+            {
+                Enable = false,
+                Type = EnergySink,
+                Mode = Effect,
+                Strength = 0f,
+                Radius = 0f,
+                Duration = 0,
+                StackDuration = true,
+                Depletable = true,
+                MaxStacks = 0,
+                NoHitParticle = false,
+                Force = new PushPullDef
+                {
+                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
+                    DisableRelativeMass = false,
+                    TractorRange = 0,
+                    ShooterFeelsForce = false,
+                },
+                Field = new FieldDef
+                {
+                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second).
+                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
+                    HideModel = false, // Hide the projectile model if it has one.
+                    ShowParticle = false, // Deprecated.
+                    Particle = new ParticleDef // Particle effect to generate at the field's position.
+                    {
+                        Name = "", // SubtypeId of field particle effect.
+                        ShrinkByDistance = false, // Deprecated.
+                        Color = Color(red: 0, green: 0, blue: 0, alpha: 0), // Deprecated, set color in particle sbc.
+                        Extras = new ParticleOptionDef
+                        {
+                            Loop = false, // Deprecated, set this in particle sbc.
+                            Restart = false, // Not used.
+                            MaxDistance = 5000, // Not used.
+                            MaxDuration = 1, // Not used.
+                            Scale = 1, // Scale of effect.
+                        },
+                    },
+                },
+            },
+            Beams = new BeamDef
+            {
+                Enable = false,
+                VirtualBeams = false, // Only one hot beam, but with the effectiveness of the virtual beams combined (better performace)
+                ConvergeBeams = false, // When using virtual beams this option visually converges the beams to the location of the real beam.
+                RotateRealBeam = false, // The real (hot beam) is rotated between all virtual beams, instead of centered between them.
+                OneParticle = false, // Only spawn one particle hit per beam weapon.
+            },
+            Trajectory = new TrajectoryDef
+            {
+                Guidance = None,
+                TargetLossDegree = 45f,
+                TargetLossTime = 120, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 15, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                AccelPerSec = 0f,
+                DesiredSpeed = 5,
+                MaxTrajectory = 5000f,
+                FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
+                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 5f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -2044,7 +2382,7 @@ namespace Scripts
             BackKickForce = 0f,
             DecayPerShot = 0f,			
 			HardPointUsable = false,
-            IgnoreWater = false,			
+            IgnoreWater = true,			
 
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
@@ -3450,9 +3788,9 @@ namespace Scripts
                 Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
                 Type = Emp, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Field, // Effect , Field
-                Strength = 30000f,
-                Radius = 350f, // Meters
-                Duration = 2700, // In Ticks
+                Strength = 95000000f,
+                Radius = 300f, // Meters
+                Duration = 300, // In Ticks
                 StackDuration = true, // Combined Durations
                 Depletable = false,
                 MaxStacks = 1, // Max Debuffs at once
@@ -3471,7 +3809,7 @@ namespace Scripts
                 {
                     Interval = 1, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
                     PulseChance = 100, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
-                    GrowTime = 30, // How many ticks it should take the field to grow to full size.
+                    GrowTime = 10, // How many ticks it should take the field to grow to full size.
                     HideModel = false, // Hide the default bubble, or other model if specified.
                     ShowParticle = true, // Show Block damage effect.
                     TriggerRange = 0f, //range at which fields are triggered
@@ -3498,7 +3836,7 @@ namespace Scripts
                 Guidance = None,
                 TargetLossDegree = 0f,
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 28, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 150, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 0f,
                 MaxTrajectory = 1000f,

@@ -11,6 +11,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -32,6 +33,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -53,6 +55,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -95,6 +98,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0.5</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -117,6 +121,7 @@
         <IsExplosive>false</IsExplosive>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0.5</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -138,6 +143,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0.5</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -201,6 +207,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0.5</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -264,6 +271,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0.5</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -327,6 +335,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0.5</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>
@@ -390,6 +399,7 @@
         <SpeedVariance>0</SpeedVariance>
         <MaxTrajectory>0</MaxTrajectory>
         <BackkickForce>0</BackkickForce>
+        <ExplosiveDamageMultiplier>0</ExplosiveDamageMultiplier>
       </BasicProperties>
       <ProjectileProperties>
         <ProjectileHitImpulse>0</ProjectileHitImpulse>

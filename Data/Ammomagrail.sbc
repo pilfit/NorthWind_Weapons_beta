@@ -467,7 +467,7 @@
       <Volume>8</Volume>
       <Model>Models\PlasmaCell10MJ.mwm</Model>
       <Capacity>1</Capacity>
-      <AmmoDefinitionId Subtype="CRAM30mmAmmo" />
+      <AmmoDefinitionId Subtype="PlasmaCell10MJ" />
 
       <MinimumOfferAmount>100</MinimumOfferAmount>
       <MaximumOfferAmount>1000</MaximumOfferAmount>

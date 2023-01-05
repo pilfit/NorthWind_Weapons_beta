@@ -17,7 +17,7 @@ namespace Scripts {
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "RotaryCannon",
+                        SubtypeId = "NWRotaryCannon",
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns.
                         MuzzlePartId = "RotaryCannonBarrel",
                         AzimuthPartId = "None",

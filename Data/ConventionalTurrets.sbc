@@ -10,8 +10,8 @@
 		  </Id>
 			<DisplayName>30mm CIWS Turret</DisplayName>
 			<Description>30mm CIWS Turret Intended for protection from fighters and missiles.
-						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 800m/s projectile speed.
-						 The targeting systems on this turret will not work if placed near another CIWS, must be placed at least 3 blocks appart.</Description>
+						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 900m/s projectile speed.
+						 The targeting systems on this turret will not work if placed near another CIWS, must be placed at least 3 blocks appart. MaxAI range 1200m.</Description>
 			<Icon>Textures\icons\CIWS.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -83,7 +83,7 @@
 			<SubtypeId>C100mmTurret</SubtypeId>
 		  </Id>
 			<DisplayName>100mm Gun Turret</DisplayName>
-			<Description>100mm dual purpose gun turret. Uses 100mm HE shells(600m/s), they can be set to act as flak or impact HE with Ammo Cycle. Use flak fuse for anti fighter or missile. </Description>
+			<Description>100mm dual purpose gun turret. Uses 100mm HE shells(800m/s), they can be set to act as flak or impact HE with Ammo Cycle. Use flak fuse for anti fighter or missile. MaxAI and flak range 2.5km, Max HE shell range 8km.  </Description>
 			<Icon>Textures\icons\100mmIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -155,7 +155,7 @@
 			<SubtypeId>C200mmTurret</SubtypeId>
 		  </Id>
 			<DisplayName>203mm Gun Turret</DisplayName>
-			<Description>203mm dual purpose gun turret. 203mm HE ammo(550m/s) can be set to flak or impact HE with ammo cycle, can also fire 203mm AP(500m/s). </Description>
+			<Description>203mm dual purpose gun turret. 203mm HE ammo(650m/s) can be set to flak or impact HE with ammo cycle, can also fire 203mm AP(600m/s). MaxAI and flak range 3.5km, max AP and HE shell range 8km. </Description>
 			<Icon>Textures\icons\C200TurretIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -246,7 +246,7 @@
 			<SubtypeId>C300mmTurret</SubtypeId>
 		  </Id>
 			<DisplayName>300mm Gun Turret</DisplayName>
-			<Description>300mm gun turret. Can fire AP(500m/s), HE or Guided 300mm shells(550m/s). Guided shells have limited smart tracking at the cost of reduced HE damage. </Description>
+			<Description>300mm gun turret. Can fire AP(500m/s), HE or Guided 300mm shells(550m/s). Guided shells have limited smart tracking at the cost of reduced HE damage. Max AI and Guided shell range 4km, max AP and HE shell range 10km. </Description>
 			<Icon>Textures\icons\300mmTurretIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -333,7 +333,7 @@
 			</Id>
 			  <DisplayName>400mm Gun Turret</DisplayName>
 			  <Description>400mm gun turret. Can fire 400mm AP(400m/s, HE and Cluster shells(450m/s). Cluster shells release a large number small explosive submunitions 300m before the target.
-				  Cluster ammo requires the turret AI to control the fuse so it will not work with manual camera aiming. </Description>
+				  Cluster ammo requires the turret AI to control the fuse so it will not work with manual camera aiming. MaxAI and Cluster round rang 5km, max AP and HE shell range 10km. </Description>
 			  <Icon>Textures\icons\C400Icon.png</Icon>
 			  <CubeSize>Large</CubeSize>
 			  <GuiVisible>true</GuiVisible>
@@ -419,7 +419,7 @@
 		  </Id>
 			<DisplayName>500mm Gun Turret</DisplayName>
 			<Description>500mm gun turret. Can fire AP(500m/s), HE or Casaba Howizter shells(550m/s). Casaba shells are small nuclear shaped charges that detonate in the barrel, firing a powerful plasma beam at the target.
-			Warning! Use of the Casaba Shells may disable near by systems do to EMP. </Description>
+			Warning! Use of the Casaba Shells may disable near by systems do to EMP. Max AI and Casaba shell range 5km, max AP and HE shell range 10km. </Description>
 			<Icon>Textures\icons\C500mmIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -511,7 +511,7 @@
 		  </Id>
 			<DisplayName>30mm AutoCannon Turret</DisplayName>
 			<Description>30mm AutoCannon Turret Intended for protection from fighters, missiles and biological threats.
-						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 800m/s projectile speed.</Description>
+						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 900m/s projectile speed. Max AI range 1200m.</Description>
 			<Icon>Textures\icons\C30mmACTIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -584,7 +584,7 @@
 		  </Id>
 			<DisplayName>30mm AutoCannon Turret SG</DisplayName>
 			<Description>30mm AutoCannon Turret Intended for protection from fighters, missiles and biological threats.
-						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 800m/s projectile speed.</Description>
+						 Can be loaded with Standard 30mm rounds, DU rounds for anti armor, or CRAM ammo for anti missile and artillery. 900m/s projectile speed. Max AI range 1200m. </Description>
 			<Icon>Textures\icons\C30mmACTIcon.png</Icon>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -656,8 +656,8 @@
 			<SubtypeId>C203mmSingleTurret</SubtypeId>
 		  </Id>
 			<DisplayName>203mm Single Gun Turret</DisplayName>
-			<Description>203mm dual purpose gun turret. Uses 203mm HE shells(600m/s), they can be set to act as flak or impact HE with Ammo Cycle. Use flak fuse for anti fighter or missile. </Description>
-			<Icon>Textures\icons\100mmIcon.png</Icon>
+			<Description>203mm dual purpose gun turret. 203mm HE ammo(650m/s) can be set to flak or impact HE with ammo cycle, can also fire 203mm AP(600m/s). MaxAI and flak range 3.5km, max AP and HE shell range 8km.  </Description>
+			<Icon>Textures\icons\C203SingleIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -691,11 +691,11 @@
 		    <MirroringY>Z</MirroringY>
 		    <MirroringZ>Y</MirroringZ>
 			<Components>
-             <Component Subtype="SteelPlate" Count="60" />
+             <Component Subtype="SteelPlate" Count="90" />
              <Component Subtype="Construction" Count="80" />
              <Component Subtype="MetalGrid" Count="25" />
 			 <Component Subtype="SmallTube" Count="12" /> 
-             <Component Subtype="LargeTube" Count="3" />
+             <Component Subtype="LargeTube" Count="4" />
              <Component Subtype="Motor" Count="20" />			 
              <Component Subtype="Computer" Count="20" />
              <Component Subtype="SteelPlate" Count="450" />
@@ -727,9 +727,9 @@
 			<TypeId>LargeMissileTurret</TypeId>
 			<SubtypeId>H203mmSingleTurret</SubtypeId>
 		  </Id>
-			<DisplayName>203mm Single Howitzer Turret</DisplayName>
-			<Description>203mm dual purpose gun turret. Uses 203mm HE shells(600m/s), they can be set to act as flak or impact HE with Ammo Cycle. Use flak fuse for anti fighter or missile. </Description>
-			<Icon>Textures\icons\100mmIcon.png</Icon>
+			<DisplayName>BD203mm Howitzer Turret</DisplayName>
+			<Description>203mm Howitzer Turret, uses bagged charge ammo that lets you choose a how much propellant to load for different ranges. Use ammo cycle to change range, projectile speed is 125ms, 225ms and 325ms. Max AI range 5km, max flak range 3.5km, max HE shell range 12km at 1g.  </Description>
+			<Icon>Textures\icons\H203SingleIcon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -763,11 +763,11 @@
 		    <MirroringY>Z</MirroringY>
 		    <MirroringZ>Y</MirroringZ>
 			<Components>
-             <Component Subtype="SteelPlate" Count="60" />
+             <Component Subtype="SteelPlate" Count="90" />
              <Component Subtype="Construction" Count="80" />
              <Component Subtype="MetalGrid" Count="25" />
 			 <Component Subtype="SmallTube" Count="12" /> 
-             <Component Subtype="LargeTube" Count="3" />
+             <Component Subtype="LargeTube" Count="4" />
              <Component Subtype="Motor" Count="20" />			 
              <Component Subtype="Computer" Count="20" />
              <Component Subtype="SteelPlate" Count="450" />

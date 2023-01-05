@@ -7,7 +7,7 @@
 			<SubtypeId>RailgunxTurretS</SubtypeId>
 		  </Id>
 			<DisplayName>75mm Railgun Turret</DisplayName>
-			<Description>75mm Railgun turret with a 3x3 mount and 3km range. 3000m/s projectile speed.</Description>
+			<Description>75mm Railgun turret with a 3x3 mount and 3km range. 3000m/s projectile speed. Max AI range 3km, max shell range 8km.</Description>
 			<Icon>Textures\icons\railgun75ticon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -75,7 +75,7 @@
 			<SubtypeId>RailgunxTurretM</SubtypeId>
 		  </Id>
 			<DisplayName>150mm Railgun Turret</DisplayName>
-			<Description>150mm dual railgun turret with a 5x5 mount and 4km range. 2500m/s projectile speed.</Description>
+			<Description>150mm dual railgun turret with a 5x5 mount and 4km range. 2500m/s projectile speed. Max AI range 4km, max shell range 10km. </Description>
 			<Icon>Textures\icons\railgun150ticon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -145,7 +145,7 @@
 			<SubtypeId>RailgunxTurret</SubtypeId>
 		  </Id>
 			<DisplayName>250mm Railgun Turret</DisplayName>
-			<Description>250mm railgun turret with a 7x7 mount and 5km range. 2000m/s projectile speed.</Description>
+			<Description>250mm railgun turret with a 7x7 mount and 5km range. 2000m/s projectile speed. Max AI range 5km, max shell range 10km. </Description>
 			<Icon>Textures\icons\railgun250ticon.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -214,7 +214,7 @@
 			<SubtypeId>AMSlaser</SubtypeId>
 		  </Id>
 			<DisplayName>Discoball Laser AMS</DisplayName>
-			<Description>Anti Missile Laser.</Description>
+			<Description>Anti Missile Laser. Will only fire at Smart projectiles. Max range 1500m. </Description>
 			<Icon>Textures\icons\discoball.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>

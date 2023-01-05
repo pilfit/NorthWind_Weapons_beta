@@ -233,9 +233,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -537,7 +537,7 @@ namespace Scripts
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -50, end: 50), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1.5f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -836,9 +836,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -1137,9 +1137,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -1439,9 +1439,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 10f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -1740,9 +1740,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 10f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -2044,9 +2044,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -2346,9 +2346,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -2647,9 +2647,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -2949,9 +2949,9 @@ namespace Scripts
                 DesiredSpeed = 800,
                 MaxTrajectory = 2200f,
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
-                SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
+                SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -3066,7 +3066,7 @@ namespace Scripts
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 0.2,
+                Diameter = 0.3,
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -3109,13 +3109,13 @@ namespace Scripts
 		        },
                 Grids = new GridSizeDef
                 {
-                    Large = 0.4f,
+                    Large = 0.3f,
                     Small = -1f,
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f,
-                    Light = -1f,
+                    Light = 0.8f,
                     Heavy = 0.01f,
                     NonArmor = -1f,
                 },
@@ -3170,7 +3170,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 1f,
-                    Damage = 20f,
+                    Damage = 30f,
                     Depth = 0.5f,
                     MaxAbsorb = 0f,
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
@@ -3252,7 +3252,7 @@ namespace Scripts
                 FieldTime = 0, // 0 is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 SpeedVariance = Random(start: -5, end: 5), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: -25, end: 25), // subtracts value from MaxTrajectory
-				GravityMultiplier = 1f, // Gravity influences the trajectory of the projectile.
+				GravityMultiplier = 0f, // Gravity influences the trajectory of the projectile.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.

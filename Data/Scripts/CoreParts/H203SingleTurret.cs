@@ -36,7 +36,7 @@ namespace Scripts {
             Targeting = new TargetingDef  
             {
                 Threats = new[] {
-                    Grids, Projectiles,
+                    Grids,
                 },
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Any,
@@ -46,7 +46,7 @@ namespace Scripts {
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.                
                 MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
                 MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-                MaxTargetDistance = 12000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = 5000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 MinTargetDistance = 20, // 0 = unlimited, Min target distance that targets will be automatically shot at.                
                 TopTargets = 8, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
@@ -54,8 +54,8 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef 
             {
-                PartName = "203mm Single Howitzer Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.25f,
+                PartName = "BD203mm Howitzer Turret", // name of weapon in terminal
+                DeviateShotAngle = 0.6f,
                 AimingTolerance = 0.15f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -74,7 +74,7 @@ namespace Scripts {
                     LockOnFocus = false,
                 },
                 HardWare = new HardwareDef {
-                    RotateRate = 0.01f,
+                    RotateRate = 0.008f,
                     ElevateRate = 0.008f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
@@ -103,10 +103,10 @@ namespace Scripts {
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 320, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 600, //heat generated per shot
+                    HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 70000, //max heat before weapon enters cooldown (70% of max heat)
                     Cooldown = .50f, //percent of max heat to be under to start firing again after overheat accepts .2-.95
                     HeatSinkRate = 1000, //amount of heat lost per second

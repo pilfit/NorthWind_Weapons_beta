@@ -60,7 +60,7 @@ namespace Scripts {
                 AimingTolerance = 0.25f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                CanShootSubmerged = true,
+                CanShootSubmerged = false,
 
                 Ui = new UiDef {
                     RateOfFire = false,

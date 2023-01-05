@@ -29,6 +29,8 @@
 				<string>LargeMissileTurret/C200mmTurret</string>
 				<string>LargeMissileTurret/C300mmTurret</string>
 				<string>LargeMissileTurret/C400mmTurret</string>
+				<string>LargeMissileTurret/C203mmSingleTurret</string>
+				<string>LargeMissileTurret/H203mmSingleTurret</string>				
 				<string>ConveyorSorter/C500mmTurret</string>
 				<string>LargeMissileTurret/C30mmSingleT</string>
 				<string>LargeMissileTurret/C30mmSingleTSG</string>
@@ -62,6 +64,8 @@
 				<string>LargeMissileTurret/C200mmTurret</string>
 				<string>LargeMissileTurret/C300mmTurret</string>
 				<string>LargeMissileTurret/C400mmTurret</string>
+				<string>LargeMissileTurret/C203mmSingleTurret</string>
+				<string>LargeMissileTurret/H203mmSingleTurret</string>
 				<string>ConveyorSorter/C500mmTurret</string>
 				<string>LargeMissileTurret/C30mmSingleT</string>
 				<string>LargeMissileTurret/C30mmSingleTSG</string>

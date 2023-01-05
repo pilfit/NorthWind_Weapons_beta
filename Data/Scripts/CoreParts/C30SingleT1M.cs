@@ -30,6 +30,7 @@ namespace Scripts {
 					
 
                 },
+                Scope = "muzzle_missile_4", //Where line of sight checks are performed from must be clear of block collision 
             },
             Targeting = new TargetingDef  
             {
