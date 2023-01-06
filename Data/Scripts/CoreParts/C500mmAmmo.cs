@@ -3812,7 +3812,7 @@ namespace Scripts
                     GrowTime = 10, // How many ticks it should take the field to grow to full size.
                     HideModel = false, // Hide the default bubble, or other model if specified.
                     ShowParticle = true, // Show Block damage effect.
-                    TriggerRange = 0f, //range at which fields are triggered
+                    TriggerRange = 300f, //range at which fields are triggered
                     Particle = new ParticleDef // Particle effect to generate at the field's position.
                     {
                         Name = "", // SubtypeId of field particle effect.
